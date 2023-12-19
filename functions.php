@@ -40,7 +40,32 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_script( 'contacts-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/contacts.js', array(), false, true );
   }
 
- 
+  if ( is_page_template('templates/work.php') ) {
+    wp_enqueue_style( 'work-style', get_template_directory_uri() . '/assets/styles/template-styles/work.css', array('main') );
+    wp_enqueue_script( 'work-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/work.js', array(), false, true );
+  }
+
+  if ( is_page_template('templates/events.php') ) {
+    wp_enqueue_style( 'events-style', get_template_directory_uri() . '/assets/styles/template-styles/events.css', array('main') );
+    wp_enqueue_script( 'events-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/events.js', array(), false, true );
+  }
+
+  if ( is_page_template('templates/gallery.php') ) {
+    wp_enqueue_style( 'gallery-style', get_template_directory_uri() . '/assets/styles/template-styles/gallery.css', array('main') );
+    wp_enqueue_script( 'gallery-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/gallery.js', array(), false, true );
+  }
+
+  if ( is_page_template('templates/info.php') ) {
+    wp_enqueue_style( 'info-style', get_template_directory_uri() . '/assets/styles/template-styles/info.css', array('main') );
+    wp_enqueue_script( 'info-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/info.js', array(), false, true );
+  }
+
+  if ( is_page_template('templates/donate.php') ) {
+    wp_enqueue_style( 'donate-style', get_template_directory_uri() . '/assets/styles/template-styles/donate.css', array('main') );
+    wp_enqueue_script( 'donate-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/donate.js', array(), false, true );
+  }
+
+
 }
 /** add fonts */
 function add_google_fonts() {
