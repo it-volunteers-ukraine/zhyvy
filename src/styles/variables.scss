@@ -1,6 +1,32 @@
+//colors
+$color-white: #FFFFFF;
+$color-text-primary: #494949;
+$color-text-grey: #CDCAC1;
+$color-text-light-grey: #494949;
+$color-blue-light: #65C0FF;
+$color-blue-dark: #18538A;
+$color-orange: #DDAD1A;
+$color-green: #76DE45;
+$color-error: #EA5151;
 
-$green: #0fda20;
+//breakpoints
+$width-xl: 1183px;
+$width-l: 992px;
+$width-m: 768px;
+$width-s: 576px;
+$width-xs: 430px;
 
-.variables{
-    color: $green;
-}
+//font
+$font-size-base: 16px;
+$line-height-base: 132%;
+$font-family-base: "Roboto Condensed", sans-serif;
+$font-family-accent: "Aero Matics Stencil", sans-serif;
+
+//container
+$width-min-body: 360px;
+$width-max-container: 1184px; //max-width content + padding
+
+//other
+$border-radius-base: 8px;
+$box-shadow-base: 0px 2px 9px 0px rgba(0, 0, 0, 0.21);
+$transition-base: cubic-bezier(0.4, 0, 0.2, 1);

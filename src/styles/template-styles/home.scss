@@ -1,3 +1,5 @@
-.home {
-    color: pink;
+@import "../variables.scss";
+
+h2 {
+  color: $color-blue-dark;
 }
