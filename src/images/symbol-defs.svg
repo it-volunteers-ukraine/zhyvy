@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+        <symbol id="chevron-right" viewBox="0 0 6 10">
+            <path d="M3.879 5.00005L0.166504 1.28755L1.227 0.227051L6 5.00005L1.227 9.77305L0.166504 8.71255L3.879 5.00005Z"
+                  fill="currentColor"/>
+        </symbol>
+
+    </defs>
+</svg>

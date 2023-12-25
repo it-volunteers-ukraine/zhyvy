@@ -9,6 +9,13 @@ $color-orange: #DDAD1A;
 $color-green: #76DE45;
 $color-error: #EA5151;
 
+$gradient-orange-headline: linear-gradient(178deg, #E5B82F 8.3%, #F8E73D 98.01%);
+$gradient-orange-sm: linear-gradient(98deg, #E5B82F 8.15%, #F8E73D 85.98%);
+$gradient-orange-btn: linear-gradient(96deg, #F18739 0%, #EDD80C 100%);
+$gradient-orange-btn-reverse: linear-gradient(96deg, #EDD60D 0%, #F19512 100%);
+$gradient-blue: linear-gradient(96deg, #65C0FF 0%, #2AA2F4 100%);
+$gradient-colorful: linear-gradient(226deg, #F9E861 2.38%, #85E3CA 55.82%, #1163C9 103.97%);
+
 //breakpoints
 $width-xl: 1183px;
 $width-l: 992px;
@@ -28,5 +35,6 @@ $width-max-container: 1184px; //max-width content + padding
 
 //other
 $border-radius-base: 8px;
+$border-radius-button: 4px;
 $box-shadow-base: 0px 2px 9px 0px rgba(0, 0, 0, 0.21);
-$transition-base: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-base: cubic-bezier(0.4, 0, 0.2, 1) 0.4s;

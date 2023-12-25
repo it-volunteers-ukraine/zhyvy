@@ -1,0 +1,160 @@
+@import "variables.scss";
+
+.button {
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: $border-radius-button;
+  background: $gradient-blue;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: transform $transition-base;
+
+  &:active {
+    transform: scale(.96);
+  }
+
+  // Filled
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background: $gradient-orange-btn;
+    transition: opacity $transition-base;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &--small {
+    @extend .button;
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+  &--medium {
+    @extend .button;
+    padding: 13px 14px;
+  }
+
+  &--large {
+    @extend .button;
+    font-size: 20px;
+    padding: 17px 16px;
+    border-radius: 8px;
+  }
+
+  &--header {
+    @extend .button;
+    background: $gradient-orange-btn;
+    padding: 10px 12px;
+
+    &:before {
+      background: $gradient-orange-btn-reverse;
+    }
+  }
+
+  &--email {
+    @extend .button;
+    padding: 13px 16px;
+  }
+
+  // Outlined
+
+  &--outlined {
+    @extend .button;
+    padding: 13px 14px;
+    border: 2px solid transparent;
+    background: transparent;
+    border-image: url("../images/button-border-blue.svg") 4 / 4px stretch;
+
+    &:before {
+      display: none;
+    }
+
+    &::after {
+      box-sizing: unset;
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid transparent;
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+      background: transparent;
+      border-image: url("../images/button-border-orange.svg") 4 / 4px stretch;
+      transition: opacity $transition-base;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      position: relative;
+      background-image: linear-gradient(96deg, #65C0FF 0%, #2AA2F4 30%, #F18739 60%, #EDD80C 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 300% 100%;
+      background-position: top left;
+      transition: all $transition-base;
+    }
+
+    &:hover span {
+      background-position: top left 100%;
+    }
+  }
+
+  &--outlined-help {
+    @extend .button--outlined;
+    padding: 13px 12px;
+    border-image: url("../images/button-border-white.svg") 4 / 4px stretch;
+
+    span {
+      gap: 6px;
+      background-image: linear-gradient(96deg, #FFFFFF 0%, #FFFFFF 30%, #F18739 60%, #EDD80C 100%);
+    }
+  }
+
+  &--outlined-phone {
+    @extend .button--outlined;
+    padding: 13px 16px;
+    border-image: url("../images/button-border-white.svg") 4 / 4px stretch;
+
+    span {
+      gap: 12px;
+      background-image: linear-gradient(96deg, #FFFFFF 0%, #FFFFFF 30%, #F18739 60%, #EDD80C 100%);
+    }
+  }
+
+
+}
+
+
