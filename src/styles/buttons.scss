@@ -21,8 +21,7 @@
     transform: scale(.96);
   }
 
-  // Filled
-
+  // Filled buttons
   &:before {
     content: "";
     position: absolute;
@@ -78,8 +77,7 @@
     padding: 13px 16px;
   }
 
-  // Outlined
-
+  // Outlined buttons
   &--outlined {
     @extend .button;
     padding: 13px 14px;
@@ -153,8 +151,108 @@
       background-image: linear-gradient(96deg, #FFFFFF 0%, #FFFFFF 30%, #F18739 60%, #EDD80C 100%);
     }
   }
-
-
 }
 
+// Arrow buttons
+.button-arrow {
+  color: $color-white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius-button;
+  background: $gradient-orange-btn;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: transform $transition-base;
 
+  &:active {
+    transform: scale(.96);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background: $gradient-orange-btn-reverse;
+    transition: opacity $transition-base;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &--small {
+    @extend .button-arrow;
+    width: 32px;
+    height: 32px;
+  }
+
+  &--medium {
+    @extend .button-arrow;
+    width: 44px;
+    height: 44px;
+  }
+
+  &--up {
+    @extend .button-arrow;
+    width: 52px;
+    height: 52px;
+    background: $gradient-colorful;
+
+    &:before {
+      background: $gradient-colorful-reverse;
+    }
+  }
+}
+
+// Tags
+.tag {
+  font-weight: 400;
+  line-height: 100%;
+  color: $color-white;
+  border-radius: 50px;
+
+  &--small {
+    @extend .tag;
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+
+  &--medium {
+    @extend .tag;
+    padding: 4px 12px;
+    font-size: 16px;
+    line-height: 132%;
+  }
+
+  &--large {
+    @extend .tag;
+    padding: 4px 12px;
+    font-size: 20px;
+    line-height: 132%;
+  }
+
+  //  colors
+  &--green {
+    background-color: $color-green;
+  }
+
+  &--orange {
+    background-color: $color-orange;
+  }
+
+  &--violet {
+    background-color: $color-violet;
+  }
+}

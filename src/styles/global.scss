@@ -5,6 +5,7 @@ body {
   color: $color-text-primary;
   font-size: $font-size-base;
   line-height: $line-height-base;
+  font-weight: $font-weight-base;
   font-family: $font-family-base;
 }
 
@@ -15,5 +16,59 @@ body {
   height: 100%;
   @media (max-width: $width-s) {
     padding: 0 16px;
+  }
+}
+
+.title-gradient-h1 { // gradient title for section headline
+  font-size: 44px;
+  line-height: 100%;
+  font-weight: 400;
+  background: $gradient-orange-headline;
+  font-family: $font-family-accent;
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media (max-width: $width-s) {
+    font-size: 40px;
+  }
+}
+
+.title-gradient-h2 {
+  font-size: 36px;
+  line-height: 116%;
+  font-weight: 500;
+  background: $gradient-orange-sm;
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media (max-width: $width-l) {
+    font-size: 30px;
+  }
+}
+
+.title-page { // white title for page heading
+  font-size: 38px;
+  line-height: 116%;
+  font-weight: 400;
+  color: $color-white;
+  font-family: $font-family-accent;
+  text-align: center;
+  text-transform: uppercase;
+  @media (max-width: $width-l) {
+    font-size: 30px;
+    line-height: 100%;
+  }
+}
+
+.title-event { // white title for post page heading
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 116%;
+  color: $color-white;
+  text-transform: uppercase;
+  @media (max-width: $width-l) {
+    font-size: 20px;
   }
 }

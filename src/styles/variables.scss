@@ -1,12 +1,16 @@
 //colors
 $color-white: #FFFFFF;
 $color-text-primary: #494949;
-$color-text-grey: #CDCAC1;
-$color-text-light-grey: #494949;
+
+$color-second-gray: #595959;
+$color-third-gray: #848592;
+$color-light-gray: #CDCAC1;
+
 $color-blue-light: #65C0FF;
 $color-blue-dark: #18538A;
 $color-orange: #DDAD1A;
 $color-green: #76DE45;
+$color-violet: #6E78CD;
 $color-error: #EA5151;
 
 $gradient-orange-headline: linear-gradient(178deg, #E5B82F 8.3%, #F8E73D 98.01%);
@@ -15,6 +19,7 @@ $gradient-orange-btn: linear-gradient(96deg, #F18739 0%, #EDD80C 100%);
 $gradient-orange-btn-reverse: linear-gradient(96deg, #EDD60D 0%, #F19512 100%);
 $gradient-blue: linear-gradient(96deg, #65C0FF 0%, #2AA2F4 100%);
 $gradient-colorful: linear-gradient(226deg, #F9E861 2.38%, #85E3CA 55.82%, #1163C9 103.97%);
+$gradient-colorful-reverse: linear-gradient(224deg, #1163C9 2.29%, #85E3CA 53.69%, #F9E861 100%);
 
 //breakpoints
 $width-xl: 1183px;
@@ -26,6 +31,7 @@ $width-xs: 430px;
 //font
 $font-size-base: 16px;
 $line-height-base: 132%;
+$font-weight-base: 400;
 $font-family-base: "Roboto Condensed", sans-serif;
 $font-family-accent: "Aero Matics Stencil", sans-serif;
 
