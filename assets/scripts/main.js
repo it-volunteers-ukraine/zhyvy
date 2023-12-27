@@ -1,1 +1,1 @@
-console.log("footer part"),console.log("header"),console.log("main");
+console.log("footer part");const headerMenu=document.querySelector("#headerMenu"),headerMobileMenuToggle=document.querySelector("#headerMobileMenuToggle");headerMobileMenuToggle.addEventListener("click",(()=>{headerMenu.classList.toggle("menu--mobile")})),document.addEventListener("click",(function(e){e.target.closest("#headerMenu")||headerMenu.classList.remove("menu--mobile")})),console.log("main");
