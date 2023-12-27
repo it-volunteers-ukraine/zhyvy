@@ -19,6 +19,16 @@ body {
   }
 }
 
+.wrapper {
+  padding-top: 94px;
+  @media (max-width: $width-l) {
+    padding-top: 80px;
+  }
+  @media (max-width: $width-xs) {
+    padding-top: 64px;
+  }
+}
+
 .title-gradient-h1 { // gradient title for section headline
   font-size: 44px;
   line-height: 100%;
