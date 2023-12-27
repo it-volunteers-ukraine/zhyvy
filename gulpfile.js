@@ -15,6 +15,13 @@ function images() {
     .pipe(dest('assets/images'))
 }
 
+function imagesBg() {
+  return src('src/images/bg/*.*')
+    .pipe(newer('assets/images/bg'))
+    // .pipe(imagemin())
+    .pipe(dest('assets/images/bg'))
+}
+
 function fonts() {
   return src('src/fonts/*.*')
     .pipe(newer('assets/fonts'))
@@ -63,6 +70,7 @@ function watching() {
   watch('src/styles/*scss', styles)
   watch('src/styles/template-styles/*scss', stylesTemplates)    
   watch(['src/images'], images)
+  watch(['src/images/bg/*.*'], imagesBg)
   watch(['src/fonts'], fonts)
   watch('src/scripts/*js', scripts)
   watch('src/scripts/template-scripts/*js', scriptsTemplates)
@@ -72,8 +80,9 @@ function watching() {
 exports.styles = styles;
 exports.stylesTemplates = stylesTemplates;
 exports.images = images;
+exports.imagesBg = imagesBg;
 exports.fonts = fonts;
 exports.scripts = scripts;
 exports.scriptsTemplates = scriptsTemplates;
 exports.watching = watching;
-exports.default = parallel(styles, stylesTemplates, images, fonts, scripts, scriptsTemplates, watching);
+exports.default = parallel(styles, stylesTemplates, images, imagesBg, fonts, scripts, scriptsTemplates, watching);
