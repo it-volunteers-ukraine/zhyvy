@@ -22,7 +22,7 @@
 					?>
                 </div>
 
-                <div class="menu menu--mobile">
+                <div id="headerMenu" class="menu">
                     <nav class="menu-nav">
 						<?php wp_nav_menu( [
 							'theme_location' => 'header',
@@ -37,7 +37,7 @@
                         </a>
                     </nav>
 
-                    <button class="menu-toggle"></button>
+                    <button id="headerMobileMenuToggle" class="menu-toggle"></button>
 
                     <a class="button--header button--header--desktop"
                        href="<?php echo get_permalink( get_page_by_path( 'pidtrymaty' ) ); ?>">підтримати

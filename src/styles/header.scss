@@ -42,6 +42,7 @@
   }
 
   .menu-nav {
+    transition: right $transition-base;
     @media (max-width: $width-mobile-menu) {
       position: absolute;
       top: 100%;
@@ -56,11 +57,10 @@
       max-height: 83vh;
     }
     @media (max-width: $width-xs) {
-      left: 0;
       top: 99%;
+      width: 100%;
       border-radius: 0;
       border-top: 1px solid lighten($color-light-gray, 10%);
-
     }
   }
 
@@ -107,8 +107,15 @@
     border: 0;
     background: url("../images/burger-button.svg");
     display: none;
+    pointer-events: none;
+    visibility: hidden;
     @media (max-width: $width-mobile-menu) {
       display: inline-block;
+      pointer-events: all;
+      visibility: visible;
+    }
+    @media (max-width: $width-xs) {
+      margin-right: 0;
     }
   }
 
