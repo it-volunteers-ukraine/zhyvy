@@ -92,10 +92,6 @@
                     Small tag
                 </span>
 
-                <span class="tag--medium tag--green">
-                    Medium tag
-                </span>
-
                 <span class="tag--large tag--green">
                     Large tag
                 </span>
