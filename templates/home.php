@@ -92,10 +92,6 @@
                     Small tag
                 </span>
 
-                <span class="tag--medium tag--green">
-                    Medium tag
-                </span>
-
                 <span class="tag--large tag--green">
                     Large tag
                 </span>
@@ -113,6 +109,12 @@
                 </span>
 
             </div>
+
+            <div style="background: #2d3136; padding: 150px; margin-top: 200px"></div>
+            <div style="background: #2d3136; padding: 150px; margin-top: 200px"></div>
+            <div style="background: #2d3136; padding: 150px; margin-top: 200px"></div>
+            <div style="background: #2d3136; padding: 150px; margin-top: 200px"></div>
+            <div style="background: #2d3136; padding: 150px; margin-top: 200px"></div>
 
         </section>
     </main>
