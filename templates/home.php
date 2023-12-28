@@ -6,14 +6,32 @@
 ?>
 
     <main>
-        <section class="container">
-            <h2>home page</h2>
-            <p>Програма спрямованої на подолання залежностей та поліпшення якості життя. Програма включає діагностику,
-                індивідуальну чи групову терапію, профілактичні заходи та підтримку спільноти.</p>
-            <p>Надається можливість
-                зручної участі в програмі, що дозволяє зберігати стандартний графік роботи та навчання. Програма
-                базується на сучасних дослідженнях та практиці, спрямована на тверезе та офігенне життя.</p>
+        <!-- Hero section -->
+        <section class="hero"
+                 style="background-image: url('<?php the_field( 'hero_img' ); ?>')">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="top">
+                        <h2 class="title">живи</h2>
+                        <h1 class="slogan"><?php the_field( 'hero_slogan' ); ?></h1>
+                    </div>
+                    <p class="text"><?php the_field( 'hero_text' ); ?></p>
+                    <a class="contact" href="tel:<?php the_field( 'phone_hotline', 'option' ); ?>" target="_blank"
+                       aria-label="Подзвонити на гарячу лінію">
+                        <svg width="24" height="24">
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-phone_24"></use>
+                        </svg>
+                        <p>
+                            <span class="contact-phone"><?php the_field( 'phone_hotline_display', 'option' ); ?></span>
+                            <span class="contact-text"><?php the_field( 'hero_phone_text' ); ?></span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
 
+
+        <section class="container">
             <div style="background: #2d3136; padding: 20px; margin-top: 40px">
                 <h2 class="title-gradient-h1">title gradient h1</h2>
 
