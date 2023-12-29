@@ -120,6 +120,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
   }
 
@@ -129,9 +130,6 @@
     font-weight: 500;
     @media screen and (max-width: $width-l) {
       font-size: 27px;
-    }
-    @media screen and (max-width: $width-xs) {
-      font-size: 17px;
     }
   }
 
@@ -146,6 +144,7 @@
     }
   }
 }
+
 
 // About section
 .about {
@@ -218,5 +217,61 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+
+// Help section
+.help {
+  padding: 54px 66px;
+  margin-bottom: 132px;
+  color: $color-white;
+  background-image: url("../../images/bg/poryad_bg_desk.jpg");
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: $width-l) {
+    padding: 64px 0;
+    margin-bottom: 96px;
+    background-image: url("../../images/bg/poryad_bg_desk_992.jpg");
+  }
+  @media screen and (max-width: $width-xs) {
+    padding: 50px 0;
+    margin-bottom: 82px;
+  }
+
+  .title {
+    margin-bottom: 24px;
+    font-size: 78px;
+    font-weight: 400;
+    line-height: 100%;
+    font-family: $font-family-accent;
+    text-align: center;
+    @media screen and (max-width: $width-s) {
+      font-size: 64px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 72px;
+    @media screen and (max-width: $width-s) {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  .help-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin-bottom: 10px;
+      font-size: 22px;
+      text-align: center;
+    }
   }
 }

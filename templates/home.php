@@ -21,7 +21,7 @@
                             <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-phone_24"></use>
                         </svg>
                         <p>
-                            <span class="contact-phone"><?php the_field( 'phone_hotline_display', 'option' ); ?></span>
+                            <span class="contact-phone"><?php the_field( 'hero_phone_number', ); ?></span>
                             <span class="contact-text"><?php the_field( 'hero_phone_text' ); ?></span>
                         </p>
                     </a>
@@ -49,6 +49,35 @@
                             <svg width="8" height="16">
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
                             </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  Help section  -->
+        <section class="help">
+            <div class="container">
+                <h2 class="title"><?php the_field( 'help_title' ); ?></h2>
+                <div class="bottom">
+                    <div class="help-item">
+                        <p><?php the_field( 'help_questionnaire_text' ); ?></p>
+                        <a href="<?php the_field( 'questionnaire_link', 'option' ); ?>" target="_blank"
+                           aria-label="Перейти на сторінку анкети" class="button--outlined-help">
+                            <span>
+                                <?php the_field( 'help_questionnaire_btn' ); ?>
+                                <i class="icon-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="help-item">
+                        <p><?php the_field( 'help_phone_text' ); ?></p>
+                        <a href="tel:<?php the_field( 'phone_hotline', 'option' ); ?>" target="_blank"
+                           aria-label="Подзвонити на гарячу лінію" class="button--outlined-phone">
+                            <span>
+                                <i class="icon-phone"></i>
+                                <?php the_field( 'phone_hotline_display', 'option' ); ?>
+                            </span>
                         </a>
                     </div>
                 </div>
