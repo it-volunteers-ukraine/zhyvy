@@ -7,8 +7,7 @@
 
     <main>
         <!-- Hero section -->
-        <section class="hero"
-                 style="background-image: url('<?php the_field( 'hero_img' ); ?>')">
+        <section class="hero">
             <div class="container">
                 <div class="hero-wrapper">
                     <div class="top">

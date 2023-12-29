@@ -5,11 +5,16 @@
   padding: 142px 0;
   margin-bottom: 92px;
   color: $color-white;
+  background-image: url("../../images/bg/main_bg_desk.jpg");
   background-size: cover;
   background-position: center;
   @media screen and (max-width: $width-l) {
     margin-bottom: 48px;
     padding: 64px 0;
+    background-image: url("../../images/bg/main_bg_992.jpg");
+  }
+  @media screen and (max-width: $width-m) {
+    background-image: url("../../images/bg/main_bg_768.jpg");
   }
   @media screen and (max-width: $width-xs) {
     padding: 53px 0;
