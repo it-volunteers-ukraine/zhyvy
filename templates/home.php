@@ -30,6 +30,32 @@
             </div>
         </section>
 
+        <!--  About section  -->
+        <section class="about">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="image">
+                        <img src="<?php echo esc_url( get_field( 'about_img' )['url'] ); ?>"
+                             alt="<?php echo esc_url( get_field( 'about_img' )['alt'] ); ?>">
+                    </div>
+                    <div class="content">
+                        <h2 class="title-gradient-h1"><?php the_field( 'about_title' ); ?></h2>
+                        <p><?php the_field( 'about_paragraph_1' ); ?></p>
+                        <p>
+                            <strong><?php the_field( 'about_title_2' ); ?></strong>
+							<?php the_field( 'about_paragraph_2' ); ?>
+                        </p>
+                        <a href="<?php echo get_permalink( get_page_by_path( 'pro-nas' ) ); ?>"
+                           class="button--medium"><?php the_field( 'about_btn_text' ); ?>
+                            <svg width="8" height="16">
+                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section class="container">
             <div style="background: #2d3136; padding: 20px; margin-top: 40px">
