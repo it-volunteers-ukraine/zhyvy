@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="hero-wrapper">
                     <div class="top">
-                        <h2 class="title">живи</h2>
+                        <span id="animatedTitle" class="animated-title">живи</span>
                         <h1 class="slogan"><?php the_field( 'hero_slogan' ); ?></h1>
                     </div>
                     <p class="text"><?php the_field( 'hero_text' ); ?></p>

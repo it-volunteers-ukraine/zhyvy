@@ -1,1 +1,1 @@
-console.log("home page");
+const speed=250,heroTitle=document.querySelector("#animatedTitle"),delay=800;function typeEffect(e,t){const n=e.innerHTML;e.innerHTML="";let c=0;setTimeout((function(){e.classList.add("_active");const i=setInterval((function(){c<n.length?(e.append(n.charAt(c)),c++):clearInterval(i)}),t)}),800)}typeEffect(heroTitle,250);

@@ -43,20 +43,33 @@
     }
   }
 
-  .title {
+  .animated-title {
+    min-width: 364px;
+    min-height: 147px;
     font-family: $font-family-accent;
     font-size: 147px;
     font-weight: 400;
     line-height: 100%;
     text-transform: uppercase;
+    color: transparent;
     @media screen and (max-width: $width-l) {
+      min-width: 245px;
+      min-height: 99px;
       font-size: 99px;
     }
     @media screen and (max-width: $width-s) {
+      min-width: 198px;
+      min-height: 80px;
       font-size: 80px;
     }
     @media screen and (max-width: $width-xs) {
+      min-width: 267px;
+      min-height: 108px;
       font-size: 108px;
+    }
+
+    &._active {
+      color: $color-white;
     }
   }
 
