@@ -80,6 +80,38 @@
             </div>
         </section>
 
+        <!--  Results section  -->
+        <div class="results">
+            <div class="container">
+                <div class="results-wrapper">
+                    <h2 class="title-gradient-h1"><?php the_field( 'results_title' ); ?></h2>
+                    <p class="text"><?php the_field( 'results_text' ); ?></p>
+                    <div class="card-list">
+						<?php if ( have_rows( 'results_cards' ) ): ?>
+							<?php while ( have_rows( 'results_cards' ) ): the_row(); ?>
+                                <div class="card">
+                                    <p class="card-number"><?php the_sub_field( 'number' ); ?></p>
+                                    <p class="card-title"><?php the_sub_field( 'title' ); ?></p>
+                                    <p class="card-description"><?php the_sub_field( 'description' ); ?></p>
+                                </div>
+							<?php endwhile; ?>
+						<?php endif; ?>
+                    </div>
+                    <div class="text-list">
+						<?php if ( have_rows( 'results_text_items' ) ): ?>
+							<?php while ( have_rows( 'results_text_items' ) ): the_row(); ?>
+                                <p><?php the_sub_field( 'description' ); ?></p>
+							<?php endwhile; ?>
+						<?php endif; ?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--  Gallery section -->
+
 
         <section class="container">
             <div style="background: #2d3136; padding: 20px; margin-top: 40px">

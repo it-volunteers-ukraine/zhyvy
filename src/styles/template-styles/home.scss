@@ -276,3 +276,131 @@
     }
   }
 }
+
+// Results section
+.results {
+  margin-bottom: 132px;
+  @media screen and (max-width: $width-l) {
+    margin-bottom: 96px;
+  }
+
+  .results-wrapper {
+    padding: 42px 36px 64px;
+    background-color: $color-white;
+    border-radius: $border-radius-base;
+    box-shadow: $box-shadow-base;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: $width-s) {
+      padding: 32px 16px;
+    }
+    @media screen and (max-width: $width-xs) {
+      padding: 32px 8px;
+    }
+  }
+
+  .title-gradient-h1 {
+    margin-bottom: 52px;
+    text-align: center;
+    @media screen and (max-width: $width-l) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .text {
+    max-width: 670px;
+    margin: 0 0 52px;
+    text-align: center;
+    font-size: 20px;
+    @media screen and (max-width: $width-l) {
+      padding: 0 8px;
+    }
+  }
+
+  .card-list {
+    margin-bottom: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 28px;
+    color: $color-third-gray;
+    @media screen and (max-width: $width-s) {
+      gap: 32px 16px;
+    }
+  }
+
+  .card {
+    width: 184px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    @media screen and (max-width: $width-s) {
+      width: 164px;
+    }
+    @media screen and (max-width: $width-xs) {
+      width: 148px;
+    }
+  }
+
+  .card-number {
+    margin-bottom: 12px;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 100%;
+    font-family: $font-family-accent;
+    text-transform: uppercase;
+    @media screen and (max-width: $width-xs) {
+      margin-bottom: 4px;
+      font-size: 30px;
+    }
+  }
+
+  .card-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 116%;
+    text-transform: uppercase;
+    @media screen and (max-width: $width-s) {
+      margin-bottom: 4px;
+      font-size: 18px;
+    }
+  }
+
+  .card-description {
+    line-height: 112%;
+  }
+
+  .text-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px 96px;
+    @media screen and (max-width: $width-xl) {
+      gap: 16px 66px;
+    }
+    @media screen and (max-width: $width-l) {
+      gap: 16px 46px;
+    }
+    @media screen and (max-width: $width-m) {
+      gap: 16px 36px;
+    }
+    @media screen and (max-width: $width-s) {
+      gap: 16px 0;
+      padding: 0 20px;
+    }
+
+    p {
+      width: 440px;
+      @media screen and (max-width: $width-xl) {
+        width: 45%;
+      }
+      @media screen and (max-width: $width-s) {
+        width: 100%;
+      }
+    }
+  }
+}
