@@ -35,7 +35,7 @@
                 <div class="about-wrapper">
                     <div class="image">
                         <img src="<?php echo esc_url( get_field( 'about_img' )['url'] ); ?>"
-                             alt="<?php echo esc_url( get_field( 'about_img' )['alt'] ); ?>">
+                             alt="<?php echo esc_attr( get_field( 'about_img' )['alt'] ); ?>">
                     </div>
                     <div class="content">
                         <h2 class="title-gradient-h1"><?php the_field( 'about_title' ); ?></h2>
@@ -109,8 +109,45 @@
             </div>
         </div>
 
-
         <!--  Gallery section -->
+        <div class="gallery">
+            <div class="container">
+                <h2 class="title-gradient-h1"><?php the_field( 'gallery_title' ); ?></h2>
+                <div class="carousel-wrapper">
+                    <div class="swiper swiperGallery">
+                        <div class="swiper-wrapper">
+							<?php if ( have_rows( 'gallery_images' ) ): ?>
+								<?php while ( have_rows( 'gallery_images' ) ): the_row(); ?>
+                                    <div class="swiper-slide">
+                                        <img src="<?php echo esc_url( get_sub_field( 'img' )['url'] ); ?>"
+                                             alt="<?php echo esc_attr( get_sub_field( 'img' )['alt'] ); ?>">
+                                    </div>
+								<?php endwhile; ?>
+							<?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="button-arrow--medium button-next">
+                        <svg width="12" height="24">
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                        </svg>
+                    </div>
+                    <div class="button-arrow--medium button-prev">
+                        <svg width="12" height="24">
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                        </svg>
+                    </div>
+                </div>
+                <a href="<?php echo get_permalink( get_page_by_path( 'galereya' ) ); ?>"
+                   class="button--large"><?php the_field( 'gallery_btn' ); ?>
+                    <svg width="8" height="16">
+                        <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- -->
 
 
         <section class="container">
