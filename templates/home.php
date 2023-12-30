@@ -63,21 +63,17 @@
                     <div class="help-item">
                         <p><?php the_field( 'help_questionnaire_text' ); ?></p>
                         <a href="<?php the_field( 'questionnaire_link', 'option' ); ?>" target="_blank"
-                           aria-label="Перейти на сторінку анкети" class="button--outlined-help">
-                            <span>
-                                <?php the_field( 'help_questionnaire_btn' ); ?>
-                                <i class="icon-chevron-right"></i>
-                            </span>
+                           aria-label="Перейти на сторінку анкети" class="button--help">
+							<?php the_field( 'help_questionnaire_btn' ); ?>
+                            <i class="icon-chevron-right"></i>
                         </a>
                     </div>
                     <div class="help-item">
                         <p><?php the_field( 'help_phone_text' ); ?></p>
                         <a href="tel:<?php the_field( 'phone_hotline', 'option' ); ?>" target="_blank"
-                           aria-label="Подзвонити на гарячу лінію" class="button--outlined-phone">
-                            <span>
-                                <i class="icon-phone"></i>
-                                <?php the_field( 'phone_hotline_display', 'option' ); ?>
-                            </span>
+                           aria-label="Подзвонити на гарячу лінію" class="button--phone">
+                            <i class="icon-phone"></i>
+							<?php the_field( 'phone_hotline_display', 'option' ); ?>
                         </a>
                     </div>
                 </div>
@@ -119,20 +115,6 @@
                 <span>
                     button outlined
                   <i class="icon-chevron-right"></i>
-                </span>
-                </a>
-
-                <a href="#" class="button--outlined-help">
-                <span>
-                   button get help
-                  <i class="icon-chevron-right"></i>
-                </span>
-                </a>
-
-                <a href="#" class="button--outlined-phone">
-                <span>
-                    <i class="icon-phone"></i>
-                    +38 093 318 37 12
                 </span>
                 </a>
 

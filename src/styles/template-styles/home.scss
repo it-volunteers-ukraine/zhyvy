@@ -245,6 +245,7 @@
     font-weight: 400;
     line-height: 100%;
     font-family: $font-family-accent;
+    text-transform: uppercase;
     text-align: center;
     @media screen and (max-width: $width-s) {
       font-size: 64px;

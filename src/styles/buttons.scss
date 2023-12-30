@@ -131,26 +131,21 @@
     }
   }
 
-  &--outlined-help {
-    @extend .button--outlined;
-    padding: 13px 12px;
-    border-image: url("../images/button-border-white.svg") 4 / 4px stretch;
-
-    span {
-      gap: 6px;
-      background-image: linear-gradient(96deg, #FFFFFF 0%, #FFFFFF 30%, #F18739 60%, #EDD80C 100%);
-    }
+  // Buttons at Homepage
+  &--help {
+    @extend .button;
+    background: transparent;
+    box-shadow: 0px 0px 0px 2px $color-white inset;
+    padding: 14px 12px;
+    gap: 6px;
   }
 
-  &--outlined-phone {
-    @extend .button--outlined;
-    padding: 13px 16px;
-    border-image: url("../images/button-border-white.svg") 4 / 4px stretch;
-
-    span {
-      gap: 12px;
-      background-image: linear-gradient(96deg, #FFFFFF 0%, #FFFFFF 30%, #F18739 60%, #EDD80C 100%);
-    }
+  &--phone {
+    @extend .button;
+    background: transparent;
+    box-shadow: 0px 0px 0px 2px $color-white inset;
+    padding: 14px 16px;
+    gap: 12px;
   }
 }
 
