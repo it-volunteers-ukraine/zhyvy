@@ -119,8 +119,11 @@
 							<?php if ( have_rows( 'gallery_images' ) ): ?>
 								<?php while ( have_rows( 'gallery_images' ) ): the_row(); ?>
                                     <div class="swiper-slide">
-                                        <img src="<?php echo esc_url( get_sub_field( 'img' )['url'] ); ?>"
-                                             alt="<?php echo esc_attr( get_sub_field( 'img' )['alt'] ); ?>">
+                                        <a href="<?php echo esc_url( get_sub_field( 'img' )['url'] ); ?>"
+                                           data-lightbox="galleryImages">
+                                            <img src="<?php echo esc_url( get_sub_field( 'img' )['url'] ); ?>"
+                                                 alt="<?php echo esc_attr( get_sub_field( 'img' )['alt'] ); ?>">
+                                        </a>
                                     </div>
 								<?php endwhile; ?>
 							<?php endif; ?>
