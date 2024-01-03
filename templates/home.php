@@ -115,19 +115,19 @@
                 <h2 class="title-gradient-h1"><?php the_field( 'gallery_title' ); ?></h2>
                 <div class="carousel-wrapper">
                     <div class="swiper swiperGallery">
-                        <div class="swiper-wrapper">
-							<?php if ( have_rows( 'gallery_images' ) ): ?>
-								<?php while ( have_rows( 'gallery_images' ) ): the_row(); ?>
-                                    <div class="swiper-slide">
-                                        <a href="<?php echo esc_url( get_sub_field( 'img' )['url'] ); ?>"
+						<?php
+							$images = get_field( 'gallery_images' );
+							if ( $images ): ?>
+                                <div class="swiper-wrapper">
+									<?php foreach ( $images as $image ): ?>
+                                        <a class="swiper-slide" href="<?php echo esc_url( $image['url'] ); ?>"
                                            data-lightbox="galleryImages">
-                                            <img src="<?php echo esc_url( get_sub_field( 'img' )['url'] ); ?>"
-                                                 alt="<?php echo esc_attr( get_sub_field( 'img' )['alt'] ); ?>">
+                                            <img src="<?php echo esc_url( $image['url'] ); ?>"
+                                                 alt="<?php echo esc_attr( $image['alt'] ); ?>">
                                         </a>
-                                    </div>
-								<?php endwhile; ?>
+									<?php endforeach; ?>
+                                </div>
 							<?php endif; ?>
-                        </div>
                     </div>
                     <div class="button-arrow--medium button-next">
                         <svg width="12" height="24">
@@ -149,6 +149,5 @@
             </div>
         </div>
     </main>
-
 
 <?php get_footer(); ?>
