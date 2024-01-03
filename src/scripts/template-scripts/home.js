@@ -54,11 +54,10 @@ function initializeLightbox() {
         'resizeDuration': 200,
         'alwaysShowNavOnTouchDevices': true,
         "disableScrolling": true,
+        'wrapAround': true,
     });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     initializeLightbox();
 });
-
-
