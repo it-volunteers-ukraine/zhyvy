@@ -62,7 +62,7 @@
                 <div class="bottom">
                     <div class="help-item">
                         <p><?php the_field( 'help_questionnaire_text' ); ?></p>
-                        <a href="<?php the_field( 'questionnaire_link', 'option' ); ?>" target="_blank"
+                        <a href="<?php the_field( 'questionnaire', 'option' ); ?>" target="_blank"
                            aria-label="Перейти на сторінку анкети" class="button--help">
 							<?php the_field( 'help_questionnaire_btn' ); ?>
                             <i class="icon-chevron-right"></i>
