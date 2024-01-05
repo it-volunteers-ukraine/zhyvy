@@ -19,7 +19,7 @@ get_header();
     global $post;
     
     $myposts = get_posts([
-        'post_type' => 'work_directions',
+        'post_type' => 'work',
     ]);
      ?>
             <ul class="work-directions__list">
@@ -28,9 +28,7 @@ get_header();
          { foreach ($myposts as $post) 
             { setup_postdata($post);
                 set_query_var('type', 'work-directions' );
-                // set_query_var('classButton', 'button--medium' ); 
-                // set_query_var('text', 'докладніше' );
-                
+                                                
             get_template_part('template-parts/content', 'wd-card' );
      } 
     } 

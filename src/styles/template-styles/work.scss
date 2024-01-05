@@ -20,10 +20,10 @@
 
 //Work directions section
 .work-directions {
-  margin: 86px 0 64px;
+  padding: 86px 0 64px;
 
   @media screen and (max-width: $width-l) {
-    margin: 48px 0 32px;
+    padding: 48px 0 32px;
   }
 }
 
