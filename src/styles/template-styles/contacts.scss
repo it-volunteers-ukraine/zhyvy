@@ -1,0 +1,95 @@
+@import "../variables.scss";
+
+.heading {
+  padding: 24px 0;
+  background-image: url("../../images/bg/page_banner_desk.jpg");
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: $width-l) {
+    padding: 16px 0;
+  }
+}
+
+.content {
+  padding: 72px 0 132px;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: $width-l) {
+    padding: 48px 0 82px;
+  }
+  @media screen and (max-width: $width-s) {
+    flex-direction: column;
+  }
+}
+
+.contacts {
+  width: 346px;
+  min-width: 346px;
+  margin-right: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px 0;
+  font-size: 17px;
+  @media screen and (max-width: $width-l) {
+    margin-right: 32px;
+    font-size: 16px;
+  }
+  @media screen and (max-width: $width-m) {
+    width: 288px;
+    min-width: 288px;
+    gap: 24px 0;
+  }
+  @media screen and (max-width: $width-s) {
+    width: 100%;
+    min-width: 100%;
+    margin-right: 0;
+    margin-bottom: 48px;
+  }
+}
+
+.contacts-top, .contacts-middle {
+  a {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts-bottom {
+  margin-bottom: -16px;
+
+  a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-right: 28px;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.map {
+  width: 100%;
+  box-shadow: $box-shadow-base;
+  background-color: $color-light-gray;
+  min-height: 300px;
+  @media screen and (max-width: $width-s) {
+    height: 300px;
+  }
+}
