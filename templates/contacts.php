@@ -6,11 +6,11 @@
 ?>
 
     <main>
-        <section class="heading">
-            <div class="container">
-                <h1 class="title-page"><?php the_field( 'title' ); ?></h1>
-            </div>
-        </section>
+
+		<?php
+			get_template_part( 'template-parts/page-banner', null, array(
+				'title' => get_field( "title" )
+			) ); ?>
 
         <section class="container">
             <div class="content">

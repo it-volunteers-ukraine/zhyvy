@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+.page-banner {
+  padding: 24px 0;
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: $width-l) {
+    padding: 13px 0;
+  }
+
+  &--single {
+    padding: 27px 0;
+    @media screen and (max-width: $width-l) {
+      padding: 16px 0;
+    }
+  }
+}

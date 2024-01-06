@@ -1,15 +1,5 @@
 @import "../variables.scss";
 
-.heading {
-  padding: 24px 0;
-  background-image: url("../../images/bg/page_banner_desk.jpg");
-  background-size: cover;
-  background-position: center;
-  @media screen and (max-width: $width-l) {
-    padding: 16px 0;
-  }
-}
-
 .content {
   padding: 72px 0 132px;
   display: flex;
@@ -45,6 +35,19 @@
     margin-right: 0;
     margin-bottom: 48px;
   }
+
+  a {
+    &:hover .icon {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  transition: transform $transition-base;
 }
 
 .contacts-top, .contacts-middle {
@@ -78,16 +81,10 @@
   }
 }
 
-.icon {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-}
-
 .map {
   width: 100%;
   box-shadow: $box-shadow-base;
-  background-color: $color-light-gray;
+  background-color: rgba($color-light-gray, 0.5);
   min-height: 300px;
   @media screen and (max-width: $width-s) {
     height: 300px;
