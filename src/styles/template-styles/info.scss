@@ -53,8 +53,10 @@
     margin-top: -70px;
   }
 
-  button {
+  // Read more button hidden by default, shown with js
+  .button--outlined {
     margin-top: 20px;
+    display: none;
   }
 }
 
