@@ -1,4 +1,4 @@
-function checkAndHideButton() {
+function showReadMoreButton() {
     document.querySelectorAll('.description').forEach((element) => {
         const textElement = element.querySelector('.text-expandable');
         const visibleHeight = textElement.clientHeight;
@@ -7,13 +7,13 @@ function checkAndHideButton() {
         const expandedHeight = textElement.scrollHeight;
         textElement.classList.remove('expanded');
 
-        if (visibleHeight === expandedHeight) {
-            element.querySelector('.button--outlined').style.display = 'none';
+        if (visibleHeight !== expandedHeight) {
+            element.querySelector('.button--outlined').style.display = 'inline-flex';
         }
     });
 }
 
-window.onload = checkAndHideButton;
+window.onload = showReadMoreButton;
 
 
 function expandText(button) {
