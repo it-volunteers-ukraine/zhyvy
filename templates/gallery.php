@@ -10,40 +10,78 @@ get_header();
         <div class="page-top-banner">
             <h1 class="title-page"><?php echo esc_html( get_field('title') ); ?></h1>
         </div>
-        <div class="container">    
+        <div class="container">
+        <?php
+			$args          = ( [
+				'fields'         => 'ids',
+				'posts_per_page' => 3,
+				'post_type'      => 'gallery',
+				'paged'          => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
+			] );
+			$gallery_query = new WP_Query( $args );
+			$total_pages   = $gallery_query->max_num_pages;
+			$current_page  = max( 1, get_query_var( 'paged' ) );
+
+			if ( $gallery_query->have_posts() ) {
+				while ( $gallery_query->have_posts() ) {
+					$gallery_query->the_post();
+					?>    
             <article class="gallery-card">
                 <div class="gallery-image">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a>
-                                    <img src="https://img.freepik.com/free-photo/forest-landscape_71767-127.jpg?w=1380&t=st=1704209797~exp=1704210397~hmac=5b4f6ccd98ff906b0b2fd5e388202bf25e2c64734e9ba12339d16e797d286a21" alt="">
-                                </a>
+                    <div class="slider-wrapper">
+                        <div class="gallery-page-swiper swiper">
+                            <?php
+                                    $images = get_field( 'gallery' );
+                                    if ( $images ): ?>
+                                        <div class="swiper-wrapper">
+                                            <?php foreach ( $images as $image ): ?>
+
+                                                <a class="swiper-slide" href="<?php echo esc_url( $image['url'] ); ?>" data-lightbox="<?php the_ID(); ?>">
+                                                    <img src="<?php echo esc_url( $image['url'] ); ?>"
+                                                        alt="<?php echo esc_attr( $image['alt'] ); ?>">
+                                                </a>
+                                            
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php endif; ?>
+                            <div class="button-arrow--small button-prev">
+                                <svg width="7.8" height="12.7">
+                                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                                </svg>
+                            </div>
+                            <div class="button-arrow--small button-next">
+                                <svg width="7.8" height="12.7">
+                                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                                </svg>
                             </div>
                         </div>
-                        <div class="button-arrow--small button-prev">
-                            <svg width="7.8" height="12.7">
-                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
-                            </svg>
-                        </div>
-                        <div class="button-arrow--small button-next">
-                            <svg width="7.8" height="12.7">
-                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
-                            </svg>
-                        </div>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
                 <div class="gallery-card-content">
-                    <h2 class="title-gradient-h2">єдність до перемоги</h2>
-                    <div class="gallery-card-date">24 серпня 2023</div>
-                    <p class="gallery-card-text">Текст про захід. Громадська Організація, Центр Психокорекції та Школа Тверезого і Офігєнного 
-                        Життя —  це три найменування, які віддзеркалюють різноманіття наших напрямків, спрямованих на підтримку та розвиток тверезого та насиченого життя.Профілактичний Проект ЖИВИ виріс до статусу Громадська Організація ЖИВИ Громадська Організація, Центр Психокорекції та Школа Тверезого і Офігєнного Життя —  це три найменування, які віддзеркалюють різноманіття наших 
-                    </p>
+                    <h2 class="title-gradient-h2"><?php the_title() ?></h2>
+                    <div class="gallery-card-date"><?php echo esc_html( get_field('date') ); ?></div>
+                    <div class="gallery-text-wrapper">
+                    <?php echo wp_kses_post ( get_field('text') ); ?>
+                    </div>
                 </div>
             </article>
+
+            <?php
+				}
+			}
+		?>
                       
             <div class="pagination">
+            <?php
+				echo paginate_links( [
+					'base'      => get_pagenum_link( 1 ) . '%_%',
+					'format'    => '/page/%#%',
+					'current'   => $current_page,
+					'total'     => $total_pages,
+					'prev_text' => __( '' ),
+					'next_text' => __( '' ),
+				] );
+			?>
                
             </div>
         </div>
