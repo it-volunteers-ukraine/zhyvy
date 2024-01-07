@@ -2,7 +2,7 @@ function checkAndHideButton() {
     document.querySelectorAll('.description').forEach((element) => {
         const textElement = element.querySelector('.text-expandable');
         const visibleHeight = textElement.clientHeight;
-        
+
         textElement.classList.add('expanded');
         const expandedHeight = textElement.scrollHeight;
         textElement.classList.remove('expanded');
@@ -17,7 +17,10 @@ window.onload = checkAndHideButton;
 
 
 function expandText(button) {
-    button.parentElement.querySelector('.text-expandable').classList.toggle('expanded');
+    const descriptionElement = button.parentElement;
+
+    descriptionElement.querySelector('.text-expandable').classList.toggle('expanded');
+    descriptionElement.scrollIntoView({behavior: 'smooth', block: 'nearest'});
     button.querySelectorAll('.btn-text').forEach((element) => element.classList.toggle('hidden'));
 }
 
