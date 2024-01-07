@@ -88,8 +88,7 @@
 							'format'    => '/page/%#%',
 							'current'   => $current_page,
 							'total'     => $total_pages,
-							'prev_text' => __( '<' ),
-							'next_text' => __( '>' ),
+							'prev_next' => false,
 						] );
 					?>
                 </div>
