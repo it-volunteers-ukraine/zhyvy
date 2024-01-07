@@ -1,0 +1,168 @@
+@import "../variables.scss";
+
+.content {
+  padding: 86px 0;
+  @media screen and (max-width: $width-l) {
+    padding: 48px 0;
+  }
+}
+
+.info-card {
+  margin-bottom: 72px;
+  display: flex;
+  align-items: stretch;
+
+  @media screen and (max-width: $width-m) {
+    flex-direction: column;
+  }
+
+  &:last-child {
+    margin-bottom: 64px;
+  }
+}
+
+.title-gradient-h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  min-height: 60px;
+  @media screen and (max-width: $width-xl) {
+    font-size: 26px;
+  }
+  @media screen and (max-width: $width-m) {
+    min-height: unset;
+  }
+}
+
+.description {
+  padding-top: 100px;
+  margin-top: -100px;
+  padding-left: 18px;
+  min-height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media screen and (max-width: $width-m) {
+    width: 100%;
+    padding-left: 0;
+    align-items: flex-end;
+  }
+  @media screen and (max-width: $width-xs) {
+    padding-top: 70px;
+    margin-top: -70px;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}
+
+.text-expandable {
+  text-align: justify;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  @media screen and (max-width: $width-l) {
+    -webkit-line-clamp: 5;
+  }
+
+  &.expanded {
+    display: block;
+    overflow: unset;
+    -webkit-box-orient: unset;
+    -webkit-line-clamp: unset;
+  }
+}
+
+.btn-text {
+  font-style: normal
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.carousel-wrapper {
+  width: 50%;
+  margin-right: 18px;
+  position: relative;
+  @media screen and (max-width: $width-m) {
+    width: 100%;
+    margin-bottom: 24px;
+    margin-right: 0;
+  }
+}
+
+.swiper {
+  border-radius: $border-radius-base;
+  @media screen and (max-width: $width-s) {
+    padding-bottom: 22px;
+  }
+}
+
+.swiper-wrapper {
+  height: 350px;
+  @media screen and (max-width: $width-l) {
+    height: 290px;
+  }
+  @media screen and (max-width: $width-m) {
+    height: 390px;
+  }
+  @media screen and (max-width: $width-s) {
+    height: 330px;
+  }
+}
+
+.swiper-slide {
+  overflow: hidden;
+  min-height: 100%;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $border-radius-base;
+  }
+}
+
+.button-next,
+.button-prev {
+  position: absolute;
+  top: calc(50% - 22px);
+  @media screen and (max-width: $width-s) {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.button-prev {
+  left: 18px;
+  @media screen and (max-width: $width-s) {
+    left: 18px;
+  }
+
+  svg {
+    transform: rotate(-180deg);
+  }
+}
+
+.button-next {
+  right: 18px;
+  @media screen and (max-width: $width-s) {
+    right: 18px;
+  }
+}
+
+.button-arrow--small {
+  @media screen and (max-width: $width-l) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+
