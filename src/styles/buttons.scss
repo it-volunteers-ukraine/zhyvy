@@ -17,6 +17,7 @@
   z-index: 1;
   transition: transform $transition-base;
   white-space: nowrap;
+  user-select: none;
 
   &:active {
     transform: scale(.96);
@@ -161,6 +162,7 @@
   position: relative;
   z-index: 1;
   transition: transform $transition-base;
+  user-select: none;
 
   &:active {
     transform: scale(.96);
@@ -219,6 +221,7 @@
   color: $color-white;
   border-radius: 50px;
   white-space: nowrap;
+  user-select: none;
 
   &--small {
     @extend .tag;
@@ -253,6 +256,7 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
+  user-select: none;
 
   .page-numbers {
     width: 44px;
