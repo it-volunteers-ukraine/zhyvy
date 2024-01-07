@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-<main class="wd">
+<main class="work">
     <section class="single-page-banner">
         <div class="container">
             <div class="singel-page-banner__wrapper">
@@ -18,7 +18,7 @@ get_header();
         </div>
     </section>
 
-    <section class="wd__article">
+    <section class="work-article">
         <div class="container">
             <?php
 		        while ( have_posts() ) :

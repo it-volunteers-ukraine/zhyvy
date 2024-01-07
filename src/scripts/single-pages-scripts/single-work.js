@@ -8,15 +8,16 @@ const swiper = new Swiper(".work__gallery", {
   direction: "horizontal",
   spaceBetween: 32,
   breakpoints: {
-    993: {
+    992: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 24,
       direction: "vertical",
     },
-    577: {
+    768: {
       slidesPerView: 2,
       slidesPerGroup: 2,
+      direction: "horizontal",
     },
   },
   navigation: {
@@ -37,3 +38,7 @@ function initializeLightbox() {
 document.addEventListener("DOMContentLoaded", function () {
   initializeLightbox();
 });
+
+// document.addEventListener("resize", function () {
+//   swiper.changeDirection("horizontal", true);
+// });

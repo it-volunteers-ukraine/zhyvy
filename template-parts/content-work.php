@@ -1,4 +1,10 @@
-   <div class="wd__wrapper">
+   <div class="work-wrapper">
+
+       <div class="work-titles">
+           <h2 class="title-gradient-h2"><?php the_title(); ?></h2>
+           <h3 class="work-subtitle"><?php the_field( 'sub_title' ); ?></h3>
+       </div>
+
        <div class="carousel-wrapper">
            <div class="swiper work__gallery">
                <?php
@@ -27,4 +33,12 @@
                </svg>
            </div>
        </div>
+
+       <div class="work-content
+       ">
+           <?php the_field( 'content' ); ?>
+       </div>
+       <div class="work-motivation">
+       </div>
+
    </div>
