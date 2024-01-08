@@ -26,7 +26,7 @@
     align-self: stretch;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 992px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 991px) {
   .about-page .history_image-thumb {
     height: 360px;
     width: 334px;
@@ -49,6 +49,12 @@
   color: #595959;
   text-align: justify;
   text-overflow: ellipsis;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 991px) {
+  .about-page .history-content_description {
+    height: 360px;
+    width: 334px;
+  }
 }
 .about-page .history-content_text {
   font-family: "Roboto Condensed", sans-serif;
