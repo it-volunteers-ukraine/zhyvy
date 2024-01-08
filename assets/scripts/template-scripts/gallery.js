@@ -1,1 +1,1 @@
-console.log("gallery");
+const swiperGalleryPage=new Swiper(".gallery-page-swiper",{spaceBetween:32,loop:!0,keyboard:{enabled:!0},navigation:{nextEl:".button-next",prevEl:".button-prev"}});function initializeLightbox(){lightbox.option({resizeDuration:200,alwaysShowNavOnTouchDevices:!0,disableScrolling:!0,wrapAround:!0})}document.addEventListener("DOMContentLoaded",(function(){initializeLightbox()}));
