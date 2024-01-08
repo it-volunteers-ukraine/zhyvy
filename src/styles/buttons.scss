@@ -273,11 +273,11 @@
     transition: all $transition-base;
     white-space: nowrap;
 
-    &:active {
+    &:active:not(.dots) {
       transform: scale(.9);
     }
 
-    &:hover {
+    &:hover:not(.dots) {
       color: $color-white;
       background: $color-blue-light;
     }
