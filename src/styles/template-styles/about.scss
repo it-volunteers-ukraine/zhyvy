@@ -1,3 +1,409 @@
-.about {
-    color: red
+@import "../variables.scss";
+
+.about-page {
+  // history section****************************************
+  .history {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 0;
+    align-items: center;
+    gap: 36px;
+    align-self: stretch;
+    // 1183
+    @media screen and (min-width: $width-xl) {
+      padding: 86px 0px 132px 0px;
+    }
+    // 768
+    @media screen and (min-width: $width-m) {
+      padding: 48px 32px 96px 32px;
+    }
+    // 360 - 768
+    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+      flex-direction: column;
+      padding: 48px 16px 82px 16px;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch;
+    }
+  }
+
+  // container for img of history
+  .history_image-thumb {
+    // 768 - 992
+    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+      height: 360px;
+      width: 334px;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // content for history
+  .history-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1;
+  }
+
+  // container for text of history
+  .history-content_description {
+    padding-right: 16px;
+    overflow: hidden;
+    color: $color-second-gray;
+    text-align: justify;
+    text-overflow: ellipsis;
+    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+      height: 360px;
+      width: 334px;
+    }
+  }
+
+  .history-content_text {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    text-overflow: ellipsis;
+    color: $color-text-primary;
+  }
+
+  // team section****************************************
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // 360
+    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+      align-items: center;
+    }
+  } 
+
+  .team_list { 
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 36px;
+    justify-content: center;
+    margin: 0 -32px 0 0;
+    // 768
+    @media only screen and (min-device-width: $width-m) and  (max-width: $width-l) {
+      justify-content: flex-start;
+    }
+  }
+
+  // CARDS
+  .team-card {
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    margin: 0 32px 32px 0;
+    height: auto;
+    flex-basis: content;
+    border-radius: $border-radius-base;
+    overflow: hidden;
+    // 920
+    @media only screen and (min-device-width: $width-l)  {
+      flex-basis: 208px;
+    }
+    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+      flex-basis: 212px;
+    }
+  }
+
+  // TWO SIDEs of  team_CARDs for hover_effects
+  .front-side,
+  .back-side {
+    background-size: cover;
+    border-radius: $border-radius-base;
+    transition: transform $transition-base;
+    backface-visibility: hidden;
+    transition: transform $transition-base;
+  }
+
+  .front-side {
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+  }
+
+  .back-side {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(238, 238, 238, 0.88);
+    margin-top: 0;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+  }
+
+  // GLOW_TEXT ON CARD
+  .back-side_text {
+    padding: 42px 24px 32px 24px;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    text-align: center;
+    font-weight: 400;
+    line-height: $line-height-base;
+    color: $color-text-primary;
+  }
+
+  // cards hover efects for  back-side
+  .team-card:hover .back-side {
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+  }
+  // cards hover efects for  front-side
+  .team-card:hover .front-side {
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+  }
+
+  // wrapp for text in _team_card
+  .team-card_content {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    gap: 4px;
+    overflow: hidden;
+    border-radius: 0 0 $border-radius-base $border-radius-base;
+    background: linear-gradient(
+      228deg,
+      #3872e1 1.04%,
+      #22aef8 48.54%,  
+      #32d299 99.8% 
+    );
+    background-repeat: repeat;
+    background-size: cover;
+
+    //  1183
+    @media screen and (min-width: $width-xl) {
+      background-image: url(../../images/bg/poryad_bg_desk.jpg);
+      padding: 14px 16px;
+    }
+    // 768
+    @media screen and (min-width: $width-m) {
+      background-image: url(../../images/bg/poryad_bg_desk_992.jpg);
+      padding: 12px;
+    }
+    // 360
+    @media screen and (min-width: 360px) {
+      background-image: url(../../images/bg/poryad_bg_desk_360.jpg);
+      padding: 14px 16px;
+    }
+  }
+  // name and surname
+  .content_title {
+    align-self: stretch;
+    font-family: $font-family-base;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+    // 1183
+    @media screen and (min-width: $width-xl) {
+      font-size: 20px;
+      line-height: $line-height-base;
+    }
+    // 920
+    @media screen and (min-width: $width-l) {
+      font-size: $font-size-base;
+      line-height: 1;
+    }
+  }
+
+  // team position
+  .content_position {
+    font-family: $font-family-base;
+    color: $color-white;
+    font-size: 14px;
+    line-height: 116%;
+  }
+
+  // results_section**************************************************
+  .results {
+    margin-top: 60px;
+  }
+
+  .results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // swiper for Results_section
+  .results .swiperResults {
+    display: flex;
+    width: 70%;
+    height: auto;
+    padding-top: 36px;
+    justify-content: space-between;
+    padding: 0;
+    gap: 0;
+  }
+
+  .results .image-wrapper {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .results .swiper-slide {
+    border-radius: 2px;
+    box-shadow: $box-shadow-base;
+  }
+
+  .results img {
+    height: 100%;
+    width: 100%;
+  }
+
+  // honors-and-thanks__section****************************************
+  .honors-and-thanks {
+    margin-top: 132px;
+    @media only screen and (min-device-width: $width-l) {
+      margin-top: 96px;
+    }
+    @media only screen and (min-device-width: $width-min-body) {
+      margin-top: 82px;
+    }
+  }
+
+  // swiper for honors-and-thanks__section
+  .honors-and-thanks .swiperHonor {
+    display: flex;
+    height: 260px;
+    padding-top: 36px;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .honors-and-thanks .swiper-slide {
+    border-radius: 2px;
+    box-shadow: $box-shadow-base;
+    padding: 0;
+  }
+  .honors-and-thanks img {
+    height: 100%;
+    width: 100%;
+  }
+
+  // partners_section***********************************
+  .partners {
+    margin-top: 60px;
+
+    // Self-propelled styles for partners without a logo
+    &_name {
+      padding: 3px;
+      font-size: $font-size-base;
+      border: 1px solid $color-orange;
+      border-radius: $border-radius-button;
+    }
+  }
+
+  .partners-container {
+    @extend .results-container;
+  }
+
+  // list of logo partners
+  .partners_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 72px 76px;
+    padding: 36px 48px 64px 48px;
+    box-shadow: $box-shadow-base;
+    background-color: $color-white;
+    border-radius: $border-radius-base;
+
+    @media screen and (min-width: $width-min-body) {
+      gap: 48px 42px;
+    }
+  }
+  .partners-card
+  // 360
+  {
+    @media screen and (min-width: $width-min-body) {
+      align-self: stretch;
+      max-width: 100px;
+    }
+  }
+
+  // tip is an external link
+  .hint_wraper {
+    display: block;
+    position: relative;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 0;
+    width: 1px;
+  }
+  // text of hint
+  .hint {
+    display: none;
+    color: $color-error;
+    font-size: 12px;
+    position: absolute;
+  }
+
+  .partners-card a:focus .hint,
+  .partners-card a:hover .hint,
+  .partners-card a:active .hint {
+    display: inline-block;
+  }
+
+  // button-up-wrapp
+  .button-up-wrapp {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  // button-up
+  .button-up {
+    padding: 6px;
+    width: 52px;
+    height: 52px;
+    background: $gradient-colorful;
+    border-radius: $border-radius-button;
+    border: none;
+    margin-top: 68px;
+    transition: $transition-base;
+
+    & svg {
+      transform: rotate(-90deg);
+      fill: $color-white;
+    }
+    &:hover {
+      background: $gradient-colorful-reverse;
+    }
+  }
+
+  // ######################################################################
+  // styles for swiper-navigation
+  .swiper-button-next,
+  .swiper-button-prev {
+    &::after {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: $border-radius-button;
+      background: $gradient-orange-btn;
+      width: 32px;
+      height: 32px;
+      font-size: 20px;
+      color: $color-white;
+    }
+    &:hover:after {
+      background: $gradient-orange-btn-reverse;
+    }
+  }
 }
