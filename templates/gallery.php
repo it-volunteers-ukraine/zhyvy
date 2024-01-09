@@ -70,37 +70,19 @@ get_header();
 			}
 		?>
 
-            <?php
-                function wpdocs_get_paginated_links( $query ) {
-                    $currentPage = max( 1, get_query_var( 'paged', 1 ) );
-                    $pages = range( 1, max( 1, $query->max_num_pages ) );
-                    return array_map( function( $page ) use ( $currentPage ) {
-                        return ( object ) array(
-                            "isCurrent" => $page == $currentPage,
-                            "page" => $page,
-                            "url" => get_pagenum_link( $page )
-                        );
-                    }, $pages );
-                }
-			?>
-
-
-            <?php if ($total_pages > 1) : ?>
-
                 <div class="pagination">
-                    <?php foreach( wpdocs_get_paginated_links( $gallery_query ) as $link ) : ?>
-                        <div class="pagination-item">
-                            <?php if ( $link->isCurrent ): ?>
-                                <span aria-current="page" class="page-numbers current"><?php _e( $link->page ) ?></span>
-                            <?php else : ?>
-                                <a class="page-numbers" href="<?php esc_attr_e( $link->url ) ?>">
-                                    <?php _e( $link->page ) ?>
-                                </a>
-                            <?php endif; ?>
-                        </div>
-                    <?php endforeach; ?>
+					<?php
+						echo paginate_links( [
+							'base'      => get_pagenum_link( 1 ) . '%_%',
+							'format'    => '/page/%#%',
+							'current'   => $current_page,
+							'total'     => $total_pages,
+							'prev_next' => false,
+						] );
+					?>
                 </div>
-            <?php endif; ?>
+
+            
         </div>
 
     </section>
