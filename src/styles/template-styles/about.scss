@@ -80,16 +80,16 @@
     @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
       align-items: center;
     }
-  } 
+  }
 
-  .team_list { 
+  .team_list {
     display: flex;
     flex-wrap: wrap;
     padding-top: 36px;
     justify-content: center;
     margin: 0 -32px 0 0;
     // 768
-    @media only screen and (min-device-width: $width-m) and  (max-width: $width-l) {
+    @media only screen and (min-device-width: $width-m) and (max-width: $width-l) {
       justify-content: flex-start;
     }
   }
@@ -106,7 +106,7 @@
     border-radius: $border-radius-base;
     overflow: hidden;
     // 920
-    @media only screen and (min-device-width: $width-l)  {
+    @media only screen and (min-device-width: $width-l) {
       flex-basis: 208px;
     }
     @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
@@ -175,8 +175,8 @@
     background: linear-gradient(
       228deg,
       #3872e1 1.04%,
-      #22aef8 48.54%,  
-      #32d299 99.8% 
+      #22aef8 48.54%,
+      #32d299 99.8%
     );
     background-repeat: repeat;
     background-size: cover;
