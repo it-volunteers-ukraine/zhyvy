@@ -51,18 +51,12 @@ body {
   }
 }
 
-.title-gradient-h2 {
-  font-size: 36px;
+.title-gradient-h2 { // title for posts at gallery, work directions etc.
+  font-size: 30px;
   line-height: 116%;
   font-weight: 500;
-  background: $gradient-orange-sm;
   text-transform: uppercase;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  @media (max-width: $width-l) {
-    font-size: 30px;
-  }
+  color: $color-orange;
 }
 
 .title-page { // white title for page heading
