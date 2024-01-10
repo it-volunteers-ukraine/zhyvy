@@ -101,17 +101,22 @@
     transform-style: preserve-3d;
     perspective: 1000px;
     margin: 0 32px 32px 0;
-    height: auto;
-    flex-basis: content;
+    max-height: 341px;
     border-radius: $border-radius-base;
     overflow: hidden;
+
     // 920
     @media only screen and (min-device-width: $width-l) {
       flex-basis: 208px;
     }
+    // 768 
     @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
       flex-basis: 212px;
     }
+    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px){
+      flex-basis: 220px;
+    }
+   
   }
 
   // TWO SIDEs of  team_CARDs for hover_effects
@@ -122,11 +127,16 @@
     transition: transform $transition-base;
     backface-visibility: hidden;
     transition: transform $transition-base;
+    height: auto;
   }
 
   .front-side {
     transform: rotateY(0deg);
     transform-style: preserve-3d;
+    & img{
+   height: 200px;
+   width: 100%;
+    }
   }
 
   .back-side {
@@ -135,7 +145,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background: rgba(238, 238, 238, 0.88);
     margin-top: 0;
     transform: rotateY(180deg);
@@ -167,6 +176,7 @@
   // wrapp for text in _team_card
   .team-card_content {
     display: flex;
+   
     flex-direction: column;
     z-index: 100;
     gap: 4px;
@@ -277,7 +287,7 @@
   // swiper for honors-and-thanks__section
   .honors-and-thanks .swiperHonor {
     display: flex;
-    height: 260px;
+    height: 360px; 
     padding-top: 36px;
     justify-content: space-between;
     width: 100%;
