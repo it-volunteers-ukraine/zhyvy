@@ -71,6 +71,10 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_script( 'donate-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/donate.js', array(), false, true );
   }
 
+  if (get_post_type() === 'work' ) {
+    wp_enqueue_style('single-work-style', get_template_directory_uri() . '/assets/styles/single-pages-styles/single-work.css', array('main') );
+    wp_enqueue_script('single-work-scripts', get_template_directory_uri() . '/assets/scripts/single-pages-scripts/single-work.js', array(), false, true);
+    }
 
 }
 /** add fonts */
