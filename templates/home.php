@@ -57,30 +57,30 @@
         </div>
     </section>
 
-        <!--  Help section  -->
-        <section class="help">
-            <div class="container">
-                <h2 class="title"><?php the_field( 'help_title' ); ?></h2>
-                <div class="bottom">
-                    <div class="help-item">
-                        <p><?php the_field( 'help_questionnaire_text' ); ?></p>
-                        <a href="<?php the_field( 'questionnaire', 'option' ); ?>" target="_blank"
-                           aria-label="Перейти на сторінку анкети" class="button--help">
-							<?php the_field( 'help_questionnaire_btn' ); ?>
-                            <i class="icon-chevron-right"></i>
-                        </a>
-                    </div>
-                    <div class="help-item">
-                        <p><?php the_field( 'help_phone_text' ); ?></p>
-                        <a href="tel:<?php the_field( 'phone_hotline', 'option' ); ?>" target="_blank"
-                           aria-label="Подзвонити на гарячу лінію" class="button--phone">
-                            <i class="icon-phone"></i>
-							<?php the_field( 'phone_hotline_display', 'option' ); ?>
-                        </a>
-                    </div>
+    <!--  Help section  -->
+    <section class="help">
+        <div class="container">
+            <h2 class="title"><?php the_field( 'help_title' ); ?></h2>
+            <div class="bottom">
+                <div class="help-item">
+                    <p><?php the_field( 'help_questionnaire_text' ); ?></p>
+                    <a href="<?php the_field( 'questionnaire', 'option' ); ?>" target="_blank"
+                        aria-label="Перейти на сторінку анкети" class="button--help">
+                        <?php the_field( 'help_questionnaire_btn' ); ?>
+                        <i class="icon-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="help-item">
+                    <p><?php the_field( 'help_phone_text' ); ?></p>
+                    <a href="tel:<?php the_field( 'phone_hotline', 'option' ); ?>" target="_blank"
+                        aria-label="Подзвонити на гарячу лінію" class="button--phone">
+                        <i class="icon-phone"></i>
+                        <?php the_field( 'phone_hotline_display', 'option' ); ?>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <!--  Help section  -->
     <section class="help">
         <div class="container">

@@ -62,7 +62,7 @@
                            <p class="text"><?php the_field('phone_hotline_display', 'option'); ?></p>
                        </span>
                    </a>
-                   <a href="mailto:<?php the_field('value_email_btn'); ?>" target="_blank"
+                   <a href="mailto:<?php the_field( 'email', 'option' ); ?>" target="_blank"
                        aria-label="Зв'язатись за допомогою електронної пошти" class="button--email work-btn-email">
                        <svg width="18" height="18">
                            <use href="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#icon-mail"></use>
@@ -86,7 +86,7 @@
 
                    <?php elseif (in_array('email', $buttons, true)) :?>
 
-                   <a href="mailto:<?php the_field('value_email_btn'); ?>" target="_blank"
+                   <a href="mailto:<?php the_field( 'email', 'option' ); ?>" target="_blank"
                        aria-label="Зв'язатись за допомогою електронної пошти" class="button--email work-btn-email">
                        <svg width="18" height="18">
                            <use href="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#icon-mail"></use>
