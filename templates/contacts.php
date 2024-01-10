@@ -22,22 +22,22 @@
                            target="_blank" aria-label="Показати адресу на карті">
                             <span class="icon"
                                   style="background: url('<?php bloginfo( 'template_url' ); ?>/assets/images/colorIcon-location.svg');"></span>
-                            <p class="text"><?php the_field( 'address', 'option' ); ?></p>
+                            <p class="underlined"><?php the_field( 'address', 'option' ); ?></p>
                         </a>
 
                         <a href="mailto:<?php the_field( 'email', 'option' ); ?>"
                            target="_blank" aria-label="Зв'язатись за допомогою електронної пошти">
                             <span class="icon"
                                   style="background: url('<?php bloginfo( 'template_url' ); ?>/assets/images/colorIcon-envelope.svg');"></span>
-                            <p class="text"><?php the_field( 'email', 'option' ); ?></p>
+                            <p class="underlined"><?php the_field( 'email', 'option' ); ?></p>
                         </a>
 
                         <a href="tel:<?php the_field( 'phone_hotline', 'option' ); ?>"
                            target="_blank" aria-label="Зв'язатись за допомогою телефону">
                             <span class="icon"
                                   style="background: url('<?php bloginfo( 'template_url' ); ?>/assets/images/colorIcon-phone.svg');"></span>
-                            <p class="text">
-                                <span><?php the_field( 'phone_hotline_display', 'option' ); ?></span>
+                            <p>
+                                <span class="underlined"><?php the_field( 'phone_hotline_display', 'option' ); ?></span>
                                 <span><?php the_field( 'phone_text' ); ?></span>
                             </p>
                         </a>
@@ -53,7 +53,7 @@
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#colorIcon-facebook2"></use>
                                     </svg>
                                 </span>
-                                <p class="text"><?php the_field( 'facebook_main_text' ); ?></p>
+                                <p class="underlined"><?php the_field( 'facebook_main_text' ); ?></p>
                             </a>
 						<?php } ?>
 
@@ -65,7 +65,7 @@
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#colorIcon-facebook2"></use>
                                     </svg>
                                 </span>
-                                <p class="text"><?php the_field( 'facebook_hub_text' ); ?></p>
+                                <p class="underlined"><?php the_field( 'facebook_hub_text' ); ?></p>
                             </a>
 						<?php } ?>
 
@@ -77,7 +77,7 @@
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#colorIcon-site"></use>
                                     </svg>
                                 </span>
-                                <p class="text"><?php the_field( 'site_text' ); ?></p>
+                                <p class="underlined"><?php the_field( 'site_text' ); ?></p>
                             </a>
 						<?php } ?>
 
@@ -89,7 +89,7 @@
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#colorIcon-viber"></use>
                                     </svg>
                                 </span>
-                                <p class="text"><?php the_field( 'viber_text' ); ?></p>
+                                <p class="underlined"><?php the_field( 'viber_text' ); ?></p>
                             </a>
 						<?php } ?>
                     </div>

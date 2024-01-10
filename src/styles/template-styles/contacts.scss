@@ -10,7 +10,7 @@
   @media screen and (max-width: $width-s) {
     flex-direction: column;
   }
-} 
+}
 
 .contacts {
   width: 346px;
@@ -40,6 +40,10 @@
     &:hover .icon {
       transform: scale(1.2);
     }
+
+    &:hover .underlined {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -62,6 +66,12 @@
   p {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.underlined {
+  @media screen and (max-width: $width-xl) {
+    text-decoration: underline;
   }
 }
 
