@@ -47,9 +47,7 @@
                         <a href="<?php echo get_permalink( get_page_by_path( 'pro-nas' ) ); ?>"
                            class="button--medium"><?php the_field( 'about_btn_text' ); ?>
                             <svg width="8" height="16">
-                                <use
-                                        href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
-                                </use>
+                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
                             </svg>
                         </a>
                     </div>
@@ -65,30 +63,6 @@
                     <div class="help-item">
                         <p><?php the_field( 'help_questionnaire_text' ); ?></p>
                         <a href="<?php the_field( 'questionnaire', 'option' ); ?>" target="_blank"
-                           aria-label="Перейти на сторінку анкети" class="button--help">
-							<?php the_field( 'help_questionnaire_btn' ); ?>
-                            <i class="icon-chevron-right"></i>
-                        </a>
-                    </div>
-                    <div class="help-item">
-                        <p><?php the_field( 'help_phone_text' ); ?></p>
-                        <a href="tel:<?php the_field( 'phone_hotline', 'option' ); ?>" target="_blank"
-                           aria-label="Подзвонити на гарячу лінію" class="button--phone">
-                            <i class="icon-phone"></i>
-							<?php the_field( 'phone_hotline_display', 'option' ); ?>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--  Help section  -->
-        <section class="help">
-            <div class="container">
-                <h2 class="title"><?php the_field( 'help_title' ); ?></h2>
-                <div class="bottom">
-                    <div class="help-item">
-                        <p><?php the_field( 'help_questionnaire_text' ); ?></p>
-                        <a href="<?php the_field( 'questionnaire_link', 'option' ); ?>" target="_blank"
                            aria-label="Перейти на сторінку анкети" class="button--help">
 							<?php the_field( 'help_questionnaire_btn' ); ?>
                             <i class="icon-chevron-right"></i>
@@ -157,14 +131,12 @@
                     </div>
                     <div class="button-arrow--medium button-next">
                         <svg width="12" height="24">
-                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
-                            </use>
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
                         </svg>
                     </div>
                     <div class="button-arrow--medium button-prev">
                         <svg width="12" height="24">
-                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
-                            </use>
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
                         </svg>
                     </div>
                 </div>
