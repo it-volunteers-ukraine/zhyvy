@@ -19,7 +19,7 @@
   white-space: nowrap;
 
   &:active {
-    transform: scale(.96);
+    transform: scale(0.96);
   }
 
   // Filled buttons
@@ -117,7 +117,13 @@
       justify-content: center;
       gap: 8px;
       position: relative;
-      background-image: linear-gradient(96deg, #65C0FF 0%, #2AA2F4 30%, #F18739 60%, #EDD80C 100%);
+      background-image: linear-gradient(
+        96deg,
+        #65c0ff 0%,
+        #2aa2f4 30%,
+        #f18739 60%,
+        #edd80c 100%
+      );
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -163,7 +169,7 @@
   transition: transform $transition-base;
 
   &:active {
-    transform: scale(.96);
+    transform: scale(0.96);
   }
 
   &:before {

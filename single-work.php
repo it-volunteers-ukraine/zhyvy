@@ -10,13 +10,11 @@
 get_header();
 ?>
 <main class="work">
-    <section class="single-page-banner">
-        <div class="container">
-            <div class="singel-page-banner__wrapper">
-                <h1 class="title-event "><?php the_title(); ?></h1>
-            </div>
-        </div>
-    </section>
+
+    <?php
+		get_template_part( 'template-parts/page-banner', null, array(
+			'title' => get_field( "title" )
+		) ); ?>
 
     <section class="work-article">
         <div class="container">
@@ -24,11 +22,9 @@ get_header();
 		        while ( have_posts() ) :
 		    	the_post();
 			    get_template_part( 'template-parts/content', 'work', get_post_type() );
-			
-                endwhile; 
-		        ?>
+			    endwhile; 
+		    ?>
         </div>
-
     </section>
 
     <?php get_footer(); ?>

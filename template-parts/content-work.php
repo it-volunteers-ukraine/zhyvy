@@ -20,25 +20,86 @@
                </div>
                <?php endif; ?>
            </div>
-           <div class="button-arrow--medium button-next">
-               <svg width="12" height="24">
-                   <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
+           <div class="button-arrow--small button-next">
+               <svg width="24" height="24">
+                   <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-arrow-24">
                    </use>
                </svg>
            </div>
-           <div class="button-arrow--medium button-prev">
-               <svg width="12" height="24">
-                   <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
+           <div class="button-arrow--small button-prev">
+               <svg width="24" height="24">
+                   <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-arrow-24">
                    </use>
                </svg>
            </div>
        </div>
 
-       <div class="work-content
-       ">
-           <?php the_field( 'content' ); ?>
+       <div class="work-text-content">
+           <div class="work-text-wrapper">
+               <?php the_field( 'text' ); ?>
+           </div>
+
+           <div class="work-motivation-wrapper">
+               <?php if ( get_field( 'motivational_text' ) ) { ?>
+               <p><?php the_field( 'motivational_text' ); ?></p>
+
+               <div class="btn-wrapper">
+                   <?php
+                    $buttons = get_field('motivation_buttons');
+
+                    if ($buttons) {
+
+                        if (in_array('phone', $buttons, true) && in_array('email', $buttons, true)) :?>
+
+                   <a href="tel:<?php the_field('phone_hotline', 'option'); ?>" target="_blank"
+                       aria-label="Зв'язатись за допомогою телефону" class="button--outlined phone-btn">
+                       <span>
+                           <svg width="17" height="17"
+                               fill="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#phone-gradient">
+                               <use href="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#icon-phone_24">
+                               </use>
+                           </svg>
+                           <p class="text"><?php the_field('phone_hotline_display', 'option'); ?></p>
+                       </span>
+                   </a>
+                   <a href="mailto:<?php the_field('value_email_btn'); ?>" target="_blank"
+                       aria-label="Зв'язатись за допомогою електронної пошти" class="button--email work-btn-email">
+                       <svg width="18" height="18">
+                           <use href="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#icon-mail"></use>
+                       </svg>
+                       <?php the_field('text_email_btn'); ?>
+                   </a>
+
+                   <?php elseif (in_array('phone', $buttons, true)) :?>
+
+                   <a href="tel:<?php the_field('phone_hotline', 'option'); ?>" target="_blank"
+                       aria-label="Зв'язатись за допомогою телефону" class="button--outlined phone-btn">
+                       <span>
+                           <svg width="17" height="17"
+                               fill="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#phone-gradient">
+                               <use href="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#icon-phone_24">
+                               </use>
+                           </svg>
+                           <p class="text"><?php the_field('phone_hotline_display', 'option'); ?></p>
+                       </span>
+                   </a>
+
+                   <?php elseif (in_array('email', $buttons, true)) :?>
+
+                   <a href="mailto:<?php the_field('value_email_btn'); ?>" target="_blank"
+                       aria-label="Зв'язатись за допомогою електронної пошти" class="button--email work-btn-email">
+                       <svg width="18" height="18">
+                           <use href="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#icon-mail"></use>
+                       </svg>
+                       <?php the_field('text_email_btn'); ?>
+                   </a>
+                   <?php endif;}?>
+
+               </div>
+               <?php } ?>
+           </div>
+
        </div>
-       <div class="work-motivation">
-       </div>
+
 
    </div>
