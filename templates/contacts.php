@@ -19,21 +19,21 @@
                     <!--  Top  -->
                     <div class="contacts-top">
                         <a href="<?php the_field( 'google_map_link', 'option' ); ?>"
-                           target="_blank" aria-label="Показати адресу на карті">
+                           target="_blank">
                             <span class="icon"
                                   style="background: url('<?php bloginfo( 'template_url' ); ?>/assets/images/colorIcon-location.svg');"></span>
                             <p class="underlined"><?php the_field( 'address', 'option' ); ?></p>
                         </a>
 
                         <a href="mailto:<?php the_field( 'email', 'option' ); ?>"
-                           target="_blank" aria-label="Зв'язатись за допомогою електронної пошти">
+                           target="_blank">
                             <span class="icon"
                                   style="background: url('<?php bloginfo( 'template_url' ); ?>/assets/images/colorIcon-envelope.svg');"></span>
                             <p class="underlined"><?php the_field( 'email', 'option' ); ?></p>
                         </a>
 
                         <a href="tel:<?php the_field( 'phone_hotline', 'option' ); ?>"
-                           target="_blank" aria-label="Зв'язатись за допомогою телефону">
+                           target="_blank">
                             <span class="icon"
                                   style="background: url('<?php bloginfo( 'template_url' ); ?>/assets/images/colorIcon-phone.svg');"></span>
                             <p>
@@ -47,7 +47,7 @@
                     <div class="contacts-middle">
 						<?php if ( get_field( 'facebook_main', 'option' ) ) { ?>
                             <a href="<?php the_field( 'facebook_main', 'option' ); ?>"
-                               target="_blank" aria-label="Перейти на сторінку в Фейсбук">
+                               target="_blank">
                                 <span class="icon">
                                     <svg width="32" height="32">
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#colorIcon-facebook2"></use>
@@ -59,7 +59,7 @@
 
 						<?php if ( get_field( 'facebook_hub', 'option' ) ) { ?>
                             <a href="<?php the_field( 'facebook_hub', 'option' ); ?>"
-                               target="_blank" aria-label="Перейти на сторінку в Фейсбук">
+                               target="_blank">
                                 <span class="icon">
                                     <svg width="32" height="32">
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#colorIcon-facebook2"></use>
@@ -71,7 +71,7 @@
 
 						<?php if ( get_field( 'site', 'option' ) ) { ?>
                             <a href="<?php the_field( 'site', 'option' ); ?>"
-                               target="_blank" aria-label="Перейти на сайт-візитку">
+                               target="_blank">
                                 <span class="icon">
                                     <svg width="32" height="32">
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#colorIcon-site"></use>
@@ -83,7 +83,7 @@
 
 						<?php if ( get_field( 'viber', 'option' ) ) { ?>
                             <a href="<?php the_field( 'viber', 'option' ); ?>"
-                               target="_blank" aria-label="Зв'язатись за допомогою Вайбер">
+                               target="_blank">
                                 <span class="icon">
                                     <svg width="32" height="32">
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#colorIcon-viber"></use>
