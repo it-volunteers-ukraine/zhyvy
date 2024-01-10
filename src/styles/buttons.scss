@@ -17,6 +17,7 @@
   z-index: 1;
   transition: transform $transition-base;
   white-space: nowrap;
+  user-select: none;
 
   &:active {
     transform: scale(0.96);
@@ -167,6 +168,7 @@
   position: relative;
   z-index: 1;
   transition: transform $transition-base;
+  user-select: none;
 
   &:active {
     transform: scale(0.96);
@@ -225,6 +227,7 @@
   color: $color-white;
   border-radius: 50px;
   white-space: nowrap;
+  user-select: none;
 
   &--small {
     @extend .tag;
@@ -250,5 +253,44 @@
 
   &--violet {
     background-color: $color-violet;
+  }
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  user-select: none;
+
+  .page-numbers {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 500;
+    color: $color-blue-light;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-button;
+    border: 2px solid $color-blue-light;
+    transition: all $transition-base;
+    white-space: nowrap;
+
+    &:active:not(.dots) {
+      transform: scale(0.9);
+    }
+
+    &:hover:not(.dots) {
+      color: $color-white;
+      background: $color-blue-light;
+    }
+
+    &.current {
+      color: $color-white;
+      background: $color-blue-light;
+    }
   }
 }

@@ -37,7 +37,8 @@
                         </a>
                     </nav>
 
-                    <button id="headerMobileMenuToggle" class="menu-toggle"></button>
+                    <button id="headerMobileMenuToggle" class="menu-toggle"
+                            aria-label="Перемикач мобільного меню"></button>
 
                     <a class="button--header button--header--desktop"
                        href="<?php echo get_permalink( get_page_by_path( 'pidtrymaty' ) ); ?>">підтримати
