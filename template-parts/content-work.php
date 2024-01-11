@@ -24,16 +24,12 @@
                <?php endif; ?>
            </div>
            <div class="button-arrow--small button-next">
-               <!-- <svg width="24" height="24">
-                   <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-arrow-24">
-                   </use>
-               </svg> -->
-               <svg >
+               <svg>
                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
                </svg>
            </div>
            <div class="button-arrow--small button-prev">
-               <svg >
+               <svg>
                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
                </svg>
            </div>
@@ -60,8 +56,7 @@
                    <a href="tel:<?php the_field('phone_hotline', 'option'); ?>" target="_blank"
                        aria-label="Зв'язатись за допомогою телефону" class="button--outlined phone-btn">
                        <span>
-                           <svg width="17" height="17"
-                               fill="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#phone-gradient">
+                           <svg width="17" height="17">
                                <use href="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#icon-phone_24">
                                </use>
                            </svg>
@@ -81,8 +76,7 @@
                    <a href="tel:<?php the_field('phone_hotline', 'option'); ?>" target="_blank"
                        aria-label="Зв'язатись за допомогою телефону" class="button--outlined phone-btn">
                        <span>
-                           <svg width="17" height="17"
-                               fill="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#phone-gradient">
+                           <svg width="17" height="17">
                                <use href="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#icon-phone_24">
                                </use>
                            </svg>
