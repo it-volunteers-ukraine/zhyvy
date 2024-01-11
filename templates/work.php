@@ -15,7 +15,7 @@ get_header();
         <div class="container">
             <?php if (have_posts()) {
                 global $post;
-                $myposts = get_posts(['post_type' => 'work',]);
+                $myposts = get_posts(['post_type' => 'work', 'posts_per_page' => -1,]);
             ?>
             <ul class="work-directions__list">
                 <?php if ($myposts)
