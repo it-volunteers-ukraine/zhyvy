@@ -1,11 +1,16 @@
 <?php
-/*
-Template Name: events
-*/
-get_header();
+	/*
+	Template Name: events
+	*/
+	get_header();
 ?>
-<h2>events page</h2>
 
+    <main>
+		<?php get_template_part( 'template-parts/page-banner', null, array(
+			'title' => get_field( "title" )
+		) ); ?>
 
+		<?php get_template_part( 'template-parts/content', 'event-list' ); ?>
+    </main>
 
 <?php get_footer(); ?>
