@@ -16,10 +16,6 @@
 
 //Titles
 .work-titles {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 24px;
   grid-area: titles;
 }
 
@@ -29,6 +25,7 @@
   font-weight: 500;
   line-height: 116%;
   text-transform: uppercase;
+  margin-top: 8px;
 }
 
 //Gallery slider
@@ -37,8 +34,8 @@
   position: relative;
   display: grid;
   grid-template-columns: 350px 1fr;
-  grid-template-rows: auto auto;
-  gap: 0px 36px;
+  grid-template-rows: min-content max-content;
+  gap: 24px 36px;
   grid-template-areas:
     "gallery titles"
     "gallery text";
@@ -50,7 +47,7 @@
       "titles"
       "gallery"
       "text";
-    gap: 0;
+    gap: 24px;
   }
   .carousel-wrapper {
     grid-area: gallery;
@@ -58,7 +55,6 @@
     height: fit-content;
     position: sticky;
     top: 110px;
-    margin-bottom: 24px;
     @media screen and (max-width: $width-l) {
       width: 100%;
       position: relative;
@@ -97,9 +93,19 @@
   .button-next,
   .button-prev {
     position: absolute;
+    @media screen and (max-width: $width-l) {
+      width: 44px;
+      height: 44px;
+    }
 
     svg {
       fill: $color-white;
+      width: 6px;
+      height: 18px;
+      @media screen and (max-width: $width-l) {
+        width: 12px;
+        height: 24px;
+      }
     }
   }
 
@@ -113,7 +119,7 @@
       left: 0;
       bottom: 50%;
     }
-    @media screen and (max-width: $width-xs) {
+    @media screen and (max-width: $width-s) {
       transform: rotate(0deg) translateX(18px) translateY(50%);
       bottom: 0;
     }
@@ -134,7 +140,7 @@
       right: 0;
     }
 
-    @media screen and (max-width: $width-xs) {
+    @media screen and (max-width: $width-s) {
       transform: rotate(0deg) translateX(-18px) translateY(50%);
       bottom: 0;
     }

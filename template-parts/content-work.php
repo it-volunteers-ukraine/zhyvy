@@ -2,7 +2,10 @@
 
        <div class="work-titles">
            <h2 class="title-gradient-h2"><?php the_title(); ?></h2>
+           <?php if ( get_field( 'sub_title' ) ) { ?>
            <h3 class="work-subtitle"><?php the_field( 'sub_title' ); ?></h3>
+           <?php } ?>
+
        </div>
 
        <div class="carousel-wrapper">
@@ -21,15 +24,17 @@
                <?php endif; ?>
            </div>
            <div class="button-arrow--small button-next">
-               <svg width="24" height="24">
+               <!-- <svg width="24" height="24">
                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-arrow-24">
                    </use>
+               </svg> -->
+               <svg >
+                   <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
                </svg>
            </div>
            <div class="button-arrow--small button-prev">
-               <svg width="24" height="24">
-                   <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-arrow-24">
-                   </use>
+               <svg >
+                   <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
                </svg>
            </div>
        </div>
@@ -39,6 +44,7 @@
                <?php the_field( 'text' ); ?>
            </div>
 
+           <?php if ( get_field( 'motivational_text' ) ) { ?>
            <div class="work-motivation-wrapper">
                <?php if ( get_field( 'motivational_text' ) ) { ?>
                <p><?php the_field( 'motivational_text' ); ?></p>
@@ -98,7 +104,7 @@
                </div>
                <?php } ?>
            </div>
-
+           <?php } ?>
        </div>
 
 
