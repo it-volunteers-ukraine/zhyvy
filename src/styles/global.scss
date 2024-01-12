@@ -55,8 +55,11 @@ body {
   font-size: 30px;
   line-height: 116%;
   font-weight: 500;
+  background: $gradient-orange-h2;
   text-transform: uppercase;
-  color: $color-orange;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title-page { // white title for page heading
