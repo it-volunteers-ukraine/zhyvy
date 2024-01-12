@@ -14,7 +14,7 @@ const swiper = new Swiper(".work__gallery", {
       spaceBetween: 24,
       direction: "vertical",
     },
-    768: {
+    576: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       direction: "horizontal",
