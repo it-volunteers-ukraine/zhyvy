@@ -54,7 +54,7 @@
                         if (in_array('phone', $buttons, true) && in_array('email', $buttons, true)) :?>
 
                    <a href="tel:<?php the_field('phone_hotline', 'option'); ?>" target="_blank"
-                       aria-label="Зв'язатись за допомогою телефону" class="button--outlined phone-btn">
+                       aria-label="Зв'язатись за допомогою телефону" class="button phone-btn">
                        <span>
                            <svg width="17" height="17">
                                <use href="<?php bloginfo('template_url'); ?>/assets/images/sprite.svg#icon-phone_24">
