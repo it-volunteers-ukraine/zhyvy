@@ -1,11 +1,12 @@
 <article class="content-event-card">
-    <div class="card-wrapper">
-
+    <a class="card-wrapper" href="<?php the_permalink(); ?>">
         <div class="tags">
-			<?php $postCategories = get_the_category();
+			<?php $postCategories = get_the_category( get_the_ID() );
 				if ( ! empty( $postCategories ) ) :
-					foreach ( $postCategories as $category ) :?>
-                        <span class="tag--large"><?php echo esc_html( $category->name ) ?></span>
+					foreach ( $postCategories as $category ) :
+						$categoryColor = get_field( 'color', $category )['0'] ?? '';
+						?>
+                        <span class="tag--large tag--<?php echo $categoryColor ?>"><?php echo esc_html( $category->name ) ?></span>
 					<?php endforeach; ?>
 				<?php endif; ?>
         </div>
@@ -14,6 +15,7 @@
             <img src="<?php echo esc_url( get_field( 'img' )['url'] ); ?>"
                  alt="<?php echo esc_attr( get_field( 'img' )['alt'] ); ?>">
         </div>
+
         <div class="description">
             <h3><?php the_field( 'title' ); ?></h3>
             <p class="datetime">
@@ -32,5 +34,5 @@
             </p>
             <p class="address"><?php the_field( 'address' ); ?></p>
         </div>
-    </div>
+    </a>
 </article>
