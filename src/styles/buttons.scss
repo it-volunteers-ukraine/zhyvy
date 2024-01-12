@@ -40,9 +40,11 @@
     transition: opacity $transition-base;
   }
 
-  &:hover {
-    &:before {
-      opacity: 1;
+  @media screen and (min-width: $width-l) {
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
     }
   }
 
@@ -108,8 +110,10 @@
       transition: opacity $transition-base;
     }
 
-    &:hover::after {
-      opacity: 1;
+    @media screen and (min-width: $width-l) {
+      &:hover::after {
+        opacity: 1;
+      }
     }
 
     span {
@@ -133,8 +137,11 @@
       transition: all $transition-base;
     }
 
-    &:hover span {
-      background-position: top left 100%;
+
+    @media screen and (min-width: $width-l) {
+      &:hover span {
+        background-position: top left 100%;
+      }
     }
   }
 
@@ -190,9 +197,11 @@
     transition: opacity $transition-base;
   }
 
-  &:hover {
-    &:before {
-      opacity: 1;
+  @media screen and (min-width: $width-l) {
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
     }
   }
 
@@ -292,6 +301,11 @@
     &.current {
       color: $color-white;
       background: $color-blue-light;
+    }
+
+    &.dots {
+      border: 2px solid transparent;
+      align-items: flex-end;
     }
   }
 }
