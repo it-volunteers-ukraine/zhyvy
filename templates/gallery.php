@@ -6,7 +6,9 @@ get_header();
 ?>
 
 <main>
-    <?php get_template_part( 'template-parts/page-banner' ); ?>
+    <?php get_template_part( 'template-parts/page-banner', null, array(
+                'title' => get_field( "title" )
+            ) ); ?>
     <section class="gallery-page">
        
         <div class="container">
@@ -57,7 +59,7 @@ get_header();
                         </div>
                     </div>
                     <div class="gallery-card-content">
-                        <h2 class="title-gradient-h2"><?php the_title() ?></h2>
+                        <h2 class="title-gradient-h2"><?php echo esc_html( get_field('title') ); ?></h2>
                         <div class="gallery-card-date"><?php echo esc_html( get_field('date') ); ?></div>
                         <div class="gallery-text-wrapper">
                         <?php echo wp_kses_post ( get_field('text') ); ?>
