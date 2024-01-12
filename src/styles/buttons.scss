@@ -119,11 +119,11 @@
       gap: 8px;
       position: relative;
       background-image: linear-gradient(
-        96deg,
-        #65c0ff 0%,
-        #2aa2f4 30%,
-        #f18739 60%,
-        #edd80c 100%
+                      96deg,
+                      #65c0ff 0%,
+                      #2aa2f4 30%,
+                      #f18739 60%,
+                      #edd80c 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
@@ -228,6 +228,7 @@
   border-radius: 50px;
   white-space: nowrap;
   user-select: none;
+  background-color: $color-blue-light;
 
   &--small {
     @extend .tag;
