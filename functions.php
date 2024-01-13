@@ -96,6 +96,19 @@ function wp_it_volunteers_menus() {
 
 add_action( 'init', 'wp_it_volunteers_menus');
 
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'footer-menu-1' => __( 'Footer Menu 1' ),
+      'footer-menu-2' => __( 'Footer Menu 2' ),
+      'footer-menu-3' => __( 'Footer Menu 3' ),
+      'footer-menu-4' => __( 'Footer Menu 4' ),
+      'footer-menu-5' => __( 'Footer Menu 5' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
+
 
 /** ACF add options page */
 if( function_exists('acf_add_options_page') ) {
