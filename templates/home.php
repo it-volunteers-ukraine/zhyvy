@@ -80,6 +80,61 @@
             </div>
         </section>
 
+        <!--  Events section  -->
+        <section class="events">
+            <div class="container">
+                <h2 class="title-gradient-h1 hidden-on-desktop"><?php the_field( 'events_title' ); ?></h2>
+                <p class="text hidden-on-desktop"><?php the_field( 'events_text' ); ?></p>
+
+                <div class="events-wrapper">
+                    <div class="left">
+						<?php $args = ( [
+							'posts_per_page' => 2,
+							'post_type'      => 'events',
+						] );
+							$query  = new WP_Query( $args );
+							if ( $query->have_posts() ) :
+								while ( $query->have_posts() ) :
+									$query->the_post();
+									get_template_part( 'template-parts/content', 'event-card' );
+								endwhile;
+								wp_reset_postdata();
+							endif; ?>
+                    </div>
+                    <div class="right">
+                        <h2 class="title-gradient-h1"><?php the_field( 'events_title' ); ?></h2>
+                        <p class="text"><?php the_field( 'events_text' ); ?></p>
+						<?php $args = ( [
+							'posts_per_page' => 2,
+							'post_type'      => 'events',
+							'offset'         => 2,
+						] );
+							$query  = new WP_Query( $args );
+							if ( $query->have_posts() ) :
+								while ( $query->have_posts() ) :
+									$query->the_post();
+									get_template_part( 'template-parts/content', 'event-mini-card' );
+								endwhile;
+								wp_reset_postdata();
+							endif; ?>
+                        <a href="<?php echo get_permalink( get_page_by_path( 'podiyi' ) ); ?>"
+                           class="button--large"><?php the_field( 'events_btn' ); ?>
+                            <svg width="8" height="16">
+                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="<?php echo get_permalink( get_page_by_path( 'podiyi' ) ); ?>"
+                   class="button--large hidden-on-desktop"><?php the_field( 'events_btn' ); ?>
+                    <svg width="8" height="16">
+                        <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
         <!--  Results section  -->
         <div class="results">
             <div class="container">
