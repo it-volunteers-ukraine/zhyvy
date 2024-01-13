@@ -1,7 +1,7 @@
    <div class="work-wrapper">
 
        <div class="work-titles">
-           <h2 class="title-gradient-h2"><?php the_title(); ?></h2>
+           <h2 class="title-gradient-h2"><?php the_field('title'); ?></h2>
            <?php if ( get_field( 'sub_title' ) ) { ?>
            <h3 class="work-subtitle"><?php the_field( 'sub_title' ); ?></h3>
            <?php } ?>
