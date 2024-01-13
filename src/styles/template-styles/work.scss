@@ -83,6 +83,11 @@
   }
   .title {
     margin-bottom: 12px;
+    font-size: 36px;
+
+    @media screen and (max-width: $width-l) {
+      font-size: 30px;
+    }
   }
   .text {
     margin-bottom: 24px;
