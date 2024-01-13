@@ -33,7 +33,8 @@
 						] );
 						?>
                         <a class="button--header button--header--mobile"
-                           href="<?php echo get_permalink( get_page_by_path( 'pidtrymaty' ) ); ?>">підтримати
+                           href="<?php echo get_permalink( get_page_by_path( 'pidtrymaty' ) ); ?>">
+							<?php the_field( 'header_donate', 'option' ); ?>
                         </a>
                     </nav>
 
@@ -41,7 +42,8 @@
                             aria-label="Перемикач мобільного меню"></button>
 
                     <a class="button--header button--header--desktop"
-                       href="<?php echo get_permalink( get_page_by_path( 'pidtrymaty' ) ); ?>">підтримати
+                       href="<?php echo get_permalink( get_page_by_path( 'pidtrymaty' ) ); ?>">
+						<?php the_field( 'header_donate', 'option' ); ?>
                     </a>
                 </div>
 
