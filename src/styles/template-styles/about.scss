@@ -4,18 +4,17 @@
   // history section****************************************
   .history {
     display: flex;
-    justify-content: space-between;
-    width: auto;
+    justify-content: center;
+    align-items: flex-start;
     margin-top: 0;
-    align-items: center;
-    gap: 36px;
-    align-self: stretch;
+    gap: 24px;
+
     // 1183
     @media screen and (min-width: $width-xl) {
       padding: 86px 0px 132px 0px;
     }
     // 768
-    @media screen and (min-width: $width-m) {
+    @media screen and (min-width: $width-m) and (max-device-width: 1182px) {
       padding: 48px 32px 96px 32px;
     }
     // 360 - 768
@@ -24,21 +23,40 @@
       padding: 48px 16px 82px 16px;
       justify-content: center;
       align-items: center;
-      align-self: stretch;
+      align-self: stretch; 
     }
   }
 
   // container for img of history
   .history_image-thumb {
+    padding: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  
+
+    @media only screen and (min-device-width: $width-xl) {
+      max-width:  542px;
+      max-height: 332px;
+    }
+// 992-1182 
+    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px){
+      max-width:  446px;
+      max-height: 302px;
+    }
+
     // 768 - 992
     @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+      max-width: 334px;
       height: 360px;
-      width: 334px;
-      & img {
-        width: 100%;
-        height: 100%;
-      }
     }
+    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+      max-width: 328px;
+      height: 211px;
+    }
+
+ 
   }
 
   // content for history
@@ -46,21 +64,42 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
-    flex: 1;
+  
+    @media only screen and (min-device-width: $width-xl) 
+    {
+      gap: 24px;
+      max-width:  542px;
+      max-height: 332px;
+    }
+
+    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+      gap: 16px;
+      max-width:  446px;
+      max-height: 302px;
+    }
+
+    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+      gap: 16px;
+         width: 340px;
+      height: 360px;
+    }
+    @media only screen and (min-device-width:   $width-min-body) and (max-device-width: 767px)
+{
+  gap: 24px;
+  max-width: 328px;
+  height: 345px;
+}
+   
   }
 
   // container for text of history
   .history-content_description {
-    padding-right: 16px;
     overflow: hidden;
     color: $color-second-gray;
     text-align: justify;
     text-overflow: ellipsis;
-    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
-      height: 360px;
-      width: 334px;
-    }
+
+
   }
 
   .history-content_text {
