@@ -1,5 +1,4 @@
 @import "../variables.scss";
-@import "../buttons.scss";
 
 //Content section
 
@@ -34,7 +33,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 350px 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: fit-content(100%) auto;
   gap: 24px 36px;
   grid-template-areas:
     "gallery titles"
@@ -224,15 +223,41 @@
   }
 
   .phone-btn {
+    padding: 13px 14px;
+    border: 2px solid transparent;
+    background: transparent;
     border-image: url("../../images/button-border-orange.svg") 4 / 4px stretch;
 
+    &:before {
+      display: none;
+    }
+
     span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      position: relative;
+      background-image: linear-gradient(
+        96deg,
+        #65c0ff 0%,
+        #2aa2f4 30%,
+        #f18739 60%,
+        #edd80c 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 300% 100%;
+      transition: all $transition-base;
       background-position: top left 100%;
     }
+
     svg {
       color: #f18739;
       transition: color $transition-base;
     }
+
     &:hover {
       border-image: url("../../images/button-border-blue.svg") 4 / 4px stretch;
       span {

@@ -20,10 +20,10 @@
 
 //Work directions section
 .work-directions {
-  padding: 86px 0 64px;
+  padding: 86px 0 188px;
 
   @media screen and (max-width: $width-l) {
-    padding: 48px 0 32px;
+    padding: 48px 0 156px;
   }
 }
 
@@ -76,19 +76,38 @@
 
 .work-directions__info {
   width: 50%;
+  min-height: 100%;
 
   @media screen and (max-width: $width-m) {
     width: 100%;
   }
   .title {
     margin-bottom: 12px;
+    font-size: 36px;
+
+    @media screen and (max-width: $width-l) {
+      font-size: 30px;
+    }
   }
   .text {
     margin-bottom: 24px;
+    text-align: justify;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    @media screen and (max-width: $width-l) {
+      -webkit-line-clamp: 7;
+    }
+    @media screen and (max-width: $width-m) {
+      -webkit-line-clamp: initial;
+      overflow: visible;
+    }
   }
   @media screen and (max-width: $width-m) {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+  }
+  .button {
+    margin-left: auto;
   }
 }
