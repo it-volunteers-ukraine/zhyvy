@@ -107,7 +107,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 1px solid rgb(10, 165, 78);
     // 360
     @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
       align-items: center;
@@ -118,12 +117,24 @@
     display: flex;
     flex-wrap: wrap;
     padding-right: 0;
-    padding-top: 36px;
     justify-content: center;
     margin: 0 -32px 0 -10px;
-    // 768
-    @media only screen and (min-device-width: $width-m) and (max-width: $width-l) {
+    // 1183
+    @media only screen and (min-device-width: $width-xl) {
+      padding-top: 36px;
+    }
+    // 768-1182
+    @media only screen and (min-device-width: $width-m) and (max-width: 1182px) {
+      padding-top: 36px;
+    }
+
+    // 768 991
+    @media only screen and (min-device-width: $width-m) and (max-width: 991px) {
       justify-content: flex-start;
+    }
+    // 360 - 767
+    @media only screen and (min-device-width: $width-min-body) and (max-width: 767px) {
+      padding-top: 16px;
     }
   }
 
@@ -147,19 +158,16 @@
     @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
       flex-basis: 208px;
       height: 263px;
-
     }
     // 768
     @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
       flex-basis: 212px;
       height: 268px;
-
     }
     // 360
     @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
       flex-basis: 256px;
       height: 319px;
-
     }
   }
 
@@ -175,19 +183,19 @@
     // 1183
     @media only screen and (min-device-width: $width-xl) {
       height: 248px;
-  }
-  // 992 -1182
-  @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
-    height: 203px;
-}
-// 768 - 1182
-@media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
-  height: 208px;
-}
-// 360
-@media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
-  height: 248px;
-}
+    }
+    // 992 -1182
+    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+      height: 203px;
+    }
+    // 768 - 1182
+    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+      height: 208px;
+    }
+    // 360
+    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+      height: 248px;
+    }
   }
 
   .front-side {
@@ -196,7 +204,6 @@
     & img {
       width: 100%;
       height: 100%;
-
     }
   }
 
@@ -258,15 +265,15 @@
       padding: 14px 16px;
     }
     // 992
-    @media screen and (min-width: $width-l) and (max-device-width: 1182px){
+    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
       background-image: url(../../images/bg/bg_team_cards_tab_992.png);
       padding: 12px;
     }
     // 768
-       @media screen and (min-width: $width-m) and (max-device-width: 991px){
+    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
       background-image: url(../../images/bg/bg_team_cards_tab_768.png);
       padding: 14px 16px;
-        }
+    }
 
     // 360
     @media screen and (min-width: 360px) and (max-device-width: 767px) {
@@ -318,7 +325,7 @@
   .results .swiperResults {
     display: flex;
     width: 70%;
-    height: auto;
+    height: 100%;
     padding-top: 36px;
     justify-content: space-between;
     padding: 0;
