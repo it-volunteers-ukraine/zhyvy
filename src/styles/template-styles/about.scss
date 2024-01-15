@@ -4,18 +4,17 @@
   // history section****************************************
   .history {
     display: flex;
-    justify-content: space-between;
-    width: auto;
+    justify-content: center;
+    align-items: flex-start;
     margin-top: 0;
-    align-items: center;
-    gap: 36px;
-    align-self: stretch;
+    gap: 24px;
+
     // 1183
     @media screen and (min-width: $width-xl) {
       padding: 86px 0px 132px 0px;
     }
     // 768
-    @media screen and (min-width: $width-m) {
+    @media screen and (min-width: $width-m) and (max-device-width: 1182px) {
       padding: 48px 32px 96px 32px;
     }
     // 360 - 768
@@ -30,14 +29,30 @@
 
   // container for img of history
   .history_image-thumb {
+    padding: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media only screen and (min-device-width: $width-xl) {
+      max-width: 542px;
+      max-height: 332px;
+    }
+    // 992-1182
+    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+      max-width: 446px;
+      max-height: 302px;
+    }
+
     // 768 - 992
     @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+      max-width: 334px;
       height: 360px;
-      width: 334px;
-      & img {
-        width: 100%;
-        height: 100%;
-      }
+    }
+    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+      max-width: 328px;
+      height: 211px;
     }
   }
 
@@ -46,21 +61,37 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
-    flex: 1;
+    // 1183
+    @media only screen and (min-device-width: $width-xl) {
+      gap: 24px;
+      max-width: 542px;
+      max-height: 332px;
+    }
+    // 992-1182
+    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+      gap: 16px;
+      max-width: 446px;
+      max-height: 302px;
+    }
+    // 768-991
+    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+      gap: 16px;
+      width: 340px;
+      height: 360px;
+    }
+    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+      gap: 24px;
+      max-width: 328px;
+      height: 345px;
+    }
   }
 
   // container for text of history
   .history-content_description {
-    padding-right: 16px;
     overflow: hidden;
     color: $color-second-gray;
     text-align: justify;
     text-overflow: ellipsis;
-    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
-      height: 360px;
-      width: 334px;
-    }
   }
 
   .history-content_text {
@@ -85,12 +116,25 @@
   .team_list {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 36px;
+    padding-right: 0;
     justify-content: center;
-    margin: 0 -32px 0 0;
-    // 768
-    @media only screen and (min-device-width: $width-m) and (max-width: $width-l) {
+    margin: 0 -32px 0 -10px;
+    // 1183
+    @media only screen and (min-device-width: $width-xl) {
+      padding-top: 36px;
+    }
+    // 768-1182
+    @media only screen and (min-device-width: $width-m) and (max-width: 1182px) {
+      padding-top: 36px;
+    }
+
+    // 768 991
+    @media only screen and (min-device-width: $width-m) and (max-width: 991px) {
       justify-content: flex-start;
+    }
+    // 360 - 767
+    @media only screen and (min-device-width: $width-min-body) and (max-width: 767px) {
+      padding-top: 16px;
     }
   }
 
@@ -104,19 +148,27 @@
     max-height: 341px;
     border-radius: $border-radius-base;
     overflow: hidden;
-
-    // 920
-    @media only screen and (min-device-width: $width-l) {
-      flex-basis: 208px;
+    // 1183
+    @media only screen and (min-device-width: $width-xl) {
+      flex-basis: 256px;
+      height: 319px;
     }
-    // 768 
+
+    // 992-1182
+    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+      flex-basis: 208px;
+      height: 263px;
+    }
+    // 768
     @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
       flex-basis: 212px;
+      height: 268px;
     }
-    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px){
-      flex-basis: 220px;
+    // 360
+    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+      flex-basis: 256px;
+      height: 319px;
     }
-   
   }
 
   // TWO SIDEs of  team_CARDs for hover_effects
@@ -128,14 +180,30 @@
     backface-visibility: hidden;
     transition: transform $transition-base;
     height: auto;
+    // 1183
+    @media only screen and (min-device-width: $width-xl) {
+      height: 248px;
+    }
+    // 992 -1182
+    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+      height: 203px;
+    }
+    // 768 - 1182
+    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+      height: 208px;
+    }
+    // 360
+    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+      height: 248px;
+    }
   }
 
   .front-side {
     transform: rotateY(0deg);
     transform-style: preserve-3d;
-    & img{
-   height: 200px;
-   width: 100%;
+    & img {
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -176,7 +244,7 @@
   // wrapp for text in _team_card
   .team-card_content {
     display: flex;
-   
+
     flex-direction: column;
     z-index: 100;
     gap: 4px;
@@ -193,17 +261,23 @@
 
     //  1183
     @media screen and (min-width: $width-xl) {
-      background-image: url(../../images/bg/poryad_bg_desk.jpg);
+      background-image: url(../../images/bg/bg_team_cards_desc.png);
       padding: 14px 16px;
     }
-    // 768
-    @media screen and (min-width: $width-m) {
-      background-image: url(../../images/bg/poryad_bg_desk_992.jpg);
+    // 992
+    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+      background-image: url(../../images/bg/bg_team_cards_tab_992.png);
       padding: 12px;
     }
+    // 768
+    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+      background-image: url(../../images/bg/bg_team_cards_tab_768.png);
+      padding: 14px 16px;
+    }
+
     // 360
-    @media screen and (min-width: 360px) {
-      background-image: url(../../images/bg/poryad_bg_desk_360.jpg);
+    @media screen and (min-width: 360px) and (max-device-width: 767px) {
+      background-image: url(../../images/bg/bg_team_cards_mob_360.png);
       padding: 14px 16px;
     }
   }
@@ -251,7 +325,7 @@
   .results .swiperResults {
     display: flex;
     width: 70%;
-    height: auto;
+    height: 100%;
     padding-top: 36px;
     justify-content: space-between;
     padding: 0;
@@ -287,7 +361,7 @@
   // swiper for honors-and-thanks__section
   .honors-and-thanks .swiperHonor {
     display: flex;
-    height: 360px; 
+    height: 360px;
     padding-top: 36px;
     justify-content: space-between;
     width: 100%;
