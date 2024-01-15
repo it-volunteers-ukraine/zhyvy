@@ -276,7 +276,6 @@
     @media screen and (max-width: $width-s) {
       flex-direction: column-reverse;
       box-shadow: $box-shadow-base;
-      background-color: $color-light-gray;
     }
 
     &:hover {
@@ -337,7 +336,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    background-color: rgba($color-white, 0.9);
+    background-color: #eeeeeede;
     backface-visibility: hidden;
     transform: rotateY(180deg);
     @media screen and (max-width: $width-s) {
@@ -362,7 +361,7 @@
       transition: all $transition-base;
 
       &:hover {
-        color: $color-blue-light;
+        color: darken($color-blue-light, 20%);
       }
     }
   }
@@ -372,8 +371,10 @@
     padding: 12px 16px;
     min-height: 68px;
     color: $color-white;
-    background-image: url(../../images/bg/poryad_bg_desk_992.jpg);
+    background-image: url(../../images/bg/wd_card_min.png);
     background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
     position: relative;
     z-index: 2;
     @media screen and (max-width: $width-s) {
