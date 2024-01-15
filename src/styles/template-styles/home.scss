@@ -450,7 +450,6 @@
 }
 
 // Events section
-
 .events {
   margin-bottom: 132px;
   @media screen and (max-width: $width-l) {
@@ -482,13 +481,15 @@
   .events-wrapper {
     display: flex;
     gap: 0 32px;
+    @media screen and (max-width: $width-xl) {
+      gap: 0 16px;
+    }
     @media screen and (max-width: 660px) {
       display: block;
     }
   }
 
   .left {
-    margin: 0 -16px;
     flex: 2;
     display: flex;
     justify-content: space-between;
@@ -531,7 +532,7 @@
   }
 
   .content-event-card {
-    width: 50%;
+    width: calc(50% - (1 * 32px / 2));
     @media screen and (max-width: 660px) {
       width: 100%;
       max-height: 500px;
