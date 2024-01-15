@@ -55,6 +55,49 @@
             </div>
         </section>
 
+        <!--  Work directions section  -->
+        <div class="work">
+            <div class="container">
+                <div class="grid-container">
+                    <div class="grid-item description">
+                        <h2 class="title-gradient-h1"><?php the_field( 'work_title' ); ?></h2>
+                        <p><?php the_field( 'work_text' ); ?></p>
+                    </div>
+					<?php $args = ( [
+						'posts_per_page' => - 1,
+						'post_type'      => 'work',
+					] );
+						$query  = new WP_Query( $args );
+						if ( $query->have_posts() ) :
+							while ( $query->have_posts() ) :
+								$query->the_post(); ?>
+                                <div class="grid-item">
+                                    <article class="card">
+                                        <div class="top">
+                                            <div class="top-front">
+                                                <img src="<?php the_field( 'img' ); ?>"
+                                                     alt="<?php the_field( 'alt' ); ?>">
+                                            </div>
+                                            <div class="top-back">
+                                                <p><?php the_field( 'homepage_hover' ); ?></p>
+                                                <a href="<?php the_permalink(); ?>">
+                                                    дізнатися Більше</a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <h3><?php the_field( 'title' ); ?></h3>
+                                            <p><?php the_field( 'homepage_description' ); ?></p>
+                                        </div>
+                                    </article>
+                                </div>
+							<?php endwhile;
+							wp_reset_postdata();
+						endif; ?>
+                </div>
+            </div>
+        </div>
+
+
         <!--  Help section  -->
         <section class="help">
             <div class="container">
