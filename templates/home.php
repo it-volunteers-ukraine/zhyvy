@@ -55,6 +55,49 @@
             </div>
         </section>
 
+        <!--  Work directions section  -->
+        <div class="work">
+            <div class="container">
+                <div class="grid-container">
+                    <div class="grid-item description">
+                        <h2 class="title-gradient-h1"><?php the_field( 'work_title' ); ?></h2>
+                        <p><?php the_field( 'work_text' ); ?></p>
+                    </div>
+					<?php $args = ( [
+						'posts_per_page' => - 1,
+						'post_type'      => 'work',
+					] );
+						$query  = new WP_Query( $args );
+						if ( $query->have_posts() ) :
+							while ( $query->have_posts() ) :
+								$query->the_post(); ?>
+                                <div class="grid-item">
+                                    <article class="card">
+                                        <div class="top">
+                                            <div class="top-front">
+                                                <img src="<?php the_field( 'img' ); ?>"
+                                                     alt="<?php the_field( 'alt' ); ?>">
+                                            </div>
+                                            <div class="top-back">
+                                                <p><?php the_field( 'homepage_hover' ); ?></p>
+                                                <a href="<?php the_permalink(); ?>">
+                                                    дізнатися Більше</a>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <h3><?php the_field( 'title' ); ?></h3>
+                                            <p><?php the_field( 'homepage_description' ); ?></p>
+                                        </div>
+                                    </article>
+                                </div>
+							<?php endwhile;
+							wp_reset_postdata();
+						endif; ?>
+                </div>
+            </div>
+        </div>
+
+
         <!--  Help section  -->
         <section class="help">
             <div class="container">
@@ -77,6 +120,61 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!--  Events section  -->
+        <section class="events">
+            <div class="container">
+                <h2 class="title-gradient-h1 hidden-on-desktop"><?php the_field( 'events_title' ); ?></h2>
+                <p class="text hidden-on-desktop"><?php the_field( 'events_text' ); ?></p>
+
+                <div class="events-wrapper">
+                    <div class="left">
+						<?php $args = ( [
+							'posts_per_page' => 2,
+							'post_type'      => 'events',
+						] );
+							$query  = new WP_Query( $args );
+							if ( $query->have_posts() ) :
+								while ( $query->have_posts() ) :
+									$query->the_post();
+									get_template_part( 'template-parts/content', 'event-card' );
+								endwhile;
+								wp_reset_postdata();
+							endif; ?>
+                    </div>
+                    <div class="right">
+                        <h2 class="title-gradient-h1"><?php the_field( 'events_title' ); ?></h2>
+                        <p class="text"><?php the_field( 'events_text' ); ?></p>
+						<?php $args = ( [
+							'posts_per_page' => 2,
+							'post_type'      => 'events',
+							'offset'         => 2,
+						] );
+							$query  = new WP_Query( $args );
+							if ( $query->have_posts() ) :
+								while ( $query->have_posts() ) :
+									$query->the_post();
+									get_template_part( 'template-parts/content', 'event-mini-card' );
+								endwhile;
+								wp_reset_postdata();
+							endif; ?>
+                        <a href="<?php echo get_permalink( get_page_by_path( 'podiyi' ) ); ?>"
+                           class="button--large"><?php the_field( 'events_btn' ); ?>
+                            <svg width="8" height="16">
+                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="<?php echo get_permalink( get_page_by_path( 'podiyi' ) ); ?>"
+                   class="button--large hidden-on-desktop"><?php the_field( 'events_btn' ); ?>
+                    <svg width="8" height="16">
+                        <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                    </svg>
+                </a>
             </div>
         </section>
 
