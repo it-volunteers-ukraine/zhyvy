@@ -392,6 +392,10 @@
 
   .partners-container {
     @extend .results-container;
+    padding: 36px 48px 64px 48px;
+    box-shadow: $box-shadow-base;
+    background-color: $color-white;
+    border-radius: $border-radius-base;
   }
 
   // list of logo partners
@@ -400,11 +404,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 72px 76px;
-    padding: 36px 48px 64px 48px;
-    box-shadow: $box-shadow-base;
-    background-color: $color-white;
-    border-radius: $border-radius-base;
+    gap: 42px;
+    
 
     @media screen and (min-width: $width-min-body) {
       gap: 48px 42px;
