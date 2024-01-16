@@ -27,18 +27,22 @@
                         <h2 class="payment-details-title"><?php echo esc_html( get_field('header_donate_details') ); ?></h2>
                         <p class="payment-details-text-bold">Розрахунковий рахунок ГО ЖИВИ:</p>
                         <div class="account-wrapper">
-                            <p><?php echo esc_html( get_field('account') ); ?></p>
-                            <svg width="16" height="16">
-                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-copy"></use>
-                            </svg>
+                            <p id="account-number"><?php echo esc_html( get_field('account') ); ?></p>
+                            <div class="copy-to-clipboard" data-clipboard-target="#account-number">
+                                <svg width="16" height="16">
+                                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-copy"></use>
+                                </svg>
+                            </div>
                         </div>
                         <p class="payment-details-text-bold"><?php echo esc_html( get_field('card_name') ); ?></p>
                         <p><?php echo esc_html( get_field('card_holder') ); ?></p>
                         <div class="card-number-wrapper">
-                            <p><?php echo esc_html( get_field('card_number') ); ?></p>
-                            <svg width="16" height="16">
-                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-copy"></use>
-                            </svg>
+                            <p id="card-number"><?php echo esc_html( get_field('card_number') ); ?></p>
+                            <div class="copy-to-clipboard" data-clipboard-target="#card-number">
+                                <svg width="16" height="16">
+                                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-copy"></use>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>

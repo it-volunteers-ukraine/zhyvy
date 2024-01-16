@@ -96,7 +96,6 @@
             }
 
             .payment-details-wrapper {
-                /*max-width: 294px; */
                 flex-grow: 1;
                 flex-shrink: 1;
 
@@ -114,15 +113,19 @@
                     font-weight: 500;
                 }
 
-                .account-wrapper {
+                .account-wrapper, .card-number-wrapper {
                     display: flex;
                     align-items: center;
+                }
+
+                .account-wrapper {
                     margin-bottom: 29px;
                 }
 
-                .card-number-wrapper {
-                    display: flex;
-                    align-items: center;
+                .copy-to-clipboard {
+                    cursor: pointer;
+                    width: 16px;
+                    height: 16px;    
                 }
             }
         }
