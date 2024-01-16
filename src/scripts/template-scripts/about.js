@@ -4,9 +4,26 @@ const swiperResults = new Swiper(".swiperResults", {
   centeredSlides: true,
   centeredSlidesBounds: true,
   createElements: true,
-  effect: "cube", // experiment style cube
-  spaceBetween: 0,
-  slidesPerView: 2,
+
+  breakpoints: {
+    1920: {
+      spaceBetween: 5,
+      slidesPerView: 3,
+    },
+
+    992: {
+      spaceBetween: 10,
+      slidesPerView: 3,
+    },
+    768: {
+      spaceBetween: 10,
+      slidesPerView: 3,
+    },
+    360: {
+      slidesPerView: 1,
+    },
+  },
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

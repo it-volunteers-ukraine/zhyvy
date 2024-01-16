@@ -15,26 +15,25 @@
 .content-event-list-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px 0;
-  margin: 0 -17px 64px;
+  gap: 32px;
+  margin-bottom: 64px;
 }
 
 
 .content-event-card {
-  padding: 0 17px;
-  width: 33.333%;
+  width: calc(33.33% - (2 * 32px / 3));
   min-height: 100%;
   height: 500px;
   @media screen and (max-width: $width-l) {
-    width: 50%;
+    width: calc(50% - (1 * 32px / 2));
   }
-  @media screen and (max-width: $width-s) {
+  @media screen and (max-width: 660px) {
     width: 100%;
   }
 
 
   .card-wrapper {
-    background-color: #ccc;
+    background-color: rgba($color-light-gray, 0.5);
     height: 100%;
     border-radius: $border-radius-base;
     overflow: hidden;
@@ -77,8 +76,9 @@
     min-height: fit-content;
     padding: 20px;
     color: $color-white;
-    background-image: url(../../images/bg/poryad_bg_desk_992.jpg);
+    background-image: url(../../images/bg/events_card_min.png);
     background-size: cover;
+    background-position: right top;
     position: absolute;
     left: 0;
     right: 0;

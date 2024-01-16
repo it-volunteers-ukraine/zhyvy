@@ -1,4 +1,4 @@
-    <footer class="footer">
+    <footer class="footer" style="display: none;">
         <div class="footer-content-wrapper">
             <div class="footer-content container">
                 <div class="footer-logo-wrapper">
