@@ -276,7 +276,7 @@
     }
 
     // 360
-    @media screen and (min-width: 360px) and (max-device-width: 767px) {
+    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
       background-image: url(../../images/bg/bg_team_cards_mob_360.png);
       padding: 14px 16px;
     }
@@ -324,13 +324,96 @@
   // swiper for Results_section
   .results .swiperResults {
     display: flex;
-    width: 70%;
+    width: 100%;
     height: 100%;
     padding-top: 36px;
+    padding-bottom: 15px;
     justify-content: space-between;
-    padding: 0;
     gap: 0;
+    position: relative;
   }
+
+
+.results  .swiper-button-next::after,
+.results  .swiper-button-prev::after 
+{
+  position: absolute;
+  z-index: 100;
+  // 1183
+@media screen and (min-width: $width-xl) 
+{
+  bottom: -80px;
+}
+// 992-1182
+@media screen and (min-width: $width-l) and  (max-device-width: 1182px)
+{
+  bottom: -60px;
+}
+// 768 -991 
+@media screen and (min-width: $width-m) and  (max-device-width: 991px)
+{
+  bottom: -45px;
+}
+// 360 -767 
+@media screen and (min-width: $width-min-body) and  (max-device-width: 767px)
+{
+  bottom: -95px;
+
+}
+}
+
+
+.results  .swiper-button-next::after
+{
+  // 1183
+@media screen and (min-width: $width-xl) 
+{
+  right: 380px;
+}
+// 992-1182
+@media screen and (min-width: $width-l) and  (max-device-width: 1182px)
+{
+  right: 315px;
+}
+
+// 768 -991 
+@media screen and (min-width: $width-m) and  (max-device-width: 991px)
+{
+  right: 235px;
+}
+// 360-767 
+@media screen and (min-width: $width-min-body) and  (max-device-width: 767px)
+{
+  right: 10px;
+}
+}
+
+
+.results  .swiper-button-prev::after
+{
+  // 1183
+  @media screen and (min-width: $width-xl) 
+{
+  left: 380px;
+}
+// 992-1182
+@media screen and (min-width: $width-l) and  (max-device-width: 1182px)
+{
+  left: 315px;
+}
+// 768 -991 
+@media screen and (min-width: $width-m) and  (max-device-width: 991px)
+{
+  left: 235px;
+}
+// 360-767 
+@media screen and (min-width: $width-min-body) and  (max-device-width: 767px)
+{
+  left: 10px;
+
+}
+}
+
 
   .results .image-wrapper {
     width: auto;
@@ -486,6 +569,7 @@
       height: 32px;
       font-size: 20px;
       color: $color-white;
+      padding: 6px;
     }
     &:hover:after {
       background: $gradient-orange-btn-reverse;
