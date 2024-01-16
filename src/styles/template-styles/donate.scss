@@ -1,0 +1,132 @@
+@import "../variables.scss";
+
+.donate {
+    height: 100vh;
+    padding-top: 86px;
+    padding-bottom: 86px;
+    @media screen and (max-width: $width-l) {
+       padding-top: 48px;
+       padding-bottom: 48px;
+    }
+
+    @media screen and (max-width: $width-m) {
+        background: $color-white;
+
+    }
+    
+
+    .donate-content {
+        background-color: $color-white;
+        border-radius: 8px;
+        box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.21);
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        padding: 48px 48px 56px;
+        @media screen and (max-width: $width-l) {
+            padding: 32px 32px 56px;
+            gap: 37px;
+        }
+        @media screen and (max-width: $width-s) {
+            flex-direction: column;
+            padding: 0px;
+            border-radius: 0px;
+            box-shadow: none;
+            gap: 36px;
+        }
+
+        .donate-content-left {
+            width: calc(440/1024*100vw);
+            @media screen and (max-width: $width-l) {
+                width: calc(329/864*100vw);
+            }
+            @media screen and (max-width: $width-m) {
+                width: calc(329/640*100vw);
+        
+            }
+            @media screen and (max-width: $width-s) {
+                width: 100%;
+            }
+        }
+    
+        .donate-content-text {
+            margin-top: 24px;
+            
+            :not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    
+        .donate-content-right {
+            display: flex;
+            align-items: end;
+            gap: 48px;
+            margin-top: 130px;
+            width: calc(559/1024*100vw);
+
+            @media screen and (max-width: $width-l) {
+                gap: 24px;
+                width: calc(498/864*100vw);
+               
+            }
+            @media screen and (max-width: $width-m) {
+                align-items: start;
+                flex-direction: column-reverse;
+                margin-top: 0px;
+                width: calc(257/640*100vw);
+            }
+            @media screen and (max-width: $width-s) {
+                gap: 48px;
+                flex-direction: column;
+                width: 100%;
+            }
+
+
+            .qr-code-wrapper {
+                width: 217px;
+                height: 217px;
+                flex-grow: 0;
+                flex-shrink: 0;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .payment-details-wrapper {
+                /*max-width: 294px; */
+                flex-grow: 1;
+                flex-shrink: 1;
+
+                .payment-details-title {
+                    color: $color-orange;
+                    font-family: $font-family-base;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 116%;
+                    text-transform: uppercase;
+                    margin-bottom: 29px;
+                }
+
+                .payment-details-text-bold {
+                    font-weight: 500;
+                }
+
+                .account-wrapper {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 29px;
+                }
+
+                .card-number-wrapper {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+

@@ -9,40 +9,39 @@
         <?php get_template_part( 'template-parts/page-banner', null, array(
                 'title' => get_field( "title" )
             ) ); ?>
-        <section class="donate">
-            <div class="container">
-                <h1 class="title-gradient-h1"><?php echo esc_html( get_field('title') ); ?></h1>
-                <div class="donate-text-wrapper">
-                    <?php echo wp_kses_post ( get_field('text') ); ?>
+        <section class="container donate">
+            <div class="donate-content">
+                <div class="donate-content-left">
+                    <h1 class="title-gradient-h1"><?php echo esc_html( get_field('title') ); ?></h1>
+                    <div class="donate-content-text">
+                        <?php echo wp_kses_post ( get_field('text') ); ?>
+                    </div>
                 </div>
-                <div class="donate-payment-details">
+                <div class="donate-content-right">
                     <div class="qr-code-wrapper">
                         <?php if( get_field('qrcode') ): ?>
-                            <img src="<?php the_field('qrcode'); ?>" alt="QR-code для донату" />
+                            <img src="<?php the_field('qrcode'); ?>" alt="QR-code для донату" width='217' heigh="217"/>
                         <?php endif; ?>
                     </div>
                     <div class="payment-details-wrapper">
-                        <h2 class="title-gradient-h2"><?php echo esc_html( get_field('header_donate') ); ?></h2>
-                        <p>Розрахунковий рахунок ГО ЖИВИ:</p>
-                        <p><?php echo esc_html( get_field('account') ); ?></p>
-                        <div class="">
+                        <h2 class="payment-details-title"><?php echo esc_html( get_field('header_donate_details') ); ?></h2>
+                        <p class="payment-details-text-bold">Розрахунковий рахунок ГО ЖИВИ:</p>
+                        <div class="account-wrapper">
+                            <p><?php echo esc_html( get_field('account') ); ?></p>
                             <svg width="16" height="16">
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-copy"></use>
                             </svg>
                         </div>
-                        <p>Картка Приват Банку:</p>
+                        <p class="payment-details-text-bold"><?php echo esc_html( get_field('card_name') ); ?></p>
                         <p><?php echo esc_html( get_field('card_holder') ); ?></p>
-                        <p><?php echo esc_html( get_field('card_number') ); ?></p>
-                        <div class="">
+                        <div class="card-number-wrapper">
+                            <p><?php echo esc_html( get_field('card_number') ); ?></p>
                             <svg width="16" height="16">
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-copy"></use>
                             </svg>
                         </div>
                     </div>
                 </div>
-
-
-               
             </div>
         </section>
     </main>
