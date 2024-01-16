@@ -2,8 +2,10 @@
 
 const swiperResults = new Swiper(".swiperResults", {
   centeredSlides: true,
-  centeredSlidesBounds: true,
-  createElements: true,
+  loop: true,
+  keyboard: {
+      enabled: true,
+  },
 
   breakpoints: {
     1920: {
@@ -33,6 +35,10 @@ const swiperResults = new Swiper(".swiperResults", {
 // honors-and-thanks__section
 
 const swiperHonor = new Swiper(".swiperHonor", {
+  centeredSlides: true,
+  loop: true,
+
+
   breakpoints: {
     1920: {
       spaceBetween: 20,

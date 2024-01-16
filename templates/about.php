@@ -129,7 +129,7 @@ get_header();
 
             <!-- swiper_slide of results_section  -->
             <div class="swiper swiperResults">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper" >
                     <?php
                     $images = get_field('results_banners');
                     if ($images): ?>
