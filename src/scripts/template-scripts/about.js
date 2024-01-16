@@ -3,9 +3,6 @@
 const swiperResults = new Swiper(".swiperResults", {
   centeredSlides: true,
   loop: true,
-  keyboard: {
-      enabled: true,
-  },
 
   breakpoints: {
     1920: {
@@ -37,7 +34,6 @@ const swiperResults = new Swiper(".swiperResults", {
 const swiperHonor = new Swiper(".swiperHonor", {
   centeredSlides: true,
   loop: true,
-
 
   breakpoints: {
     1920: {
