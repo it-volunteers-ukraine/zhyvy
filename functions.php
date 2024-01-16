@@ -26,6 +26,7 @@ function wp_it_volunteers_scripts() {
   wp_enqueue_style( 'swiper-style','https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array('main') );
   wp_enqueue_style( 'lightbox2-style', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css', array('main') );
   wp_enqueue_style( 'content-event-list-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/content-event-list.css', array('main') );
+  wp_enqueue_style( 'content-event-mini-card', get_template_directory_uri() . '/assets/styles/template-parts-styles/content-event-mini-card.css', array('main') );
 
   wp_enqueue_script( 'wp-it-volunteers-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true );
   wp_enqueue_script( 'swiper-scripts', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), false, true );
@@ -96,6 +97,19 @@ function wp_it_volunteers_menus() {
 }
 
 add_action( 'init', 'wp_it_volunteers_menus');
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'footer-menu-1' => __( 'Footer Menu 1' ),
+      'footer-menu-2' => __( 'Footer Menu 2' ),
+      'footer-menu-3' => __( 'Footer Menu 3' ),
+      'footer-menu-4' => __( 'Footer Menu 4' ),
+      'footer-menu-5' => __( 'Footer Menu 5' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
 
 
 /** ACF add options page */

@@ -6,9 +6,13 @@ get_header();
 ?>
 <main class="about-page main" id="about">
 
-    <?php get_template_part('template-parts/page-banner', null, array(
-        'title' => get_field("about_title")
-    )); ?>
+    <?php get_template_part(
+        'template-parts/page-banner',
+        null,
+        array(
+            'title' => get_field("about_title")
+        )
+    ); ?>
 
 
     <!--    history_section*************************************** -->
