@@ -333,87 +333,68 @@
     position: relative;
   }
 
+  // adaptive for btn of swiper
 
-.results  .swiper-button-next::after,
-.results  .swiper-button-prev::after 
-{
-  position: absolute;
-  z-index: 100;
-  // 1183
-@media screen and (min-width: $width-xl) 
-{
-  bottom: -80px;
-}
-// 992-1182
-@media screen and (min-width: $width-l) and  (max-device-width: 1182px)
-{
-  bottom: -60px;
-}
-// 768 -991 
-@media screen and (min-width: $width-m) and  (max-device-width: 991px)
-{
-  bottom: -45px;
-}
-// 360 -767 
-@media screen and (min-width: $width-min-body) and  (max-device-width: 767px)
-{
-  bottom: -95px;
+  .results .swiper-button-next::after,
+  .results .swiper-button-prev::after {
+    position: absolute;
+    z-index: 100;
+    // 1183
+    @media screen and (min-width: $width-xl) {
+      bottom: -80px;
+    }
+    // 992-1182
+    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+      bottom: -70px;
+    }
+    // 768 -991
+    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+      bottom: -50px;
+    }
+    // 360 -767
+    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+      bottom: -95px;
+    }
+  }
 
-}
-}
+  .results .swiper-button-next::after {
+    // 1183
+    @media screen and (min-width: $width-xl) {
+      right: 380px;
+    }
+    // 992-1182
+    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+      right: 315px;
+    }
 
+    // 768 -991
+    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+      right: 235px;
+    }
+    // 360-767
+    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+      right: 10px;
+    }
+  }
 
-.results  .swiper-button-next::after
-{
-  // 1183
-@media screen and (min-width: $width-xl) 
-{
-  right: 380px;
-}
-// 992-1182
-@media screen and (min-width: $width-l) and  (max-device-width: 1182px)
-{
-  right: 315px;
-}
-
-// 768 -991 
-@media screen and (min-width: $width-m) and  (max-device-width: 991px)
-{
-  right: 235px;
-}
-// 360-767 
-@media screen and (min-width: $width-min-body) and  (max-device-width: 767px)
-{
-  right: 10px;
-}
-}
-
-
-.results  .swiper-button-prev::after
-{
-  // 1183
-  @media screen and (min-width: $width-xl) 
-{
-  left: 380px;
-}
-// 992-1182
-@media screen and (min-width: $width-l) and  (max-device-width: 1182px)
-{
-  left: 315px;
-}
-// 768 -991 
-@media screen and (min-width: $width-m) and  (max-device-width: 991px)
-{
-  left: 235px;
-}
-// 360-767 
-@media screen and (min-width: $width-min-body) and  (max-device-width: 767px)
-{
-  left: 10px;
-
-}
-}
-
+  .results .swiper-button-prev::after {
+    // 1183
+    @media screen and (min-width: $width-xl) {
+      left: 380px;
+    }
+    // 992-1182
+    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+      left: 315px;
+    }
+    // 768 -991
+    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+      left: 235px;
+    }
+    // 360-767
+    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+      left: 10px;
+    }
+  }
 
   .results .image-wrapper {
     width: auto;
@@ -445,9 +426,65 @@
   .honors-and-thanks .swiperHonor {
     display: flex;
     height: 360px;
-    padding-top: 36px;
+    padding: 36px 10px 10px 10px;
     justify-content: space-between;
     width: 100%;
+    position: relative;
+    // 360 -767
+    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+      padding-right: 6px;
+    }
+  }
+
+  // adaptive for btn of swiper
+  .honors-and-thanks .swiper-button-next::after,
+  .honors-and-thanks .swiper-button-prev::after {
+    position: absolute;
+    z-index: 100;
+
+    // 360 -767
+    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+      bottom: -158px;
+    }
+  }
+
+  .honors-and-thanks .swiper-button-next::after {
+    // 1183
+    @media screen and (min-width: $width-xl) {
+      right: -5px;
+    }
+    // 992-1182
+    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+      right: -7px;
+    }
+
+    // 768 -991
+    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+      right: -8px;
+    }
+    // 360-767
+    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+      right: 15px;
+    }
+  }
+
+  .honors-and-thanks .swiper-button-prev::after {
+    // 1183
+    @media screen and (min-width: $width-xl) {
+      left: -10px;
+    }
+    // 992-1182
+    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+      left: -8px;
+    }
+    // 768 -991
+    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+      left: -5px;
+    }
+    // 360-767
+    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+      left: 15px;
+    }
   }
 
   .honors-and-thanks .swiper-slide {
@@ -488,7 +525,6 @@
     justify-content: center;
     align-items: center;
     gap: 42px;
-    
 
     @media screen and (min-width: $width-min-body) {
       gap: 48px 42px;
