@@ -44,7 +44,7 @@
 .footer-logo-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   width: 253px;
   @media screen and (max-width: $width-l) {
     width: 192px;
@@ -141,20 +141,20 @@
   align-content: space-between;
   justify-content: space-between;
   @media screen and (max-width: $width-l) {
-    height: 88px;
+    // height: 88px;
     margin-bottom: 32px;
   }
   @media screen and (max-width: $width-m) {
-    height: 132px;
+    flex-wrap: nowrap;
+    height: auto;
   }
   @media screen and (max-width: $width-s) {
-    height: auto;
   }
 }
 .footer-menu-item-title-wrapper {
   display: flex;
   gap: 8px;
-  @media screen and (max-width: $width-l) {
+  @media screen and (max-width: $width-m) {
     :hover {
       text-decoration: underline;
       cursor: pointer;
@@ -180,13 +180,21 @@
   height: 24px;
   fill: currentColor;
   transform: rotate(90deg);
-  @media screen and (max-width: $width-l) {
+  @media screen and (max-width: $width-m) {
     display: block;
   }
 }
 .footer-menu-item-wrapper {
-  @media screen and (max-width: $width-l) {
+  div ul li a:hover {
+    text-decoration: underline;
+  }
+  @media screen and (max-width: $width-m) {
     display: none;
+    margin-bottom: 10px;
+
+    div ul li a {
+      text-decoration: underline;
+    }
   }
 }
 

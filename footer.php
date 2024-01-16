@@ -2,7 +2,7 @@
         <div class="footer-content-wrapper">
             <div class="footer-content container">
                 <div class="footer-logo-wrapper">
-                    <a class="footer-logo" href="<?php echo get_permalink( get_page_by_path( '/' ) ); ?>">
+                    <a class="footer-logo" href="<?php echo site_url(''); ?>">
                         <img src="<?php bloginfo( 'template_url' ); ?>/assets/images/footer-logo.png"
                             alt="footer logo" />
                     </a>
