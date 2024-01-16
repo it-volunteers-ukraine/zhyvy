@@ -25,7 +25,7 @@
 			$categoryColor = get_field( 'color', $category )['0'] ?? '';
 			$currentCategory = single_cat_title( '', false );
 			$categoryName = $category->name; ?>
-            <li class="navbar-tab">
+            <li>
                 <a href="<?php echo get_category_link( $category->term_id ) ?>"
                    class="event-link event-link--<?php echo $categoryColor ?>
                    <?php echo ( $currentCategory === $categoryName ) ? ' _active' : '' ?>">
