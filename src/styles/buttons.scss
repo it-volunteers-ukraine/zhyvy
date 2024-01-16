@@ -233,6 +233,7 @@
 .tag {
   font-weight: 400;
   line-height: 100%;
+  letter-spacing: 0.05px;
   color: $color-white;
   border-radius: 50px;
   white-space: nowrap;
@@ -306,6 +307,97 @@
     &.dots {
       border: 2px solid transparent;
       align-items: flex-end;
+    }
+  }
+}
+
+// Events navbar links
+
+.event-link {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 17px;
+  line-height: 116%;
+  letter-spacing: 0.05px;
+  border-radius: $border-radius-base;
+  color: $color-blue-light;
+  border: 1px solid $color-blue-light;
+  transition: background-color $transition-base, color $transition-base;
+
+  svg {
+    display: none;
+  }
+
+  &:hover, &._active {
+    color: $color-white;
+  }
+
+  &._active {
+    svg {
+      display: inline-block;
+    }
+  }
+
+  // colors
+  &--orange {
+    color: $color-orange;
+    border: 1px solid $color-orange;
+
+    &:hover, &._active {
+      background-color: $color-orange;
+    }
+  }
+
+  &--green {
+    color: $color-green;
+    border: 1px solid $color-green;
+
+    &:hover, &._active {
+      background-color: $color-green;
+    }
+  }
+
+  &--violet {
+    color: $color-violet;
+    border: 1px solid $color-violet;
+
+    &:hover, &._active {
+      background-color: $color-violet;
+    }
+  }
+
+  &--colorful {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    user-select: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      border-radius: inherit;
+      background: $gradient-colorful;
+      transition: opacity $transition-base;
+    }
+
+    &:hover, &._active {
+      padding: 9px 13px;
+      border: none;
+
+      &:before {
+        opacity: 1;
+      }
     }
   }
 }

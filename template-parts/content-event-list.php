@@ -13,15 +13,26 @@
 <nav class="content-event-list-nav container">
     <ul>
         <li class="navbar-tab">
-            <a href="<?php echo get_permalink( get_page_by_path( 'podiyi' ) ); ?>">
+            <a href="<?php echo get_permalink( get_page_by_path( 'podiyi' ) ); ?>"
+               class="event-link event-link--colorful <?php echo ( ! is_category() ) ? '_active' : '' ?>">
+                <svg width="16" height="16">
+                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-check"></use>
+                </svg>
                 <span>Всі</span>
             </a>
         </li>
-		<?php foreach ( $allCategories as $category ) : ?>
-            <li class="navbar-tab">
-                <a href="<?php echo get_category_link( $category->term_id ) ?>">
-                    <span> <?php echo $category->name ?></span>
-                    <span><?php echo $category->count ?></span>
+		<?php foreach ( $allCategories as $category ) :
+			$categoryColor = get_field( 'color', $category )['0'] ?? '';
+			$currentCategory = single_cat_title( '', false );
+			$categoryName = $category->name; ?>
+            <li>
+                <a href="<?php echo get_category_link( $category->term_id ) ?>"
+                   class="event-link event-link--<?php echo $categoryColor ?>
+                   <?php echo ( $currentCategory === $categoryName ) ? ' _active' : '' ?>">
+                    <svg width="16" height="16">
+                        <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-check"></use>
+                    </svg>
+                    <span> <?php echo $categoryName ?></span>
                 </a>
             </li>
 		<?php endforeach; ?>

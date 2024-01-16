@@ -1,1 +1,1 @@
-console.log('donate');
+new ClipboardJS('.copy-to-clipboard');
