@@ -153,6 +153,12 @@
 .footer-menu-item-title-wrapper {
   display: flex;
   gap: 8px;
+  @media screen and (max-width: $width-l) {
+    :hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
 .footer-menu-item-title {
   color: $color-white;
@@ -162,6 +168,7 @@
   line-height: 116%; /* 23.2px */
   text-transform: uppercase;
   margin-bottom: 8px;
+
   @media screen and (max-width: $width-s) {
     margin-bottom: 20px;
   }

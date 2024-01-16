@@ -72,7 +72,7 @@
                 <div class="footer-menu-wrapper">
                     <ul class="footer-menu-list">
                         <li class="footer-menu-item">
-                            <div class="footer-menu-item-title-wrapper" id="footerDropDownBtn">
+                            <div class="footer-menu-item-title-wrapper " id="footerDropDownBtn-1">
                                 <h3 class="footer-menu-item-title">про нас</h3>
                                 <svg class="footer-menu-item-title-icon">
                                     <use
@@ -82,7 +82,7 @@
                             </div>
 
 
-                            <div class="footer-menu-item-wrapper " id="footerDropDownMenu">
+                            <div class="footer-menu-item-wrapper JSfooter-menu-item-wrapper" id="footerDropDownMenu-1">
                                 <?php wp_nav_menu(array( 'theme_location' => 'footer-menu-1', 'menu_class' => 'link-list last-child' )); ?>
                             </div>
                             <!-- <ul class="footer-menu-subList">
@@ -104,7 +104,7 @@
                             </ul> -->
                         </li>
                         <li class="footer-menu-item">
-                            <div class="footer-menu-item-title-wrapper">
+                            <div class="footer-menu-item-title-wrapper" id="footerDropDownBtn-2">
                                 <h3 class="footer-menu-item-title">контакти</h3>
                                 <svg class="footer-menu-item-title-icon">
                                     <use
@@ -112,7 +112,7 @@
                                     </use>
                                 </svg>
                             </div>
-                            <div class="footer-menu-item-wrapper">
+                            <div class="footer-menu-item-wrapper JSfooter-menu-item-wrapper" id="footerDropDownMenu-2">
                                 <?php wp_nav_menu(array( 'theme_location' => 'footer-menu-2', 'menu_class' => 'link-list last-child' )); ?>
                             </div>
                             <!-- <ul class="footer-menu-subList">
@@ -122,7 +122,7 @@
                             </ul> -->
                         </li>
                         <li class="footer-menu-item">
-                            <div class="footer-menu-item-title-wrapper">
+                            <div class="footer-menu-item-title-wrapper" id="footerDropDownBtn-3">
                                 <h3 class="footer-menu-item-title">ПОДІЇ</h3>
                                 <svg class="footer-menu-item-title-icon">
                                     <use
@@ -130,7 +130,7 @@
                                     </use>
                                 </svg>
                             </div>
-                            <div class="footer-menu-item-wrapper">
+                            <div class="footer-menu-item-wrapper" id="footerDropDownMenu-3">
                                 <?php wp_nav_menu(array( 'theme_location' => 'footer-menu-3', 'menu_class' => 'link-list last-child' )); ?>
                             </div>
                             <!-- <ul class="footer-menu-subList">
@@ -146,7 +146,7 @@
                             </ul> -->
                         </li>
                         <li class="footer-menu-item">
-                            <div class="footer-menu-item-title-wrapper">
+                            <div class="footer-menu-item-title-wrapper" id="footerDropDownBtn-4">
                                 <h3 class="footer-menu-item-title">ресурси</h3>
                                 <svg class="footer-menu-item-title-icon">
                                     <use
@@ -154,7 +154,7 @@
                                     </use>
                                 </svg>
                             </div>
-                            <div class="footer-menu-item-wrapper">
+                            <div class="footer-menu-item-wrapper" id="footerDropDownMenu-4">
                                 <?php wp_nav_menu(array( 'theme_location' => 'footer-menu-4', 'menu_class' => 'link-list last-child' )); ?>
                             </div>
                             <!-- <ul class="footer-menu-subList">
@@ -167,7 +167,7 @@
                             </ul> -->
                         </li>
                         <li class="footer-menu-item">
-                            <div class="footer-menu-item-title-wrapper">
+                            <div class="footer-menu-item-title-wrapper" id="footerDropDownBtn-5">
                                 <h3 class="footer-menu-item-title">НАПРЯМКИ РОБОТИ</h3>
                                 <svg class="footer-menu-item-title-icon">
                                     <use
@@ -175,7 +175,7 @@
                                     </use>
                                 </svg>
                             </div>
-                            <div class="footer-menu-item-wrapper">
+                            <div class="footer-menu-item-wrapper" id="footerDropDownMenu-5">
                                 <?php wp_nav_menu(array( 'theme_location' => 'footer-menu-5', 'menu_class' => 'link-list last-child' )); ?>
                             </div>
                             <!-- <ul class="footer-menu-subList">
