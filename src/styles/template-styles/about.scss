@@ -442,10 +442,15 @@
   }
 
   // for scale active slids
-  .results .swiper-slide.swiper-slide-active {
-    transform: scale(1.4);
-    z-index: 3;
+
+  @media screen and (min-width: $width-m) {
+    .results .swiper-slide.swiper-slide-active {
+      transform: scale(1.4);
+      z-index: 3;
+    }
+
   }
+
 
   .results img {
     height: 100%;
