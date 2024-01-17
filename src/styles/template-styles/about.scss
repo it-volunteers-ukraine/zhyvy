@@ -542,17 +542,21 @@
   .partners {
     margin-top: 60px;
 
-    // Self-propelled styles for partners without a logo
+    //  styles for partners without a logo
     &_name {
-      padding: 3px;
-      font-size: $font-size-base;
-      border: 1px solid $color-orange;
-      border-radius: $border-radius-button;
+      color: $color-third-gray;
+      text-align: center;
+      font-family: $font-family-base;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 116%;
+      text-transform: uppercase;
     }
   }
 
   .partners-container {
     @extend .results-container;
+    gap: 36px;
     padding: 36px 48px 64px 48px;
     box-shadow: $box-shadow-base;
     background-color: $color-white;
