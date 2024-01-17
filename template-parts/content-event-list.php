@@ -43,7 +43,7 @@
     <div class="content-event-list-grid">
 		<?php
 			$argsQuery    = ( [
-				'posts_per_page' => 6,
+				'posts_per_page' => 3,
 				'post_type'      => 'events',
 				'paged'          => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 				'category_name'  => $category_name,

@@ -21,27 +21,25 @@
         </div>
 
         <div class="description">
+            <h3 class="<?php echo( $isEventPost ? 'h3--single' : '' ); ?>"><?php the_field( 'title' ); ?></h3>
 
-            <h3><?php the_field( 'title' ); ?></h3>
-
-            <div class="details">
-                <p class="datetime">
+            <p class="datetime <?php echo( $isEventPost ? 'datetime--single' : '' ); ?>">
                 <span class="date">
                     <svg width="20" height="20">
-                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-calendar"></use>
+                        <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-calendar"></use>
                     </svg>
                     <?php the_field( 'date' ); ?>
                 </span>
-                    <span class="time">
+                <span class="time">
                     <svg width="20" height="20">
-                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-clock"></use>
+                        <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-clock"></use>
                     </svg>
                     <?php the_field( 'time' ); ?>
                 </span>
-                </p>
-                <p class="address"><?php the_field( 'address' ); ?></p>
-            </div>
+            </p>
             
+            <p class="address"><?php the_field( 'address' ); ?></p>
+
         </div>
     </div>
 </div>

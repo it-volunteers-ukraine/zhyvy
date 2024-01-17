@@ -79,6 +79,11 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_script('single-work-scripts', get_template_directory_uri() . '/assets/scripts/single-pages-scripts/single-work.js', array(), false, true);
     }
 
+  if (get_post_type() === 'events' ) {
+    wp_enqueue_style('single-events-style', get_template_directory_uri() . '/assets/styles/single-pages-styles/single-events.css', array('main') );
+    wp_enqueue_script('single-events-scripts', get_template_directory_uri() . '/assets/scripts/single-pages-scripts/single-events.js', array(), false, true);
+    }
+
 }
 /** add fonts */
 function add_google_fonts() {
