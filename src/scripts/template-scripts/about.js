@@ -1,3 +1,33 @@
+const frontSd = document.querySelector('.front-side');
+
+const backSd = document.querySelector('.back-side');
+
+
+frontSd.addEventListener("click", openTmCard);
+
+backSd.addEventListener("click", closeTmCard);
+
+
+
+
+
+function openTmCard() {
+
+  frontSd.classList.add('rotate-180');
+  backSd.classList.add('rotate-0');
+  console.log("open8");
+} 
+
+
+function  closeTmCard() {
+      frontSd.classList.remove('rotate-180');
+    backSd.classList.remove('rotate-0');
+       
+    console.log("close9");
+}
+
+
+
 // Results_section
 
 const swiperResults = new Swiper(".swiperResults", {
