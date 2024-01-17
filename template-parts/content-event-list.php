@@ -57,7 +57,11 @@
 					$query->the_post();
 					?>
 
-					<?php get_template_part( 'template-parts/content', 'event-card' ); ?>
+                    <article class="card">
+                        <a href="<?php the_permalink(); ?>">
+							<?php get_template_part( 'template-parts/content', 'event-card' ); ?>
+                        </a>
+                    </article>
 
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>

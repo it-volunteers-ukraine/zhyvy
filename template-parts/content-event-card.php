@@ -1,5 +1,9 @@
-<article class="content-event-card">
-    <a class="card-wrapper" href="<?php the_permalink(); ?>">
+<?php
+	$isEventPost = $args['isEventPost'] ?? false; // checks if card is used as heading on single-events
+?>
+
+<div class="content-event-card">
+    <div class="card-wrapper <?php echo( $isEventPost ? 'card-wrapper--single' : '' ); ?>">
         <div class="tags">
 			<?php $postCategories = get_the_category( get_the_ID() );
 				if ( ! empty( $postCategories ) ) :
@@ -17,22 +21,27 @@
         </div>
 
         <div class="description">
+
             <h3><?php the_field( 'title' ); ?></h3>
-            <p class="datetime">
+
+            <div class="details">
+                <p class="datetime">
                 <span class="date">
                     <svg width="20" height="20">
                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-calendar"></use>
                     </svg>
                     <?php the_field( 'date' ); ?>
                 </span>
-                <span class="time">
+                    <span class="time">
                     <svg width="20" height="20">
                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-clock"></use>
                     </svg>
                     <?php the_field( 'time' ); ?>
                 </span>
-            </p>
-            <p class="address"><?php the_field( 'address' ); ?></p>
+                </p>
+                <p class="address"><?php the_field( 'address' ); ?></p>
+            </div>
+            
         </div>
-    </a>
-</article>
+    </div>
+</div>
