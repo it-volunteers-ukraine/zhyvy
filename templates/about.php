@@ -70,7 +70,7 @@ get_header();
 
                         <div class="team-card">
                             <div class="front-side front-side-js">
-                                <img src="<?php
+                                <img class="front-sideIMG" src="<?php
                                 the_sub_field('team_card_image');
                                 ?>" alt="<?php
                                 the_sub_field('team_card_name');
@@ -129,7 +129,7 @@ get_header();
 
             <!-- swiper_slide of results_section  -->
             <div class="swiper swiperResults">
-                <div class="swiper-wrapper" >
+                <div class="swiper-wrapper">
                     <?php
                     $images = get_field('results_banners');
                     if ($images): ?>

@@ -250,22 +250,20 @@
     color: $color-text-primary;
   }
 
-  
   // cards  hover only for desctop back-side
   @media only screen and (min-device-width: $width-xl) {
     // cards hover efects for  back-side
-  .team-card:hover .back-side {
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-  }
+    .team-card:hover .back-side {
+      transform: rotateY(0deg);
+      transform-style: preserve-3d;
+    }
 
-  // cards  hover only for desctop  efects for  front-side
-  .team-card:hover .front-side {
-    transform: rotateY(-180deg);
-    transform-style: preserve-3d;
+    // cards  hover only for desctop  efects for  front-side
+    .team-card:hover .front-side {
+      transform: rotateY(-180deg);
+      transform-style: preserve-3d;
+    }
   }
-  }
-
 
   .rotate-180 {
     transform: rotateY(-180deg);
@@ -273,10 +271,9 @@
   }
 
   .rotate-0 {
-  transform: rotateY(0deg);
-  transform-style: preserve-3d;
-}
-
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+  }
 
   // wrapp for text in _team_card
   .team-card_content {

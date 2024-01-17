@@ -1,34 +1,37 @@
-const frontSd = document.querySelector('.front-side');
+// team_section ****************************
 
-const backSd = document.querySelector('.back-side');
+const listTeam = document.querySelector(".team_list");
 
+listTeam.addEventListener("click", openTmCard);
 
-frontSd.addEventListener("click", openTmCard);
+function openTmCard(event) {
+  let target = event.target;
+  // console.log(target, 'tar');
 
-backSd.addEventListener("click", closeTmCard);
+  // if the target has class...
+  if (target.className === "front-sideIMG") {
+    // add nearest parent div class...
+    // (shorter for the front side)
+    target.closest("div").classList.add("rotate-180");
+    // add to the class next closest to the parent div element...
+    // (shorter for the back side)
+    target
+      .closest("div")
+      .nextSibling.nextElementSibling.classList.add("rotate-0");
+  }
+  // console.log("1998", target.closest('div').nextSibling.nextElementSibling);
 
-
-
-
-
-function openTmCard() {
-
-  frontSd.classList.add('rotate-180');
-  backSd.classList.add('rotate-0');
-  console.log("open8");
-} 
-
-
-function  closeTmCard() {
-      frontSd.classList.remove('rotate-180');
-    backSd.classList.remove('rotate-0');
-       
-    console.log("close9");
+  // then by clicking on the back text, we delete the added classes
+  if (target.className === "back-side_text") {
+    target.closest("div").classList.remove("rotate-0");
+    target
+      .closest("div")
+      .previousSibling.previousElementSibling.classList.remove("rotate-180");
+  }
+  // console.log(target.closest('div').previousSibling.previousElementSibling, 1999);
 }
 
-
-
-// Results_section
+// Results_section*************************************
 
 const swiperResults = new Swiper(".swiperResults", {
   centeredSlides: true,
@@ -59,7 +62,7 @@ const swiperResults = new Swiper(".swiperResults", {
   },
 });
 
-// honors-and-thanks__section
+// honors-and-thanks__section*************************************
 
 const swiperHonor = new Swiper(".swiperHonor", {
   centeredSlides: true,
@@ -89,7 +92,7 @@ const swiperHonor = new Swiper(".swiperHonor", {
   },
 });
 
-// Lightbox
+// Lightbox***********************************************
 
 function initializeLightbox() {
   lightbox.option({
