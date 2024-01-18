@@ -13,19 +13,19 @@
     @media screen and (min-width: $width-xl) {
       padding: 86px 0px 132px 0px;
     }
-    @media only screen and (min-device-width: $width-m) and (max-device-width: 1182px) {
+    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
       padding: 48px 32px 96px 32px;
     }
 
     // 768-991
-    @media screen and (min-width: $width-m) and (max-device-width: 800px) {
+    @media screen and (min-width: $width-m) and (max-width: 800px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       align-self: stretch;
     }
     // 360 - 768
-    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       flex-direction: column;
       padding: 48px 16px 82px 16px;
       justify-content: center;
@@ -43,28 +43,28 @@
       object-fit: fill;
     }
 
-    @media only screen and (min-device-width: $width-xl) {
+    @media only screen and (min-width: $width-xl) {
       max-width: 542px;
       max-height: 332px;
     }
     // 992-1182
-    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+    @media only screen and (min-width: $width-l) and (max-width: 1182px) {
       max-width: 45%;
       max-height: 302px;
     }
     // 801-991
-    @media only screen and (min-device-width: 801px) and (max-device-width: 991px) {
+    @media only screen and (min-width: 801px) and (max-width: 991px) {
       max-width: 46%;
       max-height: 302px;
     }
 
     // 768 - 800
-    @media only screen and (min-device-width: $width-m) and (max-device-width: 800px) {
+    @media only screen and (min-width: $width-m) and (max-width: 800px) {
       width: 95%;
       max-height: 397px;
     }
     // 360-767
-    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       max-width: 328px;
       height: 211px;
     }
@@ -76,30 +76,30 @@
     flex-direction: column;
     align-items: flex-start;
     // 1183
-    @media only screen and (min-device-width: $width-xl) {
+    @media only screen and (min-width: $width-xl) {
       gap: 24px;
       max-width: 45%;
       max-height: 332px;
     }
     // 992-1182
-    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+    @media only screen and (min-width: $width-l) and (max-width: 1182px) {
       max-width: 47%;
       max-height: 302px;
     }
     // 801-991
-    @media only screen and (min-device-width: 801px) and (max-device-width: 991px) {
+    @media only screen and (min-width: 801px) and (max-width: 991px) {
       max-width: 44%;
       max-height: 302px;
     }
 
     // 768-991
-    @media only screen and (min-device-width: $width-m) and (max-device-width: 800px) {
+    @media only screen and (min-width: $width-m) and (max-width: 800px) {
       gap: 16px;
       max-width: 92%;
       height: auto;
     }
     // 360 -767
-    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       gap: 24px;
       max-width: 328px;
       height: 345px;
@@ -128,7 +128,7 @@
     flex-direction: column;
     align-items: flex-start;
     // 360
-    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       align-items: center;
     }
   }
@@ -140,20 +140,20 @@
     justify-content: center;
     margin: 0 -32px 0 -10px;
     // 1183
-    @media only screen and (min-device-width: $width-xl) {
+    @media only screen and (min-width: $width-xl) {
       padding-top: 36px;
     }
     // 768-1182
-    @media only screen and (min-device-width: $width-m) and (max-width: 1182px) {
+    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
       padding-top: 36px;
     }
 
     // 768 991
-    @media only screen and (min-device-width: $width-m) and (max-width: 991px) {
+    @media only screen and (min-width: $width-m) and (max-width: 991px) {
       justify-content: flex-start;
     }
     // 360 - 767
-    @media only screen and (min-device-width: $width-min-body) and (max-width: 767px) {
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       padding-top: 16px;
     }
   }
@@ -169,23 +169,23 @@
     border-radius: $border-radius-base;
     overflow: hidden;
     // 1183
-    @media only screen and (min-device-width: $width-xl) {
+    @media only screen and (min-width: $width-xl) {
       flex-basis: 256px;
       height: 319px;
     }
 
     // 992-1182
-    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+    @media only screen and (min-width: $width-l) and (max-width: 1182px) {
       flex-basis: 208px;
       height: 263px;
     }
     // 768
-    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+    @media only screen and (min-width: $width-m) and (max-width: 991px) {
       flex-basis: 212px;
       height: 268px;
     }
     // 360
-    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       flex-basis: 256px;
       height: 319px;
     }
@@ -201,19 +201,19 @@
     transition: transform $transition-base;
     height: auto;
     // 1183
-    @media only screen and (min-device-width: $width-xl) {
+    @media only screen and (min-width: $width-xl) {
       height: 248px;
     }
     // 992 -1182
-    @media only screen and (min-device-width: $width-l) and (max-device-width: 1182px) {
+    @media only screen and (min-width: $width-l) and (max-width: 1182px) {
       height: 203px;
     }
     // 768 - 1182
-    @media only screen and (min-device-width: $width-m) and (max-device-width: 991px) {
+    @media only screen and (min-width: $width-m) and (max-width: 991px) {
       height: 208px;
     }
     // 360
-    @media only screen and (min-device-width: $width-min-body) and (max-device-width: 767px) {
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       height: 248px;
     }
   }
@@ -251,7 +251,7 @@
   }
 
   // cards  hover only for desctop back-side
-  @media only screen and (min-device-width: $width-xl) {
+  @media only screen and (min-width: $width-xl) {
     // cards hover efects for  back-side
     .team-card:hover .back-side {
       transform: rotateY(0deg);
@@ -299,18 +299,18 @@
       padding: 14px 16px;
     }
     // 992
-    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+    @media screen and (min-width: $width-l) and (max-width: 1182px) {
       background-image: url(../../images/bg/bg_team_cards_tab_992.png);
       padding: 12px;
     }
     // 768
-    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+    @media screen and (min-width: $width-m) and (max-width: 991px) {
       background-image: url(../../images/bg/bg_team_cards_tab_768.png);
       padding: 14px 16px;
     }
 
     // 360
-    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       background-image: url(../../images/bg/bg_team_cards_mob_360.png);
       padding: 14px 16px;
     }
@@ -378,15 +378,15 @@
       bottom: -80px;
     }
     // 992-1182
-    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+    @media screen and (min-width: $width-l) and (max-width: 1182px) {
       bottom: -70px;
     }
     // 768 -991
-    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+    @media screen and (min-width: $width-m) and (max-width: 991px) {
       bottom: -50px;
     }
     // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       bottom: -95px;
     }
   }
@@ -397,16 +397,16 @@
       right: 380px;
     }
     // 992-1182
-    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+    @media screen and (min-width: $width-l) and (max-width: 1182px) {
       right: 315px;
     }
 
     // 768 -991
-    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+    @media screen and (min-width: $width-m) and (max-width: 991px) {
       right: 235px;
     }
     // 360-767
-    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       right: 10px;
     }
   }
@@ -417,15 +417,15 @@
       left: 380px;
     }
     // 992-1182
-    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+    @media screen and (min-width: $width-l) and (max-width: 1182px) {
       left: 315px;
     }
     // 768 -991
-    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+    @media screen and (min-width: $width-m) and (max-width: 991px) {
       left: 235px;
     }
     // 360-767
-    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       left: 10px;
     }
   }
@@ -448,9 +448,7 @@
       transform: scale(1.4);
       z-index: 3;
     }
-
   }
-
 
   .results img {
     height: 100%;
@@ -460,10 +458,10 @@
   // honors-and-thanks__section****************************************
   .honors-and-thanks {
     margin-top: 132px;
-    @media only screen and (min-device-width: $width-l) {
+    @media only screen and (min-width: $width-l) {
       margin-top: 96px;
     }
-    @media only screen and (min-device-width: $width-min-body) {
+    @media only screen and (min-width: $width-min-body) {
       margin-top: 82px;
     }
   }
@@ -477,7 +475,7 @@
     width: 100%;
     position: relative;
     // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       padding-right: 6px;
     }
   }
@@ -489,7 +487,7 @@
     z-index: 100;
 
     // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       bottom: -158px;
     }
   }
@@ -500,16 +498,16 @@
       right: -5px;
     }
     // 992-1182
-    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+    @media screen and (min-width: $width-l) and (max-width: 1182px) {
       right: -7px;
     }
 
     // 768 -991
-    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+    @media screen and (min-width: $width-m) and (max-width: 991px) {
       right: -8px;
     }
     // 360-767
-    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       right: 15px;
     }
   }
@@ -520,15 +518,15 @@
       left: -10px;
     }
     // 992-1182
-    @media screen and (min-width: $width-l) and (max-device-width: 1182px) {
+    @media screen and (min-width: $width-l) and (max-width: 1182px) {
       left: -8px;
     }
     // 768 -991
-    @media screen and (min-width: $width-m) and (max-device-width: 991px) {
+    @media screen and (min-width: $width-m) and (max-width: 991px) {
       left: -5px;
     }
     // 360-767
-    @media screen and (min-width: $width-min-body) and (max-device-width: 767px) {
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       left: 15px;
     }
   }
@@ -620,26 +618,7 @@
     justify-content: flex-end;
   }
 
-  // button-up
-  .button-up {
-    padding: 6px;
-    width: 52px;
-    height: 52px;
-    background: $gradient-colorful;
-    border-radius: $border-radius-button;
-    border: none;
-    margin-top: 68px;
-    transition: $transition-base;
-
-    & svg {
-      transform: rotate(-90deg);
-      fill: $color-white;
-    }
-    &:hover {
-      background: $gradient-colorful-reverse;
-    }
-  }
-
+ 
   // ######################################################################
   // styles for swiper-navigation
   .swiper-button-next,

@@ -281,26 +281,6 @@ get_header();
 
     </section>
 
-    <!-- button-up  -->
-    <div class="container">
-
-
-        <div class="button-up-wrapp">
-
-            <button class="button-up">
-                <a href="#about">
-                    <svg width="24px" height="24px">
-                        <use class="arrow-swipe" href="<?php
-                        bloginfo('template_url');
-                        ?>/assets/images/sprite.svg#icon-arrow-24">
-                        </use>
-                    </svg>
-                </a>
-            </button>
-        </div> <!-- /button-up-wrapp -->
-    </div> <!-- /container  -->
-
-
 </main>
 
 <?php
