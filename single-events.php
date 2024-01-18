@@ -3,7 +3,6 @@
 ?>
 
     <main>
-
 		<?php get_template_part( 'template-parts/page-banner', null, array(
 			'title' => get_field( "title" )
 		) ); ?>
@@ -12,7 +11,6 @@
             <div class="single-event-wrapper">
                 <div class="main-content">
                     <article class="post">
-
 						<?php get_template_part( 'template-parts/content', 'event-card', array( 'isEventPost' => true ) ); ?>
 
                         <div class="events-text-wrapper">
@@ -23,7 +21,13 @@
 
                         </div>
                     </article>
-                    <section class="comments">comments</section>
+
+                    <section class="comments">
+						<?php if ( comments_open() || get_comments_number() ) {
+							comments_template();
+						} ?>
+                    </section>
+
                 </div>
                 <section class="sidebar">
                     <div class="small-card-list">
@@ -63,10 +67,8 @@
 							wp_reset_postdata();
 						endif; ?>
                 </section>
-
             </div>
         </div>
-
     </main>
 
 <?php get_footer(); ?>
