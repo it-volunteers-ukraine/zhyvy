@@ -163,8 +163,9 @@
     @media screen and (max-width: $width-l) {
       gap: 32px;;
     }
-    @media screen and (max-width: $width-s) {
+    @media screen and (max-width: $width-m) {
       flex-direction: column;
+      align-items: center;
     }
   }
 

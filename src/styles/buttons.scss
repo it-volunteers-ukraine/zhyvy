@@ -275,6 +275,10 @@
   gap: 24px;
   user-select: none;
 
+  @media screen and (max-width: $width-xs) {
+    gap: 12px;
+  }
+
   .page-numbers {
     width: 44px;
     height: 44px;
@@ -307,6 +311,7 @@
     &.dots {
       border: 2px solid transparent;
       align-items: flex-end;
+      width: 20px;
     }
   }
 }

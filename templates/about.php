@@ -69,8 +69,8 @@ get_header();
                         ?>
 
                         <div class="team-card">
-                            <div class="front-side">
-                                <img src="<?php
+                            <div class="front-side front-side-js">
+                                <img class="front-sideIMG" src="<?php
                                 the_sub_field('team_card_image');
                                 ?>" alt="<?php
                                 the_sub_field('team_card_name');
@@ -80,7 +80,7 @@ get_header();
 
                             </div> <!-- / front-side -->
 
-                            <div class="back-side">
+                            <div class="back-side back-side-js">
                                 <p class="back-side_text">
                                     <?php
                                     the_sub_field('my_goal');
