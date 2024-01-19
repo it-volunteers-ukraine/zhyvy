@@ -7,7 +7,7 @@
 			'title' => get_field( "title" )
 		) ); ?>
 
-	    <?php get_template_part( 'template-parts/content', 'event-list-nav' ); ?>
+		<?php get_template_part( 'template-parts/content', 'event-list-nav' ); ?>
 
         <div class="container">
             <div class="single-event-wrapper">
@@ -20,7 +20,52 @@
                         </div>
 
                         <div class="socials">
+                            <p>Поділитися</p>
+                            <div class="icon-list">
+                                <a class="icon-link" href="viber://forward?text=<?php the_permalink(); ?>"
+                                   target="_blank" aria-label="Поділитися у Вайбер">
+                                    <svg width="24" height="24">
+                                        <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-viber-outlined"></use>
+                                    </svg>
+                                </a>
+                                <a class="icon-link"
+                                   href="mailto:?subject=<?php the_field( 'title' ); ?>&body=<?php the_permalink(); ?>"
+                                   target="_blank" aria-label="Поділитися через електорнну пошту">
+                                    <span class="icon">
+                                    <svg width="24" height="24">
+                                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-email-outlined"></use>
+                                    </svg>
+                                    </span>
+                                </a>
+								<?php if ( get_field( 'instagram', 'option' ) ) { ?>
+                                    <a class="icon-link" href="<?php the_field( 'instagram', 'option' ); ?>"
+                                       target="_blank" aria-label="Поділитися у інстаграм">
+                                    <span class="icon">
+                                    <svg width="24" height="24">
+                                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-instagram-outlined"></use>
+                                    </svg>
+                                    </span>
+                                    </a>
+								<?php } ?>
 
+                                <a class="icon-link" href="https://wa.me/?text=<?php the_permalink(); ?>""
+                                target="_blank" aria-label="Поділитися у вотсапп">
+                                <span class="icon">
+                                    <svg width="24" height="24">
+                                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-whatsapp-outlined"></use>
+                                    </svg>
+                                    </span>
+                                </a>
+                                <a class="icon-link"
+                                   href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"
+                                   target="_blank" aria-label="Поділитися у фейсбук">
+                                    <span class="icon">
+                                    <svg width="24" height="24">
+                                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-facebook-outlined"></use>
+                                    </svg>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
