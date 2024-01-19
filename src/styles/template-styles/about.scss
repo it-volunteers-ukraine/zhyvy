@@ -2,7 +2,7 @@
 
 .about-page {
   // history section****************************************
-  .history-container  {
+  .history-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -13,10 +13,10 @@
     @media screen and (min-width: $width-xl) {
       padding: 86px 0px 132px 0px;
     }
+
+    // 992-1183
     @media only screen and (min-width: $width-l) and (max-width: 1182px) {
       padding: 48px 32px 96px 32px;
-      border: 1px solid red;
-  
     }
 
     // 360 - 991
@@ -32,30 +32,34 @@
 
   // container for img of history
   .history_image-thumb {
-    padding: 0;
-    & img {
-    width: 100%;
-      object-fit: fill;
-    }
+    border-radius: $border-radius-base;
+    overflow: hidden;
 
+    // 1183 image-thumb
     @media only screen and (min-width: $width-xl) {
       max-width: 542px;
       max-height: 332px;
     }
-    // 992-1182
+    // 992-1182 image-thumb
     @media only screen and (min-width: $width-l) and (max-width: 1182px) {
       max-width: 45%;
-      max-height: 322px;    }
+      height: 250px;
+    }
 
-    // 768 - 991
+    // 768 - 991 image-thumb
     @media only screen and (min-width: $width-m) and (max-width: 991px) {
-      width: 95%;
+      width: 100%;
       height: auto;
     }
     // 360-767
     @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       min-width: 315px;
       height: auto;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
     }
   }
 
@@ -64,7 +68,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    // 1183
+    // 1183 content
     @media only screen and (min-width: $width-xl) {
       gap: 24px;
       max-width: 45%;
@@ -72,23 +76,21 @@
     }
     // 992-1182 content
     @media only screen and (min-width: $width-l) and (max-width: 1182px) {
-      width: 60%;
+      max-width: 50%;
       height: auto;
-      border: 1px solid rgb(0, 255, 17);
     }
-  
 
     // 768-991 content
     @media only screen and (min-width: $width-m) and (max-width: 991px) {
       gap: 16px;
       margin-top: 32px;
-      max-width: 95%;
+      width: 100%;
       height: auto;
     }
     // 360 -767 content
     @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       gap: 24px;
-      max-width: 325px;
+      min-width: 310px;
       height: auto;
       margin-top: 32px;
     }
@@ -114,6 +116,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     // 360
     @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       align-items: center;
@@ -125,16 +128,13 @@
     flex-wrap: wrap;
     padding-right: 0;
     justify-content: center;
-    margin: 0 -32px 0 -10px;
-    // 1183
-    @media only screen and (min-width: $width-xl) {
-      padding-top: 36px;
-    }
-    // 768-1182
-    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
-      padding-top: 36px;
-    }
+    margin: 0 -32px 0 0;
+    gap: 0;
 
+    // 768
+    @media only screen and (min-width: $width-m) {
+      padding-top: 36px;
+    }
     // 768 991
     @media only screen and (min-width: $width-m) and (max-width: 991px) {
       justify-content: flex-start;
@@ -155,6 +155,7 @@
     max-height: 341px;
     border-radius: $border-radius-base;
     overflow: hidden;
+
     // 1183
     @media only screen and (min-width: $width-xl) {
       flex-basis: 256px;
@@ -599,7 +600,6 @@
     display: inline-block;
   }
 
- 
   // ######################################################################
   // styles for swiper-navigation
   .swiper-button-next,
