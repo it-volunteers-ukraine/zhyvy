@@ -7,6 +7,8 @@
 			'title' => get_field( "title" )
 		) ); ?>
 
+	    <?php get_template_part( 'template-parts/content', 'event-list-nav' ); ?>
+
         <div class="container">
             <div class="single-event-wrapper">
                 <div class="main-content">
