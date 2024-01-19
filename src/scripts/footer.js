@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownBtn.addEventListener("click", function () {
       const currentDropdownContent = dropdownContents[index];
 
-      if (window.innerWidth <= 992) {
+      if (window.innerWidth <= 768) {
         currentDropdownContent.style.display =
           currentDropdownContent.style.display === "block" ? "none" : "block";
       }
     });
   });
-  if (window.innerWidth <= 992) {
+  if (window.innerWidth <= 768) {
     document.addEventListener("click", function (event) {
       dropdownContents.forEach((dropdownContent) => {
         if (
