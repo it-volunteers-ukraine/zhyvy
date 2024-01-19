@@ -138,9 +138,13 @@
 							$query  = new WP_Query( $args );
 							if ( $query->have_posts() ) :
 								while ( $query->have_posts() ) :
-									$query->the_post();
-									get_template_part( 'template-parts/content', 'event-card' );
-								endwhile;
+									$query->the_post(); ?>
+                                    <article class="card-large">
+                                        <a href="<?php the_permalink(); ?>">
+											<?php get_template_part( 'template-parts/content', 'event-card' ); ?>
+                                        </a>
+                                    </article>
+								<?php endwhile;
 								wp_reset_postdata();
 							endif; ?>
                     </div>

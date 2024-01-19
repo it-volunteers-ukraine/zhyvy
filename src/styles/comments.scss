@@ -1,0 +1,136 @@
+@import "variables.scss";
+
+.comments-area {
+  .title-gradient-h2 {
+    margin-bottom: 16px;
+  }
+
+  .comment-list {
+    margin-bottom: 24px;
+    margin-top: -16px;
+    color: $color-second-gray;
+  }
+
+  .comment-info {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .comment-item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid $color-light-gray;
+  }
+
+  .children {
+    padding-left: 40px;
+    color: $color-third-gray;
+    @media screen and (max-width: $width-xs) {
+      padding-left: 16px;
+    }
+
+    .comment-item {
+      padding-top: 0;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  .comment-author {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .comment-date {
+    color: $color-light-gray
+  }
+
+  .notes {
+    margin-bottom: 16px;
+  }
+
+  .inputs-top {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    @media screen and (max-width: $width-l) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .comment-form input::placeholder,
+  .comment-form textarea::placeholder {
+    color: $color-third-gray;
+    font-size: 17px;
+    line-height: 1.38;
+    letter-spacing: 0.32px;
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+    min-height: 56px;
+    width: 100%;
+    padding: 8px 48px 8px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: 0.32px;
+    border-radius: $border-radius-base;
+    border: 1px solid $color-light-gray;
+
+    &:focus-visible {
+      outline-color: $color-blue-light;
+    }
+  }
+
+  .comment-form-author,
+  .comment-form-email {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-comment {
+    input, textarea {
+      background-position: right 8px top 8px;
+      background-repeat: no-repeat;
+      background-image: url(../../assets/images/input_avatar_icon.svg);
+    }
+  }
+
+  .comment-form-email {
+    input {
+      background-image: url(../../assets/images/input_email_icon.svg);
+    }
+  }
+
+  .comment-form-comment {
+    margin-bottom: 16px;
+
+    textarea {
+      background-image: url(../../assets/images/input_pen_icon.svg);
+    }
+  }
+
+  .form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .pagination {
+    margin-bottom: 40px;
+  }
+
+  .button--medium {
+    border: none;
+  }
+
+}

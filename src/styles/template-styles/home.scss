@@ -533,7 +533,7 @@
     }
   }
 
-  .content-event-card {
+  .card-large {
     width: calc(50% - (1 * 32px / 2));
     @media screen and (max-width: 660px) {
       width: 100%;

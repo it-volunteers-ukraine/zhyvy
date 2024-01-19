@@ -23,19 +23,23 @@
   flex-wrap: wrap;
   gap: 32px;
   margin-bottom: 64px;
+
+  .card {
+    width: calc(33.33% - (2 * 32px / 3));
+    min-height: 100%;
+    height: 500px;
+    @media screen and (max-width: $width-l) {
+      width: calc(50% - (1 * 32px / 2));
+    }
+    @media screen and (max-width: 660px) {
+      width: 100%;
+    }
+  }
 }
 
-
 .content-event-card {
-  width: calc(33.33% - (2 * 32px / 3));
   min-height: 100%;
   height: 500px;
-  @media screen and (max-width: $width-l) {
-    width: calc(50% - (1 * 32px / 2));
-  }
-  @media screen and (max-width: 660px) {
-    width: 100%;
-  }
 
 
   .card-wrapper {
@@ -50,6 +54,15 @@
 
     &:hover {
       box-shadow: $box-shadow-hover;
+    }
+
+    &--single {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 
@@ -99,6 +112,13 @@
     text-transform: uppercase;
   }
 
+  .h3--single {
+    font-size: 30px;
+    @media screen and (max-width: $width-s) {
+      font-size: 20px;
+    }
+  }
+
   .datetime {
     font-size: 20px;
     font-weight: 500;
@@ -107,6 +127,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 4px;
+
+    &--single {
+      margin-bottom: 10px;
+      justify-content: flex-start;
+    }
   }
 
   .date, .time {

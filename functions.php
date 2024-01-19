@@ -80,6 +80,11 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_script('single-work-scripts', get_template_directory_uri() . '/assets/scripts/single-pages-scripts/single-work.js', array(), false, true);
     }
 
+  if (get_post_type() === 'events' ) {
+    wp_enqueue_style('single-events-style', get_template_directory_uri() . '/assets/styles/single-pages-styles/single-events.css', array('main') );
+    wp_enqueue_script('single-events-scripts', get_template_directory_uri() . '/assets/scripts/single-pages-scripts/single-events.js', array(), false, true);
+    }
+
 }
 /** add fonts */
 function add_google_fonts() {
@@ -137,3 +142,36 @@ if( function_exists('acf_add_options_page') ) {
       'parent_slug'   => 'theme-general-settings',
   ));
 }
+
+add_action('pre_get_comments', function($query) { // reverse all comments to get newest on first page
+	if ( !is_admin()) {
+		$query->query_vars['order'] = 'DESC';
+	}
+});
+
+add_filter ('comments_array',  function ($comments) { // reverse comments on current page
+	return array_reverse($comments);
+});
+
+function wp_it_volunteers_comment_markup(): void {
+	$author_name = get_comment_author();
+	$comment_date = get_comment_date('d.m.Y');
+	$comment_text = get_comment_text();
+	echo '<li class="comment-item">';
+	echo '<div class="comment-info">';
+	echo '<span class="comment-author">' . esc_html($author_name) . '</span>';
+	echo '<span class="comment-date">' . esc_html($comment_date) . '</span>';
+	echo '</div>';
+	echo '<span class="comment-text">' . esc_html($comment_text). '</span>';
+	echo '</li>';
+}
+
+function  wp_it_volunteers_comment_fields_order( $comment_fields ): array {
+	$order = array( 'author', 'email', 'comment' );
+	$new_fields = array();
+	foreach( $order as $index ) {
+		$new_fields[ $index ] = $comment_fields[ $index ];
+	}
+	return $new_fields;
+}
+add_action( 'comment_form_fields', 'wp_it_volunteers_comment_fields_order' );

@@ -2,43 +2,10 @@
 	$category_name = $args['category_name'] ?? '';
 ?>
 
-<?php
-	$argsCategory  = ( [
-		'post_type'  => 'events', // doesn't work - find alternative
-		'hide_empty' => true,
-	] );
-	$allCategories = get_categories( $argsCategory );
-?>
+<?php get_template_part( 'template-parts/content', 'event-list-nav' ); ?>
 
-<nav class="content-event-list-nav container">
-    <ul>
-        <li class="navbar-tab">
-            <a href="<?php echo get_permalink( get_page_by_path( 'podiyi' ) ); ?>"
-               class="event-link event-link--colorful <?php echo ( ! is_category() ) ? '_active' : '' ?>">
-                <svg width="16" height="16">
-                    <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-check"></use>
-                </svg>
-                <span>Всі</span>
-            </a>
-        </li>
-		<?php foreach ( $allCategories as $category ) :
-			$categoryColor = get_field( 'color', $category )['0'] ?? '';
-			$currentCategory = single_cat_title( '', false );
-			$categoryName = $category->name; ?>
-            <li>
-                <a href="<?php echo get_category_link( $category->term_id ) ?>"
-                   class="event-link event-link--<?php echo $categoryColor ?>
-                   <?php echo ( $currentCategory === $categoryName ) ? ' _active' : '' ?>">
-                    <svg width="16" height="16">
-                        <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-check"></use>
-                    </svg>
-                    <span> <?php echo $categoryName ?></span>
-                </a>
-            </li>
-		<?php endforeach; ?>
-    </ul>
-</nav>
 
+<!-- Card grid for events-->
 <section class="container">
     <div class="content-event-list-grid">
 		<?php
@@ -57,7 +24,11 @@
 					$query->the_post();
 					?>
 
-					<?php get_template_part( 'template-parts/content', 'event-card' ); ?>
+                    <article class="card">
+                        <a href="<?php the_permalink(); ?>">
+							<?php get_template_part( 'template-parts/content', 'event-card' ); ?>
+                        </a>
+                    </article>
 
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
@@ -73,6 +44,9 @@
 			'current'   => $current_page,
 			'total'     => $total_pages,
 			'prev_next' => false,
+			'show_all'  => $total_pages <= 5,
+			'end_size'  => 1,
+			'mid_size'  => ( $current_page === 1 ) || ( $current_page == $total_pages ) ? 3 : 1,
 		] );
 	?>
 </section>
