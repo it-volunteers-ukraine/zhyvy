@@ -11,6 +11,8 @@
 
         <div class="container">
             <div class="single-event-wrapper">
+
+                <!--    Post + comments    -->
                 <div class="main-content">
                     <article class="post">
 						<?php get_template_part( 'template-parts/content', 'event-card', array( 'isEventPost' => true ) ); ?>
@@ -49,7 +51,7 @@
 								<?php } ?>
 
                                 <a class="icon-link" href="https://wa.me/?text=<?php the_permalink(); ?>"
-                                target="_blank" aria-label="Поділитися у вотсапп">
+                                   target="_blank" aria-label="Поділитися у вотсапп">
                                 <span class="icon">
                                     <svg width="24" height="24">
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-whatsapp-outlined"></use>
@@ -74,13 +76,16 @@
 							comments_template();
 						} ?>
                     </section>
-
                 </div>
+
+                <!--     Sidebar -->
                 <section class="sidebar">
                     <div class="small-card-list">
 						<?php $args = ( [
 							'posts_per_page' => 4,
 							'post_type'      => 'events',
+							'offset'         => 1,
+							'post__not_in' => array( $post->ID ),
 						] );
 							$query  = new WP_Query( $args );
 							if ( $query->have_posts() ) :
@@ -99,7 +104,7 @@
 					<?php $args = ( [
 						'posts_per_page' => 1,
 						'post_type'      => 'events',
-						'offset'         => 4,
+						'post__not_in' => array( $post->ID ),
 					] );
 						$query  = new WP_Query( $args );
 						if ( $query->have_posts() ) :
