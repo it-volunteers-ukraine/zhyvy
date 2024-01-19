@@ -48,7 +48,7 @@
                                     </a>
 								<?php } ?>
 
-                                <a class="icon-link" href="https://wa.me/?text=<?php the_permalink(); ?>""
+                                <a class="icon-link" href="https://wa.me/?text=<?php the_permalink(); ?>"
                                 target="_blank" aria-label="Поділитися у вотсапп">
                                 <span class="icon">
                                     <svg width="24" height="24">

@@ -37,20 +37,20 @@
 			'fields' => array(
 				'author' => '<div class="inputs-top">' .
 				            '<div class="comment-form-author">' .
-				            '<input id="author" name="author" placeholder="*Ім\'я" type="text" autocomplete="name" required />' .
+				            '<input id="author" name="author" placeholder="' . get_field( "events_comments_placeholder_name", 'option' ) . '" type="text" autocomplete="name" required />' .
 				            '</div>',
 				'email'  => '<div class="comment-form-email">' .
-				            '<input id="email" name="email" placeholder="*Email" type="email" autocomplete="email" required />' .
+				            '<input id="email" name="email" placeholder="' . get_field( "events_comments_placeholder_email", 'option' ) . '" type="email" autocomplete="email" required />' .
 				            '</div>' .
 				            '</div>',
 			),
 
-			'title_reply'          => '<h4 class="title-gradient-h2">Додати коментар</h4>',
-			'comment_notes_before' => '<p class="notes">Поділіться Вашими враженнями</p>',
+			'title_reply'          => '<h4 class="title-gradient-h2">' . get_field( "events_comments_add", 'option' ) . '</h4>',
+			'comment_notes_before' => '<p class="notes">' . get_field( "events_comments_text", 'option' ) . '</p>',
 			'comment_field'        => '<div class="comment-form-comment">' .
-			                          '<textarea id="comment" name="comment" rows="8" required placeholder="*Текст"></textarea>' .
+			                          '<textarea id="comment" name="comment" rows="8" required placeholder="' . get_field( "events_comments_placeholder_text", 'option' ) . '"></textarea>' .
 			                          '</div>',
-			'submit_button'        => '<button type="submit" id="submit-comment" class="button--medium">Відправити</button>',
+			'submit_button'        => '<button type="submit" id="submit-comment" class="button--medium">' . get_field( "events_comments_send", 'option' ) . '</button>',
 		)
 	); ?>
 </div>
