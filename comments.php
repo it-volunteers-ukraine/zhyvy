@@ -22,7 +22,11 @@
 			) ); ?>
         </ul>
         <div class="pagination">
-			<?php paginate_comments_links( array( 'prev_next' => false, ) ); ?>
+			<?php paginate_comments_links( array(
+				'prev_next' => false,
+				'end_size'  => 1,
+				'mid_size'  => 1,
+			) ) ?>
         </div>
 	<?php endif; ?>
 

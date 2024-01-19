@@ -10,7 +10,7 @@
     <div class="content-event-list-grid">
 		<?php
 			$argsQuery    = ( [
-				'posts_per_page' => 3,
+				'posts_per_page' => 6,
 				'post_type'      => 'events',
 				'paged'          => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 				'category_name'  => $category_name,
@@ -44,6 +44,9 @@
 			'current'   => $current_page,
 			'total'     => $total_pages,
 			'prev_next' => false,
+			'show_all'  => $total_pages <= 5,
+			'end_size'  => 1,
+			'mid_size'  => ( $current_page === 1 ) || ( $current_page == $total_pages ) ? 3 : 1,
 		] );
 	?>
 </section>
