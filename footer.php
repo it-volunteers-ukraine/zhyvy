@@ -3,7 +3,8 @@
             <div class="footer-content container">
                 <div class="footer-logo-wrapper">
                     <a class="footer-logo" href="<?php echo site_url(''); ?>">
-                        <img src="<?php echo esc_url(get_field('footer_logo','options')['url']); ?>" alt="logo" />
+                        <img class="footer-logo" src="<?php echo esc_url(get_field('footer_logo','options')['url']); ?>"
+                            alt="logo" />
                     </a>
                     <p class="footer-logo-desc">
                         <?php the_field( 'footer_logo_desc', 'option' ); ?>
