@@ -7,12 +7,14 @@ body {
   line-height: $line-height-base;
   font-weight: $font-weight-base;
   font-family: $font-family-base;
-
   background-image: url("../images/bg/brick_bg-desktop-min.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: repeat-y;
-  @media (max-width: $width-l) {
-    background-image: url("../images/bg/break_bg.jpg");
+  @media (max-width: 992px) {
+    background-image: url("../images/bg/brick_992_768-min.jpg");
+  }
+  @media (max-width: 536px) {
+    background-image: url("../images/bg/brick_536-min.jpg");
   }
 }
 
