@@ -22,11 +22,10 @@
     // 360 - 991
     @media only screen and (min-width: $width-min-body) and (max-width: 991px) {
       flex-direction: column;
-      padding: 48px 16px 82px 16px;
+      padding: 16px 16px 82px 16px;
       justify-content: center;
       align-items: center;
       align-self: stretch;
-      gap: 24px;
     }
   }
 
@@ -117,7 +116,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    // 360
+    // 360 767
     @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       align-items: center;
     }
@@ -167,12 +166,12 @@
       flex-basis: 208px;
       height: 263px;
     }
-    // 768
+    // 768-991
     @media only screen and (min-width: $width-m) and (max-width: 991px) {
       flex-basis: 212px;
       height: 268px;
     }
-    // 360
+    // 360-767
     @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       flex-basis: 256px;
       height: 319px;
@@ -212,6 +211,7 @@
     & img {
       width: 100%;
       height: 100%;
+      object-fit: fill;
     }
   }
 
@@ -270,6 +270,7 @@
     flex-direction: column;
     z-index: 100;
     gap: 4px;
+    flex: 1;
     overflow: hidden;
     border-radius: 0 0 $border-radius-base $border-radius-base;
     background: linear-gradient(
@@ -286,18 +287,18 @@
       background-image: url(../../images/bg/bg_team_cards_desc.png);
       padding: 14px 16px;
     }
-    // 992
+    // 992-1182
     @media screen and (min-width: $width-l) and (max-width: 1182px) {
       background-image: url(../../images/bg/bg_team_cards_tab_992.png);
       padding: 12px;
     }
-    // 768
+    // 768-991
     @media screen and (min-width: $width-m) and (max-width: 991px) {
       background-image: url(../../images/bg/bg_team_cards_tab_768.png);
       padding: 14px 16px;
     }
 
-    // 360
+    // 360-767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       background-image: url(../../images/bg/bg_team_cards_mob_360.png);
       padding: 14px 16px;
@@ -315,7 +316,7 @@
       font-size: 20px;
       line-height: $line-height-base;
     }
-    // 920
+    // 992
     @media screen and (min-width: $width-l) {
       font-size: $font-size-base;
       line-height: 1;
@@ -430,7 +431,7 @@
   }
 
   // for scale active slids
-
+  // 768
   @media screen and (min-width: $width-m) {
     .results .swiper-slide.swiper-slide-active {
       transform: scale(1.4);
@@ -446,9 +447,11 @@
   // honors-and-thanks__section****************************************
   .honors-and-thanks {
     margin-top: 132px;
+    // 992
     @media only screen and (min-width: $width-l) {
       margin-top: 96px;
     }
+    // 360
     @media only screen and (min-width: $width-min-body) {
       margin-top: 82px;
     }
@@ -531,7 +534,11 @@
 
   // partners_section***********************************
   .partners {
-    margin-top: 60px;
+    margin-top: 96px;
+    margin-bottom: 64px;
+    @media screen and (min-width: $width-xl) {
+      margin-top: 132px;
+    }
 
     //  styles for partners without a logo
     &_name {
@@ -561,17 +568,23 @@
     justify-content: center;
     align-items: center;
     gap: 42px;
-
-    @media screen and (min-width: $width-min-body) {
+    flex: 1 0 0;
+    padding: 0;
+    // 1183
+    @media screen and (min-width: $width-xl) {
+      gap: 76px;
+    }
+    // 360 -991
+    @media screen and (min-width: $width-min-body) and (max-width: 991px) {
       gap: 48px 42px;
     }
   }
-  .partners-card
-  // 360
-  {
-    @media screen and (min-width: $width-min-body) {
-      align-self: stretch;
-      max-width: 100px;
+  .partners-card {
+    align-self: stretch;
+    max-width: 100px;
+    // 768
+    @media screen and (min-width: $width-m) {
+      max-width: 140px;
     }
   }
 

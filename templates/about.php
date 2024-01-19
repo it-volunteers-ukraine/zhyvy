@@ -18,39 +18,39 @@ get_header();
     <!--    history_section*************************************** -->
     <section class="history" id="history">
         <div class="container">
-        <div class="history-container">
+            <div class="history-container">
 
-            <?php
-            $image = get_field('history_image');
-            if (!empty($image)): ?>
+                <?php
+                $image = get_field('history_image');
+                if (!empty($image)): ?>
 
-                <div class="history_image-thumb">
-                    <img src="<?php
-                    echo esc_url($image['url']);
-                    ?>" alt="<?php
-                    echo esc_attr($image['alt']);
-                    ?>" />
-                    <?php
-            endif;
-            ?>
-            </div>
-
-            <div class="history-content">
-                <h1 class="title-gradient-h1">
-                    <?php
-                    the_field('history_title');
-                    ?>
-                </h1>
-
-                <div class="history-content_description">
-                    <p class="history-content_text">
+                    <div class="history_image-thumb">
+                        <img src="<?php
+                        echo esc_url($image['url']);
+                        ?>" alt="<?php
+                        echo esc_attr($image['alt']);
+                        ?>" />
                         <?php
-                        the_field('history_text');
-                        ?>
-                    </p>
+                endif;
+                ?>
                 </div>
-            </div> <!-- /   history-content -->
-        </div >                 <!-- / history-container  -->
+
+                <div class="history-content">
+                    <h1 class="title-gradient-h1">
+                        <?php
+                        the_field('history_title');
+                        ?>
+                    </h1>
+
+                    <div class="history-content_description">
+                        <p class="history-content_text">
+                            <?php
+                            the_field('history_text');
+                            ?>
+                        </p>
+                    </div>
+                </div> <!-- /   history-content -->
+            </div> <!-- / history-container  -->
         </div> <!-- container  -->
     </section>
 
