@@ -10,51 +10,19 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main class="container">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-it-volunteers' ); ?></h1>
-			</header><!-- .page-header -->
+    <section class="not-found-section">
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp-it-volunteers' ); ?></p>
+        <h1 class="title "><?php esc_html_e( 'Сторінку не знайдено', 'wp-it-volunteers' ); ?> </h1>
+        <p class="text">Неправильно набрано адресу, або такої сторінки на сайті більше не існує. </p>
+        <a class="button--medium button--transparent" href="<?php echo esc_url( home_url( '/' ) ); ?>">Перейти на
+            головну
+            сторінку</a>
 
-					<?php
-					get_search_form();
+    </section>
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wp-it-volunteers' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$wp_it_volunteers_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wp-it-volunteers' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$wp_it_volunteers_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
+</main>
 
 <?php
 get_footer();
