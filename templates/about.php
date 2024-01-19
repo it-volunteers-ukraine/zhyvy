@@ -18,6 +18,8 @@ get_header();
     <!--    history_section*************************************** -->
     <section class="history" id="history">
         <div class="container">
+        <div class="history-container">
+
             <?php
             $image = get_field('history_image');
             if (!empty($image)): ?>
@@ -48,6 +50,7 @@ get_header();
                     </p>
                 </div>
             </div> <!-- /   history-content -->
+        </div >                 <!-- / history-container  -->
         </div> <!-- container  -->
     </section>
 
