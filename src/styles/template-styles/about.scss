@@ -22,10 +22,11 @@
     // 360 - 991
     @media only screen and (min-width: $width-min-body) and (max-width: 991px) {
       flex-direction: column;
-      padding: 16px 16px 82px 16px;
+      padding: 48px 16px 82px 16px;
       justify-content: center;
       align-items: center;
       align-self: stretch;
+      gap: 0;
     }
   }
 
@@ -42,7 +43,7 @@
     // 992-1182 image-thumb
     @media only screen and (min-width: $width-l) and (max-width: 1182px) {
       max-width: 45%;
-      height: 250px;
+      height: 265px;
     }
 
     // 768 - 991 image-thumb
@@ -77,6 +78,7 @@
     @media only screen and (min-width: $width-l) and (max-width: 1182px) {
       max-width: 50%;
       height: auto;
+      gap: 16px;
     }
 
     // 768-991 content
