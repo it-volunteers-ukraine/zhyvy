@@ -2,6 +2,9 @@
 	$isEventPost = $args['isEventPost'] ?? false; // checks if card is used as heading on single-events
 ?>
 
+
+<!-- Standard card for events-->
+<!-- This part uses styles from content-event-list.scss-->
 <div class="content-event-card">
     <div class="card-wrapper <?php echo( $isEventPost ? 'card-wrapper--single' : '' ); ?>">
         <div class="tags">
@@ -37,7 +40,7 @@
                     <?php the_field( 'time' ); ?>
                 </span>
             </p>
-            
+
             <p class="address"><?php the_field( 'address' ); ?></p>
 
         </div>

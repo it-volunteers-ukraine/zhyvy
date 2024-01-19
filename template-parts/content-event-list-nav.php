@@ -5,6 +5,9 @@
 	$allCategories = get_categories( $args );
 ?>
 
+
+<!-- Navbar tabs for events-->
+<!-- This part uses styles from content-event-list.scss-->
 <nav class="content-event-list-nav container">
     <ul>
         <li class="navbar-tab">

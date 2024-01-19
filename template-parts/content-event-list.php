@@ -4,6 +4,8 @@
 
 <?php get_template_part( 'template-parts/content', 'event-list-nav' ); ?>
 
+
+<!-- Card grid for events-->
 <section class="container">
     <div class="content-event-list-grid">
 		<?php

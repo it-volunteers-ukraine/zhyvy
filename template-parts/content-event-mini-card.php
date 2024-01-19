@@ -1,3 +1,4 @@
+<!-- Small card for events used in sidebars-->
 <article class="content-event-mini-card">
     <a class="card-wrapper" href="<?php the_permalink(); ?>">
 
