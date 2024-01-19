@@ -6,29 +6,21 @@ listTeam.addEventListener("click", openTmCard);
 
 function openTmCard(event) {
   let target = event.target;
-  // console.log(target, 'tar');
 
-  // if the target has class...
   if (target.className === "front-sideIMG") {
-    // add nearest parent div class...
-    // (shorter for the front side)
     target.closest("div").classList.add("rotate-180");
-    // add to the class next closest to the parent div element...
-    // (shorter for the back side)
+
     target
       .closest("div")
       .nextSibling.nextElementSibling.classList.add("rotate-0");
   }
-  // console.log("1998", target.closest('div').nextSibling.nextElementSibling);
 
-  // then by clicking on the back text, we delete the added classes
   if (target.className === "back-side_text") {
     target.closest("div").classList.remove("rotate-0");
     target
       .closest("div")
       .previousSibling.previousElementSibling.classList.remove("rotate-180");
   }
-  // console.log(target.closest('div').previousSibling.previousElementSibling, 1999);
 }
 
 // Results_section*************************************
