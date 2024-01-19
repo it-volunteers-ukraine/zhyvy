@@ -18,10 +18,16 @@
                     </div>
                 </div>
                 <div class="donate-content-right">
-                    <div class="qr-code-wrapper">
-                        <?php if( get_field('qrcode') ): ?>
-                            <img src="<?php the_field('qrcode'); ?>" alt="QR-code для донату" width='217' heigh="217"/>
-                        <?php endif; ?>
+                    <div class="donate-donate-link">
+                        <div class="qr-code-wrapper">
+                            <?php if( get_field('qrcode') ): ?>
+                                <img src="<?php the_field('qrcode'); ?>" alt="QR-code для донату" width='217' heigh="217"/>
+                            <?php endif; ?>
+                        </div>
+                        <a class="button button--medium" href="<?php the_field('donate_link'); ?>" target="_blank">
+                            <?php the_field('button'); ?>
+                            <span class="icon-chevron-right"></span>
+                        </a>
                     </div>
                     <div class="payment-details-wrapper">
                         <h2 class="payment-details-title"><?php echo esc_html( get_field('header_donate_details') ); ?></h2>
