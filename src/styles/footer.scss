@@ -144,7 +144,7 @@
     // height: 88px;
     margin-bottom: 32px;
   }
-  @media screen and (max-width: $width-m) {
+  @media screen and (max-width: $width-l) {
     flex-wrap: nowrap;
     height: auto;
   }
@@ -154,7 +154,7 @@
 .footer-menu-item-title-wrapper {
   display: flex;
   gap: 8px;
-  @media screen and (max-width: $width-m) {
+  @media screen and (max-width: $width-l) {
     :hover {
       text-decoration: underline;
       cursor: pointer;
@@ -180,7 +180,7 @@
   height: 24px;
   fill: currentColor;
   transform: rotate(90deg);
-  @media screen and (max-width: $width-m) {
+  @media screen and (max-width: $width-l) {
     display: block;
   }
 }
@@ -188,7 +188,7 @@
   div ul li a:hover {
     text-decoration: underline;
   }
-  @media screen and (max-width: $width-m) {
+  @media screen and (max-width: $width-l) {
     display: none;
     margin-bottom: 10px;
 
