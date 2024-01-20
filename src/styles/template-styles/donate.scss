@@ -20,7 +20,7 @@
             padding: 32px 32px 56px;
             gap: 37px;
         }
-        @media screen and (max-width: $width-s) {
+        @media screen and (max-width: 616px) {
             background-color: transparent;
             border-radius: 0px;
             box-shadow: none;
@@ -34,11 +34,11 @@
             @media screen and (max-width: $width-l) {
                 width: calc(329/864*100vw);
             }
-            @media screen and (max-width: $width-m) {
+            @media screen and (max-width: 850px) {
                 width: calc(329/640*100vw);
         
             }
-            @media screen and (max-width: $width-s) {
+            @media screen and (max-width: 616px) {
                 width: 100%;
             }
         }
@@ -53,7 +53,7 @@
     
         .donate-content-right {
             display: flex;
-            align-items: start;
+            align-items: flex-start;
             gap: 48px;
             margin-top: 70px;
             width: calc(559/1024*100vw);
@@ -63,13 +63,13 @@
                 width: calc(498/864*100vw);
                
             }
-            @media screen and (max-width: $width-m) {
+            @media screen and (max-width: 850px) {
                 align-items: start;
                 flex-direction: column-reverse;
                 margin-top: 0px;
                 width: calc(257/640*100vw);
             }
-            @media screen and (max-width: $width-s) {
+            @media screen and (max-width: 616px) {
                 gap: 48px;
                 flex-direction: column;
                 width: 100%;
