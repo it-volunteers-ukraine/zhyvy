@@ -21,11 +21,19 @@
 				'callback'          => 'wp_it_volunteers_comment_markup',
 			) ); ?>
         </ul>
+
         <div class="pagination">
-			<?php paginate_comments_links( array(
-				'prev_next' => false,
-				'end_size'  => 1,
-				'mid_size'  => 1,
+			<?php
+				$page =max( 1, get_query_var( 'cpage' ) );
+				$max_page = get_comment_pages_count();
+
+                paginate_comments_links( array(
+	                'current'   => $page,
+	                'total'     => $max_page,
+	                'prev_next' => false,
+	                'show_all'  => $max_page <= 5,
+	                'end_size'  => 1,
+	                'mid_size'  => ( $page === 1 ) || ( $page == $max_page ) ? 3 : 1,
 			) ) ?>
         </div>
 	<?php endif; ?>
