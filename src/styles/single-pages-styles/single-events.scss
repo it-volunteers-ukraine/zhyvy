@@ -5,7 +5,7 @@
   display: flex;
   gap: 32px;
 
-  @media screen and (max-width: $width-m) {
+  @media screen and (max-width: $width-m+50px) {
     flex-direction: column;
   }
 
@@ -67,7 +67,7 @@
       width: 320px;
       min-width: 320px;
     }
-    @media screen and (max-width: $width-m) {
+    @media screen and (max-width: $width-m+50px) {
       width: 100%;
       display: flex;
       gap: 24px;
@@ -78,7 +78,7 @@
   }
 
   .small-card-list {
-    @media screen and (max-width: $width-m) {
+    @media screen and (max-width: $width-m+50px) {
       margin-bottom: -24px;
       width: 320px;
       min-width: 320px;
@@ -87,6 +87,9 @@
       width: 100%;
       min-width: 320px;
     }
+    @media screen and (max-width: ($width-xs)) {
+      min-width: 100%;
+    }
   }
 
   .card-large {
@@ -94,6 +97,12 @@
     top: 110px;
     width: 100%;
     height: fit-content;
+  }
+
+  .pagination {
+    @media screen and (max-width: $width-l) {
+      gap: 12px;
+    }
   }
 }
 
