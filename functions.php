@@ -153,6 +153,20 @@ add_filter ('comments_array',  function ($comments) { // reverse comments on cur
 	return array_reverse($comments);
 });
 
+function redirect_after_comment($location, $comment) { // redirect to first page after comment submit
+	$commentPostId = $comment->comment_post_ID;
+	$commentPostLink = get_permalink($commentPostId) . '#postComments';
+	$changedLocation = add_query_arg(
+		array(
+			'unapproved'      => $comment->comment_ID,
+			'moderation-hash' => wp_hash( $comment->comment_date_gmt ),
+		),
+		$commentPostLink
+	);
+	return $changedLocation;
+}
+add_filter('comment_post_redirect', 'redirect_after_comment', 10, 2);
+
 function wp_it_volunteers_comment_markup(): void {
 	$author_name = get_comment_author();
 	$comment_date = get_comment_date('d.m.Y');

@@ -9,7 +9,7 @@
 	$commentsNumber = get_comments_number();
 ?>
 
-<div class="comments-area">
+<div id="postComments" class="comments-area">
 	<?php if ( $commentsNumber > 0 ): ?>
         <h2 class="title-gradient-h2">Коментарі (<?php echo $commentsNumber ?>)</h2>
 	<?php endif; ?>
@@ -24,23 +24,23 @@
 
         <div class="pagination">
 			<?php
-				$page =max( 1, get_query_var( 'cpage' ) );
+				$page     = max( 1, get_query_var( 'cpage' ) );
 				$max_page = get_comment_pages_count();
 
-                paginate_comments_links( array(
-	                'current'   => $page,
-	                'total'     => $max_page,
-	                'prev_next' => false,
-	                'show_all'  => $max_page <= 5,
-	                'end_size'  => 1,
-	                'mid_size'  => ( $page === 1 ) || ( $page == $max_page ) ? 3 : 1,
-			) ) ?>
+				paginate_comments_links( array(
+					'current'   => $page,
+					'total'     => $max_page,
+					'prev_next' => false,
+					'show_all'  => $max_page <= 5,
+					'end_size'  => 1,
+					'mid_size'  => ( $page === 1 ) || ( $page == $max_page ) ? 3 : 1,
+				) ) ?>
         </div>
 	<?php endif; ?>
 
 	<?php //If comments are closed and there are comments
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-            <p><?php echo 'Коментарі закриті' ?></p>
+            <p>Коментарі закриті</p>
 		<?php endif; ?>
 
 
