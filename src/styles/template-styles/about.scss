@@ -363,18 +363,19 @@
   .results .swiper-button-next::after,
   .results .swiper-button-prev::after {
     position: absolute;
+    bottom: -85px;
     z-index: 100;
     // 1183
     @media screen and (min-width: $width-xl) {
-      bottom: -80px;
+      bottom: -95px;
     }
     // 992-1182
     @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      bottom: -70px;
+      bottom: -80px;
     }
     // 768 -991
     @media screen and (min-width: $width-m) and (max-width: 991px) {
-      bottom: -50px;
+      bottom: -60px;
     }
     // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
@@ -385,16 +386,16 @@
   .results .swiper-button-next::after {
     // 1183
     @media screen and (min-width: $width-xl) {
-      right: 380px;
+      right: 310px;
     }
     // 992-1182
     @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      right: 315px;
+      right: 250px;
     }
 
     // 768 -991
     @media screen and (min-width: $width-m) and (max-width: 991px) {
-      right: 235px;
+      right: 190px;
     }
     // 360-767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
@@ -405,15 +406,15 @@
   .results .swiper-button-prev::after {
     // 1183
     @media screen and (min-width: $width-xl) {
-      left: 380px;
+      left: 310px;
     }
     // 992-1182
     @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      left: 315px;
+      left: 250px;
     }
     // 768 -991
     @media screen and (min-width: $width-m) and (max-width: 991px) {
-      left: 235px;
+      left: 190px;
     }
     // 360-767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
