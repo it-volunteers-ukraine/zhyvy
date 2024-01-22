@@ -4,7 +4,7 @@
 
 <main>
 	<?php get_template_part( 'template-parts/page-banner', null, array(
-		'title' => get_the_archive_title()
+		'title' => get_field( "events_title",'option' )
 	) ); ?>
 
 	<?php $category_name = ( get_queried_object() ) ? get_queried_object()->name : ''; ?>
