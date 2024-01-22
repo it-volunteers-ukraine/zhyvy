@@ -1,5 +1,9 @@
 @import "../variables.scss";
 
+.content-event-list {
+  padding-bottom: 64px;
+}
+
 .content-event-list-nav {
   ul {
     margin: 32px 0;
@@ -131,6 +135,9 @@
     &--single {
       margin-bottom: 10px;
       justify-content: flex-start;
+      @media screen and (max-width: $width-xs) {
+        justify-content: space-between;
+      }
     }
   }
 

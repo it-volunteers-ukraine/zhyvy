@@ -3,7 +3,7 @@
 ?>
 
 
-<!-- Standard card for events-->
+<!-- Standard card for events;  should be wrapped in <article> and <a> tags -->
 <!-- This part uses styles from content-event-list.scss-->
 <div class="content-event-card">
     <div class="card-wrapper <?php echo( $isEventPost ? 'card-wrapper--single' : '' ); ?>">

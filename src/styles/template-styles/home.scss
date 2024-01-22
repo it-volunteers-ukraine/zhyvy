@@ -160,10 +160,7 @@
     display: flex;
     justify-content: space-between;
     gap: 36px;
-    @media screen and (max-width: $width-l) {
-      gap: 32px;;
-    }
-    @media screen and (max-width: $width-m) {
+    @media screen and (max-width: ($width-l)-10px) {
       flex-direction: column;
       align-items: center;
     }
