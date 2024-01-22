@@ -8,7 +8,7 @@
 <div class="content-event-card">
     <div class="card-wrapper <?php echo( $isEventPost ? 'card-wrapper--single' : '' ); ?>">
         <div class="tags">
-			<?php $postCategories = get_the_category( get_the_ID() );
+			<?php $postCategories = get_the_terms( get_the_ID(), 'events_categories' );
 				if ( ! empty( $postCategories ) ) :
 					foreach ( $postCategories as $category ) :
 						$categoryColor = get_field( 'color', $category )['0'] ?? '';

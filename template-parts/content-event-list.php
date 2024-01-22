@@ -9,13 +9,23 @@
 <section class="container">
     <div class="content-event-list-grid">
 		<?php
-			$argsQuery    = ( [
+			$args = ( array(
 				'posts_per_page' => 6,
 				'post_type'      => 'events',
 				'paged'          => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
-				'category_name'  => $category_name,
-			] );
-			$query        = new WP_Query( $argsQuery );
+			) );
+
+			if ( is_archive() ) {
+				$args['tax_query'] = array(
+					array(
+						'taxonomy' => 'events_categories',
+						'field'    => 'slug',
+						'terms'    => $category_name,
+					),
+				);
+			}
+            
+			$query        = new WP_Query( $args );
 			$total_pages  = $query->max_num_pages;
 			$current_page = max( 1, get_query_var( 'paged' ) );
 

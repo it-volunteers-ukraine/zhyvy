@@ -1,8 +1,8 @@
 <?php
-	$args          = ( [
+	$allCategories = get_terms( array(
+		'taxonomy'   => 'events_categories',
 		'hide_empty' => true,
-	] );
-	$allCategories = get_categories( $args );
+	) );
 ?>
 
 
@@ -12,7 +12,7 @@
     <ul>
         <li class="navbar-tab">
             <a href="<?php echo get_permalink( get_page_by_path( 'podiyi' ) ); ?>"
-               class="event-link event-link--colorful <?php echo ( ! is_category() && ! is_single() ) ? '_active' : '' ?>">
+               class="event-link event-link--colorful <?php echo ( ! is_archive() && ! is_category() && ! is_single() ) ? '_active' : '' ?>">
                 <svg width="16" height="16">
                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-check"></use>
                 </svg>
