@@ -1,3 +1,11 @@
+    <div class="to-top-wrapper container">
+        <a href="#" class="to-top" aria-label="Кнопка вгору">
+            <svg class="to-top-icon">
+                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-to-top"></use>
+            </svg>
+        </a>
+    </div>
+
     <footer class="footer">
         <div class="footer-content-wrapper">
             <div class="footer-content container">

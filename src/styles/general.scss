@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -40,7 +43,6 @@ a {
 button {
   cursor: pointer;
 }
-
 
 //push the footer to the bottom of the page
 html,
