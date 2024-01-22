@@ -257,3 +257,22 @@
   font-weight: 400;
   line-height: 132%; /* 13.2px */
 }
+
+// ============= to top button ============= //
+.to-top-wrapper {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: end;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.to-top {
+  width: 52px;
+  height: 52px;
+  background: $gradient-colorful;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
