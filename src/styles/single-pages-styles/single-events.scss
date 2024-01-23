@@ -1,9 +1,12 @@
 @import "../variables.scss";
 
 .single-event-wrapper {
-  margin-bottom: 132px;
+  margin-bottom: 64px;
   display: flex;
   gap: 32px;
+  @media screen and (max-width: $width-l) {
+    margin-bottom: 32px;
+  }
 
   @media screen and (max-width: $width-m+50px) {
     flex-direction: column;

@@ -2,6 +2,9 @@
 
 .content-event-list {
   padding-bottom: 64px;
+  @media screen and (max-width: $width-l) {
+    padding-bottom: 32px;
+  }
 }
 
 .content-event-list-nav {

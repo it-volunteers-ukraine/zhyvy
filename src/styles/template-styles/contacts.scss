@@ -1,11 +1,11 @@
 @import "../variables.scss";
 
 .content {
-  padding: 72px 0 132px;
+  padding: 72px 0 64px;
   display: flex;
   justify-content: space-between;
   @media screen and (max-width: $width-l) {
-    padding: 48px 0 82px;
+    padding: 48px 0;
   }
   @media screen and (max-width: $width-s) {
     flex-direction: column;
