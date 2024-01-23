@@ -3,13 +3,13 @@
 //Content section
 
 .work-article {
-  padding: 64px 0 188px;
+  padding: 64px 0;
 
   @media screen and (max-width: $width-l) {
-    padding: 32px 0 156px;
+    padding: 32px 0;
   }
   @media screen and (max-width: $width-xs) {
-    padding: 24px 0 172px;
+    padding: 24px 0 48px;
   }
 }
 
@@ -29,7 +29,7 @@
 
 //Gallery slider
 .work-wrapper {
-  padding: 16px 0;
+  padding: 16px 0 0;
   position: relative;
   display: grid;
   grid-template-columns: 350px 1fr;
