@@ -26,13 +26,14 @@ function wp_it_volunteers_scripts() {
   wp_enqueue_style( 'swiper-style','https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array('main') );
   wp_enqueue_style( 'lightbox2-style', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css', array('main') );
   wp_enqueue_style( 'content-event-list-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/content-event-list.css', array('main') );
-  wp_enqueue_style( 'content-event-mini-card', get_template_directory_uri() . '/assets/styles/template-parts-styles/content-event-mini-card.css', array('main') );
-
+  wp_enqueue_style( 'content-event-mini-card-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/content-event-mini-card.css', array('main') );
   wp_enqueue_style( '404-style', get_template_directory_uri() . '/assets/styles/template-styles/404.css', array('main') );
+
   wp_enqueue_script( 'wp-it-volunteers-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true );
   wp_enqueue_script( 'swiper-scripts', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), false, true );
   wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), false, true );
-  wp_enqueue_script( 'lightbox2-scripts', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js', array(), false, true );
+  wp_enqueue_script( 'jquery-validate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js', array('jquery'), false, true );
+  wp_enqueue_script( 'lightbox2-scripts', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js', array('jquery'), false, true );
   wp_enqueue_script( 'clipboard-scripts', 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js', array(), false, true );
 
   if ( is_page_template('templates/home.php') ) {
@@ -189,3 +190,4 @@ function  wp_it_volunteers_comment_fields_order( $comment_fields ): array {
 	return $new_fields;
 }
 add_action( 'comment_form_fields', 'wp_it_volunteers_comment_fields_order' );
+
