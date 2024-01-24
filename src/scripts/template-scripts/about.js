@@ -59,6 +59,7 @@ const swiperResults = new Swiper(".swiperResults", {
 const swiperHonor = new Swiper(".swiperHonor", {
   centeredSlides: true,
   loop: true,
+  spaceBetween: 10,
 
   breakpoints: {
     1920: {
@@ -76,6 +77,8 @@ const swiperHonor = new Swiper(".swiperHonor", {
     },
     360: {
       slidesPerView: 1,
+      spaceBetween: 16,
+
     },
   },
   navigation: {

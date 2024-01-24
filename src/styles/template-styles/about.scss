@@ -1,22 +1,43 @@
 @import "../variables.scss";
 
 .about-page {
+  html,
+  body,
+   section {
+    overflow-x: hidden;
+  }
+
+  section {
+    margin: 0 auto;
+    padding: 0;
+  }
+
   // history section****************************************
   .history-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    justify-content: center;
+    padding: 48px 16px 82px 16px;
+
+
     margin-top: 0;
     gap: 24px;
 
     // 1183
     @media screen and (min-width: $width-xl) {
       padding: 86px 0px 132px 0px;
+      flex-direction: row;
+      align-items: flex-start;
+
     }
 
     // 992-1183
     @media only screen and (min-width: $width-l) and (max-width: 1182px) {
       padding: 48px 32px 96px 32px;
+      flex-direction: row;
+      align-items: flex-start;
+
     }
 
     // 360 - 991
@@ -68,9 +89,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 32px;
+    gap: 24px;
     // 1183 content
     @media only screen and (min-width: $width-xl) {
-      gap: 24px;
+      margin-top:0;
       max-width: 45%;
       max-height: 332px;
     }
@@ -79,6 +102,7 @@
       max-width: 50%;
       height: auto;
       gap: 16px;
+      margin-top:0;
     }
 
     // 768-991 content
@@ -116,11 +140,10 @@
   .team-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-
+    align-items: center;
     // 360 767
-    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
-      align-items: center;
+    @media only screen and (min-width: $width-m) {
+      align-items: flex-start;
     }
   }
 
@@ -131,6 +154,8 @@
     justify-content: center;
     margin: 0 -32px 0 0;
     gap: 0;
+    padding-top: 17px;
+
 
     // 768
     @media only screen and (min-width: $width-m) {
@@ -140,6 +165,7 @@
     @media only screen and (min-width: $width-m) and (max-width: 991px) {
       justify-content: flex-start;
     }
+  
     // 360 - 767
     @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       padding-top: 16px;
@@ -156,6 +182,7 @@
     max-height: 341px;
     border-radius: $border-radius-base;
     overflow: hidden;
+    flex-basis: 225px;
 
     // 1183
     @media only screen and (min-width: $width-xl) {
@@ -188,7 +215,7 @@
     transition: transform $transition-base;
     backface-visibility: hidden;
     transition: transform $transition-base;
-    height: auto;
+    height: 238px;
     // 1183
     @media only screen and (min-width: $width-xl) {
       height: 248px;
@@ -270,6 +297,7 @@
     display: flex;
 
     flex-direction: column;
+    padding: 14px 16px;
     z-index: 100;
     gap: 4px;
     flex: 1;
@@ -281,6 +309,8 @@
       #22aef8 48.54%,
       #32d299 99.8%
     );
+    background-image: url(../../images/bg/bg_team_cards_mob_360.png);
+
     background-repeat: repeat;
     background-size: cover;
 
@@ -351,11 +381,44 @@
     display: flex;
     width: 100%;
     height: 100%;
-    padding-top: 36px;
-    padding-bottom: 15px;
+    padding-top: 46px;
+    padding-bottom: 46px;
     justify-content: space-between;
     gap: 0;
+    align-self: stretch;
+  }
+
+  .results .swiper-slide {
+    border-radius: $border-radius-base;
+    box-shadow: $box-shadow-base;
+    transition: transform 0.5s;
+    overflow: hidden;
+    max-height: 247px;
+    max-width: 436px;
+    flex-shrink: 0;
     position: relative;
+
+    // 360 -607
+    @media screen and (min-width: $width-min-body) and (max-width: 607px) {
+      height: 187px;
+      max-width: 328px;
+    }
+  }
+
+  // for scale active slids
+  // 768
+  .results .swiper-slide.swiper-slide-active {
+    @media screen and (min-width: $width-m) {
+      transform: scale(1.4);
+      z-index: 3;
+      border-radius: $border-radius-base;
+      overflow: hidden;
+    }
+  }
+
+  .results img {
+    height: 100%;
+    width: 100%;
   }
 
   // adaptive for btn of swiper
@@ -367,11 +430,11 @@
     z-index: 100;
     // 1183
     @media screen and (min-width: $width-xl) {
-      bottom: -95px;
+      bottom: -105px;
     }
     // 992-1182
     @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      bottom: -80px;
+      bottom: -87px;
     }
     // 768 -991
     @media screen and (min-width: $width-m) and (max-width: 991px) {
@@ -379,7 +442,7 @@
     }
     // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: -95px;
+      bottom: -85px;
     }
   }
 
@@ -390,7 +453,7 @@
     }
     // 992-1182
     @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      right: 250px;
+      right: 260px;
     }
 
     // 768 -991
@@ -410,7 +473,7 @@
     }
     // 992-1182
     @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      left: 250px;
+      left: 260px;
     }
     // 768 -991
     @media screen and (min-width: $width-m) and (max-width: 991px) {
@@ -420,31 +483,6 @@
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       left: 10px;
     }
-  }
-
-  .results .image-wrapper {
-    width: auto;
-    flex-shrink: 0;
-  }
-
-  .results .swiper-slide {
-    border-radius: 2px;
-    box-shadow: $box-shadow-base;
-    transition: transform 0.5s;
-  }
-
-  // for scale active slids
-  // 768
-  @media screen and (min-width: $width-m) {
-    .results .swiper-slide.swiper-slide-active {
-      transform: scale(1.4);
-      z-index: 3;
-    }
-  }
-
-  .results img {
-    height: 100%;
-    width: 100%;
   }
 
   // honors-and-thanks__section****************************************
