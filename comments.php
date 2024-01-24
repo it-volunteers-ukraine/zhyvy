@@ -62,7 +62,11 @@
 			'comment_field'        => '<div class="comment-form-comment">' .
 			                          '<textarea id="comment" name="comment" rows="8" required placeholder="' . get_field( "events_comments_placeholder_text", 'option' ) . '"></textarea>' .
 			                          '</div>',
-			'submit_button'        => '<button type="submit" id="submit-comment" class="button--medium">' . get_field( "events_comments_send", 'option' ) . '</button>',
+			'submit_button'        => '<button type="submit" id="submit-comment" class="button--medium">' . get_field( "events_comments_send", 'option' ) .
+			                          '<svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" viewBox="0 0 6 10" fill="none">
+                                       <path d="M3.879 5.00005L0.166504 1.28755L1.227 0.227051L6 5.00005L1.227 9.77305L0.166504 8.71255L3.879 5.00005Z" fill="currentColor"/>
+                                       </svg>' .
+			                          '</button>',
 		)
 	); ?>
 </div>
