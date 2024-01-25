@@ -16,9 +16,8 @@
   display: flex;
   gap: 220px;
   position: relative;
-  // justify-content: space-between;
   @media screen and (max-width: $width-xl) {
-    gap: 160px;
+    gap: 100px;
   }
   @media screen and (max-width: $width-l) {
     padding-bottom: 42px;
@@ -27,7 +26,6 @@
 
   @media screen and (max-width: $width-l) {
     padding-bottom: 30px;
-    // gap: 48px;
   }
 
   @media screen and (max-width: $width-s) {
@@ -41,10 +39,10 @@
   }
 }
 
+// ============= footer-logo ============= //
 .footer-logo-wrapper {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   width: 253px;
   @media screen and (max-width: $width-l) {
     width: 192px;
@@ -84,6 +82,9 @@
     font-size: 16px;
   }
 }
+
+// ============= footer-socials-list ============= //
+
 .footer-socials-list {
   display: flex;
   max-width: 254px;
@@ -93,7 +94,7 @@
   }
 }
 
-.footer-socials-list-2 {
+.footer-socials-list-mob {
   display: none;
   @media screen and (max-width: $width-l) {
     display: block;
@@ -103,14 +104,14 @@
   }
 }
 
-.footer-social-item {
-}
-
 .footer-social-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  // display: block;
+  transition: transform $transition-base;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 .footer-social-icon {
   width: 24px;
@@ -122,7 +123,7 @@
   }
 }
 
-/* footer-menu */
+// ============= footer-menu ============= //
 
 .footer-menu-wrapper {
   flex-grow: 1;
@@ -141,7 +142,6 @@
   align-content: space-between;
   justify-content: space-between;
   @media screen and (max-width: $width-l) {
-    // height: 88px;
     margin-bottom: 32px;
   }
   @media screen and (max-width: $width-l) {
@@ -154,6 +154,8 @@
 .footer-menu-item-title-wrapper {
   display: flex;
   gap: 8px;
+  width: fit-content;
+
   @media screen and (max-width: $width-l) {
     :hover {
       text-decoration: underline;
@@ -179,24 +181,48 @@
   width: 24px;
   height: 24px;
   fill: currentColor;
+  transition: $transition-base;
   transform: rotate(90deg);
   @media screen and (max-width: $width-l) {
     display: block;
   }
 }
+.footer-menu-item-title-icon-rotate {
+  @media screen and (max-width: $width-l) {
+    transition: $transition-base;
+    transform: rotate(270deg);
+  }
+}
+
 .footer-menu-item-wrapper {
   div ul li a:hover {
     text-decoration: underline;
   }
   @media screen and (max-width: $width-l) {
-    display: none;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     div ul li a {
+      display: block;
       text-decoration: underline;
+      padding-top: 6px;
+      padding-bottom: 6px;
     }
   }
 }
+
+.footer-dropdown-menu {
+  @media screen and (max-width: $width-l) {
+    display: none;
+  }
+}
+
+.footer-menu-active {
+  @media screen and (max-width: $width-l) {
+    display: block;
+  }
+}
+
+// ============= footer-buttons-panel ============= //
 
 .footer-btns-panel {
   padding: 20px 0px;
@@ -244,6 +270,9 @@
   line-height: 100%; /* 16px */
   text-transform: uppercase;
 }
+
+// ============= footer-copyright ============= //
+
 .footer-copyright-wrapper {
   padding: 6px 0px;
   display: flex;
@@ -261,7 +290,7 @@
 // ============= to top button ============= //
 .to-top-wrapper {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   justify-content: end;
   padding-top: 36px;
@@ -271,8 +300,11 @@
   width: 52px;
   height: 52px;
   background: $gradient-colorful;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform $transition-base;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
