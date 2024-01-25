@@ -58,7 +58,7 @@
         <!--  Work directions section  -->
         <div class="work">
             <div class="container">
-                <div class="grid-container">
+                <div id="workDirectionsGrid" class="grid-container">
                     <div class="grid-item description">
                         <h2 class="title-gradient-h1"><?php the_field( 'work_title' ); ?></h2>
                         <p><?php the_field( 'work_text' ); ?></p>
@@ -84,7 +84,7 @@
                                                     дізнатися Більше</a>
                                             </div>
                                         </div>
-                                        <div class="bottom">
+                                        <div class="bottom" onclick=showAccordionCard(this)>
                                             <h3><?php the_field( 'title' ); ?></h3>
                                             <p><?php the_field( 'homepage_description' ); ?></p>
                                         </div>

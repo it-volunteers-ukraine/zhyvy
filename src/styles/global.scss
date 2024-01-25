@@ -30,10 +30,10 @@ body {
 
 .wrapper {
   padding-top: 94px;
-  @media (max-width: $width-xl) {
+  @media screen and ((max-width: $width-xl) or (max-height: $height-m)) {
     padding-top: 80px;
   }
-  @media (max-width: $width-xs) {
+  @media screen and (max-width: $width-xs) {
     padding-top: 64px;
   }
 }

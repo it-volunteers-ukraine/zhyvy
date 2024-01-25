@@ -89,13 +89,38 @@
     &:focus-visible {
       outline-color: $color-blue-light;
     }
+
+    &.error {
+      border: 1px solid $color-error;
+
+      &:focus-visible {
+        outline-color: $color-error;
+
+      }
+    }
+  }
+
+  span.error {
+    font-size: 14px;
+    color: $color-error;
+    line-height: 116%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-comment{
+    padding-bottom: 18px;
+    margin-bottom: 10px;
+    position: relative;
   }
 
   .comment-form-author,
   .comment-form-email {
     flex: 1;
     width: 100%;
-    margin-bottom: 24px;
   }
 
   .comment-form-author,
@@ -118,6 +143,8 @@
     margin-bottom: 16px;
 
     textarea {
+      display: block;
+      resize: none;
       background-image: url(../../assets/images/input_pen_icon.svg);
     }
   }
