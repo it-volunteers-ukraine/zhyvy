@@ -4,7 +4,7 @@ const delay = 800;
 
 function typeEffect(element, speed) {
     const text = element.innerHTML;
-    element.innerHTML = "";
+    element.innerHTML = '';
 
     let i = 0;
 
@@ -25,7 +25,7 @@ function typeEffect(element, speed) {
 typeEffect(heroTitle, speed);
 
 
-const swiper = new Swiper(".swiperGallery", {
+const swiper = new Swiper('.swiperGallery', {
     spaceBetween: 32,
     loop: true,
     keyboard: {
@@ -44,8 +44,8 @@ const swiper = new Swiper(".swiperGallery", {
         },
     },
     navigation: {
-        nextEl: ".button-next",
-        prevEl: ".button-prev",
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
     },
 });
 
@@ -53,11 +53,24 @@ function initializeLightbox() {
     lightbox.option({
         'resizeDuration': 200,
         'alwaysShowNavOnTouchDevices': true,
-        "disableScrolling": true,
+        'disableScrolling': true,
         'wrapAround': true,
     });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
     initializeLightbox();
 });
+
+function showAccordionCard(element) {
+    const cardGrid = document.querySelector('#workDirectionsGrid');
+    const cardList = cardGrid.querySelectorAll('.card');
+    const currentCard = element.parentElement;
+
+    cardList.forEach(card => {
+        if (card !== currentCard) {
+            card.classList.remove('_active');
+        }
+    });
+    currentCard.classList.toggle('_active');
+}
