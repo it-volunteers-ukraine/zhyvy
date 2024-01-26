@@ -26,7 +26,7 @@
     }
 
     // 992-1183
-    @media only screen and (min-width: $width-l) and (max-width: 1182px) {
+    @media only screen and (min-width: $width-l) {
       padding: 48px 32px 96px 32px;
       flex-direction: row;
       align-items: flex-start;
@@ -90,7 +90,7 @@
       max-height: 332px;
     }
     // 992-1182 content
-    @media only screen and (min-width: $width-l) and (max-width: 1182px) {
+    @media only screen and (min-width: $width-l) {
       max-width: 50%;
       height: auto;
       gap: 16px;
@@ -404,7 +404,6 @@
     overflow: hidden;
     height: auto;
     width: 328px;
-    border: 1px solid rgb(0, 255, 174);
     // 768
     @media screen and (min-width: $width-m) {
       width: 355px;
