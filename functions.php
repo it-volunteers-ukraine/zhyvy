@@ -202,6 +202,6 @@ add_filter('allowed_block_types', function($block_types, $post) {
 }, 10, 2);
 
 function limit_string_length($inputString, $maxLength) {
-	return (strlen($inputString) > $maxLength) ? mb_substr($inputString, 0, $maxLength - 3) . '...' : $inputString;
+	return (mb_strlen($inputString) > $maxLength) ? mb_substr($inputString, 0, $maxLength - 3) . '...' : $inputString;
 }
 
