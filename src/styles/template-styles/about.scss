@@ -3,7 +3,7 @@
 .about-page {
   html,
   body,
-   section {
+  section {
     overflow-x: hidden;
   }
 
@@ -20,7 +20,6 @@
     justify-content: center;
     padding: 48px 16px 82px 16px;
 
-
     margin-top: 0;
     gap: 24px;
 
@@ -29,7 +28,6 @@
       padding: 86px 0px 132px 0px;
       flex-direction: row;
       align-items: flex-start;
-
     }
 
     // 992-1183
@@ -37,7 +35,6 @@
       padding: 48px 32px 96px 32px;
       flex-direction: row;
       align-items: flex-start;
-
     }
 
     // 360 - 991
@@ -93,7 +90,7 @@
     gap: 24px;
     // 1183 content
     @media only screen and (min-width: $width-xl) {
-      margin-top:0;
+      margin-top: 0;
       max-width: 45%;
       max-height: 332px;
     }
@@ -102,7 +99,7 @@
       max-width: 50%;
       height: auto;
       gap: 16px;
-      margin-top:0;
+      margin-top: 0;
     }
 
     // 768-991 content
@@ -151,24 +148,29 @@
     display: flex;
     flex-wrap: wrap;
     padding-right: 0;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0 -32px 0 0;
     gap: 0;
     padding-top: 17px;
 
-
-    // 768
-    @media only screen and (min-width: $width-m) {
+    // 992
+    @media only screen and (min-width: $width-l) {
       padding-top: 36px;
+      justify-content: center;
     }
     // 768 991
     @media only screen and (min-width: $width-m) and (max-width: 991px) {
       justify-content: flex-start;
     }
-  
+
     // 360 - 767
     @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
       padding-top: 16px;
+      justify-content: center;
+    }
+    @media only screen and (max-width: $width-min-body) {
+      padding-top: 16px;
+      justify-content: center;
     }
   }
 
@@ -186,7 +188,7 @@
 
     // 1183
     @media only screen and (min-width: $width-xl) {
-      flex-basis: 256px;
+      flex-basis: 250px;
       height: 319px;
     }
 
@@ -386,6 +388,7 @@
     justify-content: space-between;
     gap: 0;
     align-self: stretch;
+    position: relative;
   }
 
   .results .swiper-slide {
@@ -393,16 +396,8 @@
     box-shadow: $box-shadow-base;
     transition: transform 0.5s;
     overflow: hidden;
-    max-height: 247px;
-    max-width: 436px;
-    flex-shrink: 0;
-    position: relative;
-
-    // 360 -607
-    @media screen and (min-width: $width-min-body) and (max-width: 607px) {
-      height: 187px;
-      max-width: 328px;
-    }
+    height: auto;
+    width: 350px;
   }
 
   // for scale active slids
@@ -419,69 +414,76 @@
   .results img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 
   // adaptive for btn of swiper
 
-  .results .swiper-button-next::after,
-  .results .swiper-button-prev::after {
+  .results .swiper-button-next,
+  .results .swiper-button-prev {
+    top: auto;
     position: absolute;
-    bottom: -85px;
     z-index: 100;
+    bottom: 9%;
     // 1183
     @media screen and (min-width: $width-xl) {
-      bottom: -105px;
+      bottom: 4%;
     }
-    // 992-1182
+    // 992 -1182
     @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      bottom: -87px;
+      bottom: 9%;
     }
-    // 768 -991
+
     @media screen and (min-width: $width-m) and (max-width: 991px) {
-      bottom: -60px;
+      bottom: 12%;
     }
     // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: -85px;
+      bottom: 10%;
     }
   }
 
-  .results .swiper-button-next::after {
-    // 1183
-    @media screen and (min-width: $width-xl) {
-      right: 310px;
-    }
+  // buttons of swiper for results
+  .results .swiper-button-next {
+    right: 27%;
     // 992-1182
-    @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      right: 260px;
+    @media screen and (min-width: $width-l) {
+      right: 28%;
     }
-
     // 768 -991
     @media screen and (min-width: $width-m) and (max-width: 991px) {
-      right: 190px;
+      right: 29%;
     }
+
     // 360-767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      right: 10px;
+      right: 4%;
+    }
+    // <360
+    @media screen and (max-width: $width-min-body) {
+      right: 4%;
     }
   }
 
-  .results .swiper-button-prev::after {
+  .results .swiper-button-prev {
+    left: 27%;
     // 1183
-    @media screen and (min-width: $width-xl) {
-      left: 310px;
-    }
     // 992-1182
-    @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      left: 260px;
+    @media screen and (min-width: $width-l) {
+      left: 28%;
     }
     // 768 -991
     @media screen and (min-width: $width-m) and (max-width: 991px) {
-      left: 190px;
+      left: 29%;
     }
+
     // 360-767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      left: 10px;
+      left: 4%;
+    }
+    // <360
+    @media screen and (max-width: $width-min-body) {
+      left: 4%;
     }
   }
 
@@ -501,76 +503,52 @@
   // swiper for honors-and-thanks__section
   .honors-and-thanks .swiperHonor {
     display: flex;
-    height: 360px;
+    height: 100%;
     padding: 36px 10px 10px 10px;
     justify-content: space-between;
     width: 100%;
     position: relative;
-    // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      padding-right: 6px;
-    }
   }
 
   // adaptive for btn of swiper
-  .honors-and-thanks .swiper-button-next::after,
-  .honors-and-thanks .swiper-button-prev::after {
+  .honors-and-thanks .swiper-button-next,
+  .honors-and-thanks .swiper-button-prev {
     position: absolute;
     z-index: 100;
 
     // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: -158px;
+      bottom: -1%;
+      top: auto;
     }
   }
 
-  .honors-and-thanks .swiper-button-next::after {
-    // 1183
-    @media screen and (min-width: $width-xl) {
-      right: -5px;
-    }
-    // 992-1182
-    @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      right: -7px;
-    }
-
-    // 768 -991
-    @media screen and (min-width: $width-m) and (max-width: 991px) {
-      right: -8px;
-    }
-    // 360-767
+  // buttons for slide  honors-and-thanks
+  .honors-and-thanks .swiper-button-next {
+    right: 0;
+    // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      right: 15px;
+      right: 10%;
     }
   }
-
-  .honors-and-thanks .swiper-button-prev::after {
-    // 1183
-    @media screen and (min-width: $width-xl) {
-      left: -10px;
-    }
-    // 992-1182
-    @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      left: -8px;
-    }
-    // 768 -991
-    @media screen and (min-width: $width-m) and (max-width: 991px) {
-      left: -5px;
-    }
-    // 360-767
+  .honors-and-thanks .swiper-button-prev {
+    left: 0;
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      left: 15px;
+      left: 10%;
     }
   }
 
+  // slide
   .honors-and-thanks .swiper-slide {
+    height: auto;
     border-radius: 2px;
     box-shadow: $box-shadow-base;
-    padding: 0;
+    overflow: hidden;
   }
-  .honors-and-thanks img {
+  .swiperHonor img {
     height: 100%;
     width: 100%;
+    object-fit: fill;
   }
 
   // partners_section***********************************

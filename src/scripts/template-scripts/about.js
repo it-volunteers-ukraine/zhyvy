@@ -36,14 +36,16 @@ const swiperResults = new Swiper(".swiperResults", {
     },
 
     992: {
-      spaceBetween: 10,
+      spaceBetween: 5,
       slidesPerView: 3,
     },
     768: {
-      spaceBetween: 10,
+      spaceBetween: 5,
       slidesPerView: 3,
     },
+  
     360: {
+      spaceBetween: 10,
       slidesPerView: 1,
     },
   },
