@@ -7,11 +7,6 @@
     overflow-x: hidden;
   }
 
-  section {
-    margin: 0 auto;
-    padding: 0;
-  }
-
   // history section****************************************
   .history-container {
     display: flex;
@@ -373,22 +368,33 @@
   .results-container {
     display: flex;
     flex-direction: column;
-    gap: 36px;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   // swiper for Results_section
   .results .swiperResults {
     display: flex;
     width: 100%;
-    height: 100%;
-    padding-top: 46px;
-    padding-bottom: 46px;
+    height: auto;
+    padding-bottom: 18px;
+
     justify-content: space-between;
-    gap: 0;
-    align-self: stretch;
     position: relative;
+    // 1183
+    @media screen and (min-width: $width-l) {
+      margin-top: 24px;
+    }
+
+    // 768
+    @media screen and (min-width: $width-m) {
+      padding-top: 46px;
+      padding-bottom: 46px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+    }
   }
 
   .results .swiper-slide {
@@ -397,7 +403,12 @@
     transition: transform 0.5s;
     overflow: hidden;
     height: auto;
-    width: 350px;
+    width: 328px;
+    border: 1px solid rgb(0, 255, 174);
+    // 768
+    @media screen and (min-width: $width-m) {
+      width: 355px;
+    }
   }
 
   // for scale active slids
@@ -439,7 +450,7 @@
     }
     // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: 10%;
+      bottom: -1.5%;
     }
   }
 
@@ -504,7 +515,7 @@
   .honors-and-thanks .swiperHonor {
     display: flex;
     height: 100%;
-    padding: 36px 10px 10px 10px;
+    padding: 36px 10px 16px 10px;
     justify-content: space-between;
     width: 100%;
     position: relative;
@@ -518,7 +529,7 @@
 
     // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: -1%;
+      bottom: -0.7%;
       top: auto;
     }
   }

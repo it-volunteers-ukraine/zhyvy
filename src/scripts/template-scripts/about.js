@@ -43,7 +43,7 @@ const swiperResults = new Swiper(".swiperResults", {
       spaceBetween: 5,
       slidesPerView: 3,
     },
-  
+
     360: {
       spaceBetween: 10,
       slidesPerView: 1,
@@ -80,7 +80,6 @@ const swiperHonor = new Swiper(".swiperHonor", {
     360: {
       slidesPerView: 1,
       spaceBetween: 16,
-
     },
   },
   navigation: {

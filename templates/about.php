@@ -133,7 +133,7 @@ get_header();
                     ?>
                 </h2>
                 <!-- swiper_slide of results_section  -->
-                          <div class="swiper swiperResults">
+                <div class="swiper swiperResults">
                     <div class="swiper-wrapper">
                         <?php
                         $images = get_field('results_banners');
@@ -160,7 +160,7 @@ get_header();
                     <div class="swiper-button-prev"></div>
                 </div> <!-- /swiperResults  -->
 
-                           
+
             </div> <!-- / results-container   -->
         </div> <!-- / container   -->
     </section>
