@@ -4,7 +4,7 @@
 
     <main>
 		<?php get_template_part( 'template-parts/page-banner', null, array(
-			'title' => get_field( "title" )
+			'title' => get_the_title() ? limit_string_length( get_the_title(), 100 ) : 'Подія від ГО "ЖИВИ"'
 		) ); ?>
 
 		<?php get_template_part( 'template-parts/content', 'event-list-nav' ); ?>
@@ -18,7 +18,7 @@
 						<?php get_template_part( 'template-parts/content', 'event-card', array( 'isEventPost' => true ) ); ?>
 
                         <div class="events-text-wrapper">
-							<?php the_field( 'text' ); ?>
+							<?php the_content(); ?>
                         </div>
 
                         <div class="socials">
@@ -85,13 +85,13 @@
 							'posts_per_page' => 4,
 							'post_type'      => 'events',
 							'offset'         => 1,
-							'post__not_in' => array( $post->ID ),
+							'post__not_in'   => array( $post->ID ),
 						] );
 							$query  = new WP_Query( $args );
 							if ( $query->have_posts() ) :
 								while ( $query->have_posts() ) :
 									$query->the_post(); ?>
-											<?php get_template_part( 'template-parts/content', 'event-mini-card' ); ?>
+									<?php get_template_part( 'template-parts/content', 'event-mini-card' ); ?>
 								<?php endwhile;
 								wp_reset_postdata();
 							endif; ?>
@@ -100,7 +100,7 @@
 					<?php $args = ( [
 						'posts_per_page' => 1,
 						'post_type'      => 'events',
-						'post__not_in' => array( $post->ID ),
+						'post__not_in'   => array( $post->ID ),
 					] );
 						$query  = new WP_Query( $args );
 						if ( $query->have_posts() ) :
