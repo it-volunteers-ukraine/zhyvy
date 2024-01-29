@@ -1,1 +1,1 @@
-new ClipboardJS(".copy-to-clipboard");
+const clipboard=new ClipboardJS(".copy-to-clipboard"),copyBtn=document.querySelectorAll(".copy-to-clipboard");function onSuccessCopy(o){console.log(o.trigger),o.trigger.classList.add("tooltiped"),setTimeout((()=>o.trigger.classList.remove("tooltiped")),1e3)}clipboard.on("success",(o=>onSuccessCopy(o)));
