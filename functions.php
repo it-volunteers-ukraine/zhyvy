@@ -191,3 +191,17 @@ function  wp_it_volunteers_comment_fields_order( $comment_fields ): array {
 }
 add_action( 'comment_form_fields', 'wp_it_volunteers_comment_fields_order' );
 
+add_filter('allowed_block_types', function($block_types, $post) {
+	if ($post->post_type == 'events') {
+		return [
+			'core/paragraph',
+			'core/image'
+		];
+	}
+	return $block_types;
+}, 10, 2);
+
+function limit_string_length($inputString, $maxLength) {
+	return (mb_strlen($inputString) > $maxLength) ? mb_substr($inputString, 0, $maxLength - 3) . '...' : $inputString;
+}
+

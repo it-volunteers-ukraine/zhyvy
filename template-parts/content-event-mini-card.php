@@ -33,7 +33,7 @@
                     <?php the_field( 'time' ); ?>
                 </span>
             </p>
-            <h4><?php the_field( 'title' ); ?></h4>
+            <h4><?php echo get_the_title() ? get_the_title() : 'Подія від ГО "ЖИВИ"'; ?></h4>
         </div>
     </a>
 </article>

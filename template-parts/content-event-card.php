@@ -24,7 +24,7 @@
         </div>
 
         <div class="description">
-            <h3 class="<?php echo( $isEventPost ? 'h3--single' : '' ); ?>"><?php the_field( 'title' ); ?></h3>
+            <h3 class="<?php echo( $isEventPost ? 'h3--single' : '' ); ?>"><?php echo get_the_title() ? limit_string_length( get_the_title(), 100 ) : 'Подія від ГО "ЖИВИ"'; ?></h3>
 
             <p class="datetime <?php echo( $isEventPost ? 'datetime--single' : '' ); ?>">
                 <span class="date">

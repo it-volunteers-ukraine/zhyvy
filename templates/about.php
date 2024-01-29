@@ -132,7 +132,6 @@ get_header();
                     the_field('results_title');
                     ?>
                 </h2>
-
                 <!-- swiper_slide of results_section  -->
                 <div class="swiper swiperResults">
                     <div class="swiper-wrapper">
@@ -160,6 +159,8 @@ get_header();
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div> <!-- /swiperResults  -->
+
+
             </div> <!-- / results-container   -->
         </div> <!-- / container   -->
     </section>
