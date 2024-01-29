@@ -125,10 +125,58 @@
                 }
 
                 .copy-to-clipboard {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
                     cursor: pointer;
-                    width: 16px;
-                    height: 16px;    
+                    border-color: transparent;
+                    padding: 0;
+                    background-color: transparent;
                 }
+
+                .tooltiped {
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        z-index: 9998;
+                        top: 15px;
+                        right: 250%;
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-bottom: 5px solid rgba(0,0,0,.72);
+                    }
+                    
+                    &:after {
+                        content: "Copied!";
+                        display: block;
+                        position: absolute;
+                        z-index: 9999;
+                        top: 20px;
+                        right: 200%;
+                        padding: 5px 8px;
+                        font-family: $font-family-base;
+                        font-size: 11px;
+                        line-height: 1.5;
+                        color: #fff;
+                        text-align: center;
+                        text-decoration: none;
+                        text-shadow: none;
+                        text-transform: none;
+                        letter-spacing: normal;
+                        word-wrap: break-word;
+                        white-space: pre;
+                        pointer-events: none;
+                        background: $color-text-primary;
+                        border-radius: 3px;
+                        -webkit-font-smoothing: subpixel-antialiased;
+                    }
+                }
+                
             }
         }
     }

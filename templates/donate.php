@@ -34,21 +34,21 @@
                         <p class="payment-details-text-bold">Розрахунковий рахунок ГО ЖИВИ:</p>
                         <div class="account-wrapper">
                             <p id="account-number"><?php echo esc_html( get_field('account') ); ?></p>
-                            <div class="copy-to-clipboard" data-clipboard-target="#account-number">
+                            <button type="button" class="copy-to-clipboard " data-clipboard-target="#account-number">
                                 <svg width="16" height="16">
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-copy"></use>
                                 </svg>
-                            </div>
+                            </button>
                         </div>
                         <p class="payment-details-text-bold"><?php echo esc_html( get_field('card_name') ); ?></p>
                         <p><?php echo esc_html( get_field('card_holder') ); ?></p>
                         <div class="card-number-wrapper">
                             <p id="card-number"><?php echo esc_html( get_field('card_number') ); ?></p>
-                            <div class="copy-to-clipboard" data-clipboard-target="#card-number">
+                            <button type="button" class="copy-to-clipboard " data-clipboard-target="#card-number">
                                 <svg width="16" height="16">
                                     <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-copy"></use>
                                 </svg>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
