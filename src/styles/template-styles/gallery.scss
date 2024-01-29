@@ -21,6 +21,11 @@
         
         @media screen and (max-width: $width-m) {
             flex-direction: column;
+            gap: 24px
+        }
+
+        @media screen and (max-width: $width-s) {
+            gap: 46px
         }
     
         .gallery-image {
