@@ -144,8 +144,7 @@
     flex-wrap: wrap;
     padding-right: 0;
     justify-content: flex-start;
-    margin: 0 -32px 0 0;
-    gap: 0;
+    gap: 32px;
     padding-top: 17px;
 
     // 992
@@ -175,7 +174,8 @@
     flex-direction: column;
     transform-style: preserve-3d;
     perspective: 1000px;
-    margin: 0 32px 32px 0;
+  
+    
     max-height: 341px;
     border-radius: $border-radius-base;
     overflow: hidden;
@@ -278,12 +278,12 @@
       transform-style: preserve-3d;
     }
   }
-  // clase for js
+  // class for js
   .rotate-180 {
     transform: rotateY(-180deg);
     transform-style: preserve-3d;
   }
-  // clase for js
+  // class for js
   .rotate-0 {
     transform: rotateY(0deg);
     transform-style: preserve-3d;
