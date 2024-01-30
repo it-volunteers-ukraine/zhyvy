@@ -378,7 +378,7 @@
     display: flex;
     width: 100%;
     height: auto;
-  
+
     justify-content: space-between;
     position: relative;
     // 1183
@@ -427,7 +427,6 @@
     object-fit: cover;
   }
 
-  
   // buttons of swiper for results
 
   .results .button-prev,
@@ -435,15 +434,13 @@
     top: auto;
     position: absolute;
 
-
     @media screen and (min-width: $width-xl) {
       bottom: 4%;
     }
     @media screen and (min-width: $width-m) and (max-width: 1182px) {
       bottom: 10%;
-    
     }
-    @media screen and (min-width: $width-min-body) and (max-width: 767px){
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       bottom: 0;
     }
 
@@ -455,7 +452,7 @@
     }
   }
 
-// prev 
+  // prev
   .results .button-prev {
     left: 27%;
     // 1183
@@ -482,11 +479,9 @@
     }
   }
 
-
-  // next 
+  // next
   .results .button-next {
-
-  right: 27%;
+    right: 27%;
     // 1183
     // 992-1182
     @media screen and (min-width: $width-l) {
@@ -505,57 +500,13 @@
     @media screen and (max-width: $width-min-body) {
       right: 4%;
     }
-
   }
 
-  // svg 
+  // svg
   .results .button-arrow--small {
     @media screen and (max-width: $width-l) {
       width: 44px;
       height: 44px;
-    }
-  }
-
-  .results .swiper-button-next {
-    right: 27%;
-    // 992-1182
-    @media screen and (min-width: $width-l) {
-      right: 28%;
-    }
-    // 768 -991
-    @media screen and (min-width: $width-m) and (max-width: 991px) {
-      right: 29%;
-    }
-
-    // 360-767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      right: 4%;
-    }
-    // <360
-    @media screen and (max-width: $width-min-body) {
-      right: 4%;
-    }
-  }
-
-  .results .swiper-button-prev {
-    left: 27%;
-    // 1183
-    // 992-1182
-    @media screen and (min-width: $width-l) {
-      left: 28%;
-    }
-    // 768 -991
-    @media screen and (min-width: $width-m) and (max-width: 991px) {
-      left: 29%;
-    }
-
-    // 360-767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      left: 4%;
-    }
-    // <360
-    @media screen and (max-width: $width-min-body) {
-      left: 4%;
     }
   }
 
@@ -583,6 +534,56 @@
   }
 
   // adaptive for btn of swiper
+
+  .honors-and-thanks .button-prev,
+  .honors-and-thanks .button-next {
+    top: auto;
+    bottom: 40%;
+    position: absolute;
+
+    // 360 -767
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
+      bottom: 0;
+    }
+
+    svg {
+      @media screen and (max-width: $width-l) {
+        width: 12px;
+        height: 24px;
+      }
+    }
+  }
+
+  // prev
+  .honors-and-thanks .button-prev {
+    left: 0;
+    // 360 -767
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
+      left: 10%;
+    }
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  // next
+  .honors-and-thanks .button-next {
+    right: 0;
+    // 360 -767
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
+      right: 10%;
+    }
+  }
+
+  // svg
+  .honors-and-thanks .button-arrow--small {
+    @media screen and (max-width: $width-l) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
   .honors-and-thanks .swiper-button-next,
   .honors-and-thanks .swiper-button-prev {
     position: absolute;
