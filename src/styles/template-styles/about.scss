@@ -378,8 +378,7 @@
     display: flex;
     width: 100%;
     height: auto;
-    padding-bottom: 18px;
-
+  
     justify-content: space-between;
     position: relative;
     // 1183
@@ -394,6 +393,7 @@
     }
     @media screen and (max-width: 767px) {
       margin-top: 20px;
+      padding-bottom: 22px;
     }
   }
 
@@ -427,33 +427,95 @@
     object-fit: cover;
   }
 
-  // adaptive for btn of swiper
+  
+  // buttons of swiper for results
 
-  .results .swiper-button-next,
-  .results .swiper-button-prev {
+  .results .button-prev,
+  .results .button-next {
     top: auto;
     position: absolute;
-    z-index: 100;
-    bottom: 9%;
-    // 1183
+
+
     @media screen and (min-width: $width-xl) {
       bottom: 4%;
     }
-    // 992 -1182
-    @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      bottom: 9%;
+    @media screen and (min-width: $width-m) and (max-width: 1182px) {
+      bottom: 10%;
+    
+    }
+    @media screen and (min-width: $width-min-body) and (max-width: 767px){
+      bottom: 0;
     }
 
-    @media screen and (min-width: $width-m) and (max-width: 991px) {
-      bottom: 12%;
-    }
-    // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: -1.5%;
+    svg {
+      @media screen and (max-width: $width-l) {
+        width: 12px;
+        height: 24px;
+      }
     }
   }
 
-  // buttons of swiper for results
+// prev 
+  .results .button-prev {
+    left: 27%;
+    // 1183
+    // 992-1182
+    @media screen and (min-width: $width-l) {
+      left: 28%;
+    }
+    // 768 -991
+    @media screen and (min-width: $width-m) and (max-width: 991px) {
+      left: 29%;
+    }
+
+    // 360-767
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
+      left: 4%;
+    }
+    // <360
+    @media screen and (max-width: $width-min-body) {
+      left: 4%;
+    }
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+
+  // next 
+  .results .button-next {
+
+  right: 27%;
+    // 1183
+    // 992-1182
+    @media screen and (min-width: $width-l) {
+      right: 28%;
+    }
+    // 768 -991
+    @media screen and (min-width: $width-m) and (max-width: 991px) {
+      right: 29%;
+    }
+
+    // 360-767
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
+      right: 4%;
+    }
+    // <360
+    @media screen and (max-width: $width-min-body) {
+      right: 4%;
+    }
+
+  }
+
+  // svg 
+  .results .button-arrow--small {
+    @media screen and (max-width: $width-l) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
   .results .swiper-button-next {
     right: 27%;
     // 992-1182
@@ -535,14 +597,14 @@
 
   // buttons for slide  honors-and-thanks
   .honors-and-thanks .swiper-button-next {
-    right: 0;
+    right: -1%;
     // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       right: 10%;
     }
   }
   .honors-and-thanks .swiper-button-prev {
-    left: 0;
+    left: -1%;
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       left: 10%;
     }
@@ -640,27 +702,5 @@
   .partners-card a:hover .hint,
   .partners-card a:active .hint {
     display: inline-block;
-  }
-
-  // ######################################################################
-  // styles for swiper-navigation
-  .swiper-button-next,
-  .swiper-button-prev {
-    &::after {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: $border-radius-button;
-      background: $gradient-orange-btn;
-      width: 32px;
-      height: 32px;
-      font-size: 20px;
-      color: $color-white;
-      padding: 6px;
-    }
-    &:hover:after {
-      background: $gradient-orange-btn-reverse;
-    }
   }
 }
