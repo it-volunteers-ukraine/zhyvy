@@ -340,7 +340,9 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $color-white;
-    // 1183
+    filter: blur(0);  
+    filter: brightness(99%);
+      // 1183
     @media screen and (min-width: $width-xl) {
       font-size: 20px;
       line-height: $line-height-base;
