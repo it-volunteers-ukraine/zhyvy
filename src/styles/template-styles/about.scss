@@ -137,7 +137,7 @@
 
     //  767
     @media only screen and (min-width: $width-m) and (max-width: 1182px) {
-      padding-top: 96px;
+      padding-top: 86px;
       align-items: flex-start;
     }
     // 360 - 767
@@ -379,7 +379,7 @@
     width: 100%;
     //  767
     @media only screen and (min-width: $width-m) {
-      padding-top: 96px;
+      padding-top: 86px;
     }
     // 360 - 767
     @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
@@ -412,14 +412,6 @@
   }
 
 
-   .text-desktop-svg
-   {
-width: 209px;
-@media screen and (min-width: $width-m) {
-  width: 230px;
-}
-
-   }
 
   .results .swiper-slide {
     border-radius: $border-radius-base;
@@ -639,7 +631,6 @@ width: 209px;
       text-transform: uppercase;
     }
   }
-
   .partners-container {
     @extend .results-container;
     gap: 36px;

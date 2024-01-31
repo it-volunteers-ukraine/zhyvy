@@ -127,41 +127,15 @@ get_header();
     <section class="results" id="results">
         <div class="container">
             <div class="results-container">
-
-               
                 <!-- alternate title as svg  -->
-                <?php
 
-                $titlesAb =  the_field('results_title');
-
-                                if ( $titlesAb):{
-                                    ?>       
-                                        <h2 class="title-gradient-h1">
-                <?php
-                the_field('results_title');
-                ?>
+                <h2 class="title-gradient-h1">
+                    <?php
+                    the_field('results_title');
+                    ?>
                 </h2>
-                                
-                <?php 
-                } else: {
-                ?>
-                                     <div class="text-desktop-svg"> 
-                    <img src="<?php bloginfo('template_url'); ?> /assets/images/text-desktop.svg" alt="результат"  />
-                                        </div>                         
-                            
-                                        <?php
-                                }
-                                ?>       
-                                                            
-                                
-                <?php endif; ?>
-                            
-                        
-
-              
 
 
-          
                 <!-- swiper_slide of results_section  -->
                 <div class="swiper swiperResults">
                     <div class="swiper-wrapper">
