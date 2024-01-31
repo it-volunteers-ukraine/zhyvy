@@ -377,8 +377,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    @media only screen and (min-width: $width-xl) {
+      padding-top: 122px;
+    }
     //  767
-    @media only screen and (min-width: $width-m) {
+    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
       padding-top: 86px;
     }
     // 360 - 767
