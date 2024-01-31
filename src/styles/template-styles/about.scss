@@ -411,8 +411,6 @@
     }
   }
 
-
-
   .results .swiper-slide {
     border-radius: $border-radius-base;
     box-shadow: $box-shadow-base;
@@ -533,7 +531,7 @@
     }
     //  767
     @media only screen and (min-width: $width-m) and (max-width: 1182px) {
-      padding-top: 45px;
+      padding-top: 86px;
     }
     // 360 - 767
     @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
