@@ -51,8 +51,8 @@ const swiperResults = new Swiper(".swiperResults", {
   },
 
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
   },
 });
 
@@ -83,8 +83,8 @@ const swiperHonor = new Swiper(".swiperHonor", {
     },
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
   },
 });
 

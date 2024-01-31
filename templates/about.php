@@ -127,11 +127,15 @@ get_header();
     <section class="results" id="results">
         <div class="container">
             <div class="results-container">
+                <!-- alternate title as svg  -->
+
                 <h2 class="title-gradient-h1">
                     <?php
                     the_field('results_title');
                     ?>
                 </h2>
+
+
                 <!-- swiper_slide of results_section  -->
                 <div class="swiper swiperResults">
                     <div class="swiper-wrapper">
@@ -152,12 +156,23 @@ get_header();
                                     </a>
                                 </div> <!-- /swiper_slide of results_section -->
                             <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div> <!-- /swiper-wraper  -->
+                        </div> <!-- /swiper-wraper  -->
+                    <?php endif; ?>
 
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="button-arrow--small button-prev">
+                        <svg width="7.8" height="12.7">
+                            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
+                            </use>
+                        </svg>
+                    </div> <!-- button-prev -->
+                    <div class="button-arrow--small button-next">
+                        <svg width="7.8" height="12.7">
+                            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
+                            </use>
+                        </svg>
+                    </div> <!-- button-next  -->
+
                 </div> <!-- /swiperResults  -->
 
 
@@ -198,12 +213,22 @@ get_header();
                                     </a>
                                 </div> <!-- /swiper_slide of honors-and-thanks__section -->
                             <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div> <!-- /swiper-wraper of honors-and-thanks__section -->
+                        </div> <!-- /swiper-wraper of honors-and-thanks__section -->
+                    <?php endif; ?>
 
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="button-arrow--small button-prev">
+                        <svg width="7.8" height="12.7">
+                            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
+                            </use>
+                        </svg>
+                    </div> <!-- button-prev -->
+                    <div class="button-arrow--small button-next">
+                        <svg width="7.8" height="12.7">
+                            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
+                            </use>
+                        </svg>
+                    </div> <!-- button-next  -->
                 </div> <!-- /swiperHonor  -->
             </div> <!-- / thanks-container   -->
         </div> <!-- / container   -->

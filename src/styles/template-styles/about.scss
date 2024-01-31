@@ -10,36 +10,36 @@
   // history section****************************************
   .history-container {
     display: flex;
+    gap: 36px;
     flex-direction: column;
     justify-content: center;
     justify-content: center;
-    padding: 48px 16px 82px 16px;
-
-    margin-top: 0;
-    gap: 24px;
 
     // 1183
     @media screen and (min-width: $width-xl) {
-      padding: 86px 0px 132px 0px;
       flex-direction: row;
       align-items: flex-start;
+
+      padding-top: 86px;
     }
 
-    // 992-1183
-    @media only screen and (min-width: $width-l) {
-      padding: 48px 32px 96px 32px;
+    // 360
+    @media only screen and (min-width: $width-min-body) and (max-width: 1182px) {
       flex-direction: row;
       align-items: flex-start;
+      padding-top: 48px;
     }
 
     // 360 - 991
     @media only screen and (min-width: $width-min-body) and (max-width: 991px) {
       flex-direction: column;
-      padding: 48px 16px 82px 16px;
       justify-content: center;
       align-items: center;
       align-self: stretch;
-      gap: 0;
+    }
+
+    @media only screen and (max-width: $width-min-body) {
+      gap: 32px;
     }
   }
 
@@ -81,10 +81,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 32px;
     gap: 24px;
     // 1183 content
-    @media only screen and (min-width: $width-xl) {
+    @media only screen and (min-width: $width-xl) and (max-width: 1182px) {
       margin-top: 0;
       max-width: 45%;
       max-height: 332px;
@@ -100,7 +99,6 @@
     // 768-991 content
     @media only screen and (min-width: $width-m) and (max-width: 991px) {
       gap: 16px;
-      margin-top: 32px;
       width: 100%;
       height: auto;
     }
@@ -109,7 +107,6 @@
       gap: 24px;
       min-width: 310px;
       height: auto;
-      margin-top: 32px;
     }
   }
 
@@ -133,9 +130,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // 360 767
-    @media only screen and (min-width: $width-m) {
+    @media only screen and (min-width: $width-xl) {
+      padding-top: 132px;
       align-items: flex-start;
+    }
+
+    //  767
+    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
+      padding-top: 86px;
+      align-items: flex-start;
+    }
+    // 360 - 767
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
+      padding-top: 82px;
     }
   }
 
@@ -144,8 +151,7 @@
     flex-wrap: wrap;
     padding-right: 0;
     justify-content: flex-start;
-    margin: 0 -32px 0 0;
-    gap: 0;
+    gap: 32px;
     padding-top: 17px;
 
     // 992
@@ -175,7 +181,7 @@
     flex-direction: column;
     transform-style: preserve-3d;
     perspective: 1000px;
-    margin: 0 32px 32px 0;
+
     max-height: 341px;
     border-radius: $border-radius-base;
     overflow: hidden;
@@ -210,7 +216,7 @@
     background-size: cover;
     border-radius: $border-radius-base;
     transition: transform $transition-base;
-    backface-visibility: hidden;
+
     transition: transform $transition-base;
     height: 238px;
     // 1183
@@ -243,11 +249,13 @@
 
   .back-side {
     position: absolute;
+    backface-visibility: hidden;
+
     text-align: center;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(238, 238, 238, 0.88);
+    background: rgba(238, 238, 238, 0.87);
     margin-top: 0;
     transform: rotateY(180deg);
     transform-style: preserve-3d;
@@ -278,12 +286,12 @@
       transform-style: preserve-3d;
     }
   }
-  // clase for js
+  // class for js
   .rotate-180 {
     transform: rotateY(-180deg);
     transform-style: preserve-3d;
   }
-  // clase for js
+  // class for js
   .rotate-0 {
     transform: rotateY(0deg);
     transform-style: preserve-3d;
@@ -340,6 +348,8 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $color-white;
+    filter: blur(0);
+    filter: brightness(99%);
     // 1183
     @media screen and (min-width: $width-xl) {
       font-size: 20px;
@@ -361,16 +371,23 @@
   }
 
   // results_section**************************************************
-  .results {
-    margin-top: 60px;
-  }
-
   .results-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    @media only screen and (min-width: $width-xl) {
+      padding-top: 122px;
+    }
+    //  767
+    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
+      padding-top: 86px;
+    }
+    // 360 - 767
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
+      padding-top: 82px;
+    }
   }
 
   // swiper for Results_section
@@ -378,7 +395,6 @@
     display: flex;
     width: 100%;
     height: auto;
-    padding-bottom: 18px;
 
     justify-content: space-between;
     position: relative;
@@ -394,6 +410,7 @@
     }
     @media screen and (max-width: 767px) {
       margin-top: 20px;
+      padding-bottom: 22px;
     }
   }
 
@@ -427,55 +444,33 @@
     object-fit: cover;
   }
 
-  // adaptive for btn of swiper
+  // buttons of swiper for results
 
-  .results .swiper-button-next,
-  .results .swiper-button-prev {
+  .results .button-prev,
+  .results .button-next {
     top: auto;
     position: absolute;
-    z-index: 100;
-    bottom: 9%;
-    // 1183
+
     @media screen and (min-width: $width-xl) {
       bottom: 4%;
     }
-    // 992 -1182
-    @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      bottom: 9%;
+    @media screen and (min-width: $width-m) and (max-width: 1182px) {
+      bottom: 10%;
+    }
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
+      bottom: 0;
     }
 
-    @media screen and (min-width: $width-m) and (max-width: 991px) {
-      bottom: 12%;
-    }
-    // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: -1.5%;
+    svg {
+      @media screen and (max-width: $width-l) {
+        width: 12px;
+        height: 24px;
+      }
     }
   }
 
-  // buttons of swiper for results
-  .results .swiper-button-next {
-    right: 27%;
-    // 992-1182
-    @media screen and (min-width: $width-l) {
-      right: 28%;
-    }
-    // 768 -991
-    @media screen and (min-width: $width-m) and (max-width: 991px) {
-      right: 29%;
-    }
-
-    // 360-767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      right: 4%;
-    }
-    // <360
-    @media screen and (max-width: $width-min-body) {
-      right: 4%;
-    }
-  }
-
-  .results .swiper-button-prev {
+  // prev
+  .results .button-prev {
     left: 27%;
     // 1183
     // 992-1182
@@ -495,18 +490,55 @@
     @media screen and (max-width: $width-min-body) {
       left: 4%;
     }
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  // next
+  .results .button-next {
+    right: 27%;
+    // 1183
+    // 992-1182
+    @media screen and (min-width: $width-l) {
+      right: 28%;
+    }
+    // 768 -991
+    @media screen and (min-width: $width-m) and (max-width: 991px) {
+      right: 29%;
+    }
+
+    // 360-767
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
+      right: 4%;
+    }
+    // <360
+    @media screen and (max-width: $width-min-body) {
+      right: 4%;
+    }
+  }
+
+  // svg
+  .results .button-arrow--small {
+    @media screen and (max-width: $width-l) {
+      width: 44px;
+      height: 44px;
+    }
   }
 
   // honors-and-thanks__section****************************************
   .honors-and-thanks {
-    margin-top: 132px;
-    // 992
-    @media only screen and (min-width: $width-l) {
-      margin-top: 96px;
+    @media only screen and (min-width: $width-xl) {
+      padding-top: 112px;
     }
-    // 360
-    @media only screen and (min-width: $width-min-body) {
-      margin-top: 82px;
+    //  767
+    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
+      padding-top: 86px;
+    }
+    // 360 - 767
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
+      padding-top: 82px;
     }
   }
 
@@ -521,30 +553,53 @@
   }
 
   // adaptive for btn of swiper
-  .honors-and-thanks .swiper-button-next,
-  .honors-and-thanks .swiper-button-prev {
+
+  .honors-and-thanks .button-prev,
+  .honors-and-thanks .button-next {
+    top: auto;
+    bottom: 40%;
     position: absolute;
-    z-index: 100;
 
     // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: -0.7%;
-      top: auto;
+      bottom: 0;
+    }
+
+    svg {
+      @media screen and (max-width: $width-l) {
+        width: 12px;
+        height: 24px;
+      }
     }
   }
 
-  // buttons for slide  honors-and-thanks
-  .honors-and-thanks .swiper-button-next {
+  // prev
+  .honors-and-thanks .button-prev {
+    left: 0;
+    // 360 -767
+    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
+      left: 10%;
+    }
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  // next
+  .honors-and-thanks .button-next {
     right: 0;
     // 360 -767
     @media screen and (min-width: $width-min-body) and (max-width: 767px) {
       right: 10%;
     }
   }
-  .honors-and-thanks .swiper-button-prev {
-    left: 0;
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      left: 10%;
+
+  // svg
+  .honors-and-thanks .button-arrow--small {
+    @media screen and (max-width: $width-l) {
+      width: 44px;
+      height: 44px;
     }
   }
 
@@ -563,11 +618,8 @@
 
   // partners_section***********************************
   .partners {
-    margin-top: 96px;
-    margin-bottom: 64px;
-    @media screen and (min-width: $width-xl) {
-      margin-top: 132px;
-    }
+    padding-top: 82px;
+    padding-bottom: 32px;
 
     //  styles for partners without a logo
     &_name {
@@ -580,7 +632,6 @@
       text-transform: uppercase;
     }
   }
-
   .partners-container {
     @extend .results-container;
     gap: 36px;
@@ -640,27 +691,5 @@
   .partners-card a:hover .hint,
   .partners-card a:active .hint {
     display: inline-block;
-  }
-
-  // ######################################################################
-  // styles for swiper-navigation
-  .swiper-button-next,
-  .swiper-button-prev {
-    &::after {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: $border-radius-button;
-      background: $gradient-orange-btn;
-      width: 32px;
-      height: 32px;
-      font-size: 20px;
-      color: $color-white;
-      padding: 6px;
-    }
-    &:hover:after {
-      background: $gradient-orange-btn-reverse;
-    }
   }
 }
