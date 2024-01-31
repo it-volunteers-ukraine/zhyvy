@@ -11,29 +11,24 @@
   .history-container {
     display: flex;
     gap: 36px;
-        flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     justify-content: center;
-   
 
     // 1183
     @media screen and (min-width: $width-xl) {
       flex-direction: row;
       align-items: flex-start;
-   
+
       padding-top: 86px;
-      padding-bottom: 132px;
     }
 
     // 360
-    @media only screen and (min-width: $width-min-body) and (max-width: 1182px){
+    @media only screen and (min-width: $width-min-body) and (max-width: 1182px) {
       flex-direction: row;
       align-items: flex-start;
       padding-top: 48px;
-      padding-bottom: 32px;
-          }
-
-         
+    }
 
     // 360 - 991
     @media only screen and (min-width: $width-min-body) and (max-width: 991px) {
@@ -41,9 +36,9 @@
       justify-content: center;
       align-items: center;
       align-self: stretch;
-     }
+    }
 
-     @media only screen and (max-width: $width-min-body) {
+    @media only screen and (max-width: $width-min-body) {
       gap: 32px;
     }
   }
@@ -86,7 +81,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-      gap: 24px;
+    gap: 24px;
     // 1183 content
     @media only screen and (min-width: $width-xl) and (max-width: 1182px) {
       margin-top: 0;
@@ -135,9 +130,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // 360 767
-    @media only screen and (min-width: $width-m) {
+    @media only screen and (min-width: $width-xl) {
+      padding-top: 132px;
       align-items: flex-start;
+    }
+
+    //  767
+    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
+      padding-top: 96px;
+      align-items: flex-start;
+    }
+    // 360 - 767
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
+      padding-top: 82px;
     }
   }
 
@@ -176,8 +181,7 @@
     flex-direction: column;
     transform-style: preserve-3d;
     perspective: 1000px;
-  
-    
+
     max-height: 341px;
     border-radius: $border-radius-base;
     overflow: hidden;
@@ -212,7 +216,7 @@
     background-size: cover;
     border-radius: $border-radius-base;
     transition: transform $transition-base;
-   
+
     transition: transform $transition-base;
     height: 238px;
     // 1183
@@ -344,9 +348,9 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $color-white;
-    filter: blur(0);  
+    filter: blur(0);
     filter: brightness(99%);
-      // 1183
+    // 1183
     @media screen and (min-width: $width-xl) {
       font-size: 20px;
       line-height: $line-height-base;
@@ -367,16 +371,20 @@
   }
 
   // results_section**************************************************
-  .results {
-    margin-top: 60px;
-  }
-
   .results-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    //  767
+    @media only screen and (min-width: $width-m) {
+      padding-top: 96px;
+    }
+    // 360 - 767
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
+      padding-top: 82px;
+    }
   }
 
   // swiper for Results_section
@@ -402,6 +410,16 @@
       padding-bottom: 22px;
     }
   }
+
+
+   .text-desktop-svg
+   {
+width: 209px;
+@media screen and (min-width: $width-m) {
+  width: 230px;
+}
+
+   }
 
   .results .swiper-slide {
     border-radius: $border-radius-base;
@@ -518,14 +536,16 @@
 
   // honors-and-thanks__section****************************************
   .honors-and-thanks {
-    margin-top: 132px;
-    // 992
-    @media only screen and (min-width: $width-l) {
-      margin-top: 96px;
+    @media only screen and (min-width: $width-xl) {
+      padding-top: 112px;
     }
-    // 360
-    @media only screen and (min-width: $width-min-body) {
-      margin-top: 82px;
+    //  767
+    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
+      padding-top: 45px;
+    }
+    // 360 - 767
+    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
+      padding-top: 82px;
     }
   }
 
@@ -590,33 +610,6 @@
     }
   }
 
-  .honors-and-thanks .swiper-button-next,
-  .honors-and-thanks .swiper-button-prev {
-    position: absolute;
-    z-index: 100;
-
-    // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: -0.7%;
-      top: auto;
-    }
-  }
-
-  // buttons for slide  honors-and-thanks
-  .honors-and-thanks .swiper-button-next {
-    right: -1%;
-    // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      right: 10%;
-    }
-  }
-  .honors-and-thanks .swiper-button-prev {
-    left: -1%;
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      left: 10%;
-    }
-  }
-
   // slide
   .honors-and-thanks .swiper-slide {
     height: auto;
@@ -632,11 +625,8 @@
 
   // partners_section***********************************
   .partners {
-    margin-top: 96px;
-    margin-bottom: 64px;
-    @media screen and (min-width: $width-xl) {
-      margin-top: 132px;
-    }
+    padding-top: 82px;
+    padding-bottom: 32px;
 
     //  styles for partners without a logo
     &_name {

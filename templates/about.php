@@ -127,11 +127,20 @@ get_header();
     <section class="results" id="results">
         <div class="container">
             <div class="results-container">
+
+                <!-- alternate title as svg  -->
+
                 <h2 class="title-gradient-h1">
                     <?php
                     the_field('results_title');
                     ?>
                 </h2>
+<div class="text-desktop-svg"> 
+<img src="<?php bloginfo('template_url'); ?> /assets/images/text-desktop.svg" alt="результат" title="результат"  />
+
+</div>
+
+          
                 <!-- swiper_slide of results_section  -->
                 <div class="swiper swiperResults">
                     <div class="swiper-wrapper">
@@ -158,15 +167,13 @@ get_header();
                     <div class="swiper-pagination"></div>
                     <div class="button-arrow--small button-prev">
                         <svg width="7.8" height="12.7">
-                            <use
-                                href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
+                            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
                             </use>
                         </svg>
                     </div> <!-- button-prev -->
                     <div class="button-arrow--small button-next">
                         <svg width="7.8" height="12.7">
-                            <use
-                                href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
+                            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
                             </use>
                         </svg>
                     </div> <!-- button-next  -->
@@ -212,20 +219,18 @@ get_header();
                                 </div> <!-- /swiper_slide of honors-and-thanks__section -->
                             <?php endforeach; ?>
                         </div> <!-- /swiper-wraper of honors-and-thanks__section -->
-                        <?php endif; ?>
+                    <?php endif; ?>
 
                     <div class="swiper-pagination"></div>
                     <div class="button-arrow--small button-prev">
                         <svg width="7.8" height="12.7">
-                            <use
-                                href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
+                            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
                             </use>
                         </svg>
                     </div> <!-- button-prev -->
                     <div class="button-arrow--small button-next">
                         <svg width="7.8" height="12.7">
-                            <use
-                                href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
+                            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#chevron-right">
                             </use>
                         </svg>
                     </div> <!-- button-next  -->
