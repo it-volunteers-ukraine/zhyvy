@@ -56,7 +56,7 @@
         </section>
 
         <!--  Work directions section  -->
-        <div class="work">
+        <section class="work">
             <div class="container">
                 <div id="workDirectionsGrid" class="grid-container">
                     <div class="grid-item description">
@@ -95,7 +95,7 @@
 						endif; ?>
                 </div>
             </div>
-        </div>
+        </section>
 
 
         <!--  Help section  -->
@@ -183,7 +183,7 @@
         </section>
 
         <!--  Results section  -->
-        <div class="results">
+        <section class="results">
             <div class="container">
                 <div class="results-wrapper">
                     <h2 class="title-gradient-h1"><?php the_field( 'results_title' ); ?></h2>
@@ -209,10 +209,10 @@
 
                 </div>
             </div>
-        </div>
+        </section>
 
         <!--  Gallery section -->
-        <div class="gallery">
+        <section class="gallery">
             <div class="container">
                 <h2 class="title-gradient-h1"><?php the_field( 'gallery_title' ); ?></h2>
                 <div class="carousel-wrapper">
@@ -249,7 +249,7 @@
                     </svg>
                 </a>
             </div>
-        </div>
+        </section>
     </main>
 
 <?php get_footer(); ?>
