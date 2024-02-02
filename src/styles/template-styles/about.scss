@@ -1,11 +1,6 @@
 @import "../variables.scss";
 
 .about-page {
-  html,
-  body,
-  section {
-    overflow-x: hidden;
-  }
 
   // history section****************************************
   .history-container {
@@ -531,94 +526,79 @@
     }
   }
 
-  // honors-and-thanks__section****************************************
-  .honors-and-thanks {
-    @media only screen and (min-width: $width-xl) {
-      padding-top: 112px;
-    }
-    //  767
-    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
-      padding-top: 86px;
-    }
-    // 360 - 767
-    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
-      padding-top: 82px;
-    }
-  }
 
-  // swiper for honors-and-thanks__section
-  .honors-and-thanks .swiperHonor {
-    display: flex;
-    height: 100%;
-    padding: 36px 10px 16px 10px;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
-  }
-
-  // adaptive for btn of swiper
-
-  .honors-and-thanks .button-prev,
-  .honors-and-thanks .button-next {
-    top: auto;
-    bottom: 40%;
-    position: absolute;
-
-    // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      bottom: 0;
+  // honors-and-thanks section
+  .honors {
+    margin-top: 132px;
+    @media screen and (max-width: $width-l) {
+      margin-top: 96px;
     }
 
-    svg {
-      @media screen and (max-width: $width-l) {
-        width: 12px;
-        height: 24px;
+    .title-gradient-h1 {
+      margin-bottom: 36px;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      padding: 0 16px;
+      margin: 0 -16px;
+      @media screen and (max-width: $width-s) {
+        padding: 0;
+        margin: 0;
       }
     }
-  }
 
-  // prev
-  .honors-and-thanks .button-prev {
-    left: 0;
-    // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      left: 10%;
+    .swiper-wrapper {
+      height: 180px;
+      @media screen and (max-width: $width-l) {
+        height: 254px;
+
+      }
     }
 
-    svg {
-      transform: rotate(-180deg);
+    .swiper-slide {
+      overflow: hidden;
+      min-height: 100%;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 4px;
+      }
     }
-  }
 
-  // next
-  .honors-and-thanks .button-next {
-    right: 0;
-    // 360 -767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      right: 10%;
+    .button-next_honors,
+    .button-prev_honors {
+      position: absolute;
+      top: calc(50% - 22px);
+      @media screen and (max-width: $width-s) {
+        top: auto;
+        bottom: -22px;
+      }
     }
-  }
 
-  // svg
-  .honors-and-thanks .button-arrow--small {
-    @media screen and (max-width: $width-l) {
-      width: 44px;
-      height: 44px;
+    .button-prev_honors {
+      left: 0;
+      @media screen and (max-width: $width-s) {
+        left: 16px;
+      }
+
+      svg {
+        transform: rotate(-180deg);
+      }
     }
-  }
 
-  // slide
-  .honors-and-thanks .swiper-slide {
-    height: auto;
-    border-radius: 2px;
-    box-shadow: $box-shadow-base;
-    overflow: hidden;
-  }
+    .button-next_honors {
+      right: 0;
+      @media screen and (max-width: $width-s) {
+        right: 16px;
+      }
+    }
 
-  .swiperHonor img {
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
   }
 
   // partners_section***********************************

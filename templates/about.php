@@ -143,10 +143,7 @@
                                 <div class="swiper-slide">
                                     <a href="<?php
 										echo esc_url( $image['url'] );
-									?>" data-lightbox="
-    <?php
-										the_ID();
-									?>" tabindex="1">
+									?>" data-lightbox="resultsGallery" tabindex="1">
                                         <img src="<?php echo esc_url( $image['url'] ); ?>"
                                              alt="<?php echo esc_attr( $image['alt'] ); ?>"/>
                                     </a>
@@ -176,56 +173,37 @@
 
 
         <!-- honors-and-thanks section  -->
-        <section class="honors-and-thanks" id="thanks">
-
+        <section class="honors" id="aboutHonors">
             <div class="container">
-                <div class="thanks-container">
-
-                    <h2 class="title-gradient-h1">
+                <h2 class="title-gradient-h1"><?php the_field( 'thanks_title' ); ?></h2>
+                <div class="carousel-wrapper">
+                    <div class="swiper swiperHonors">
 						<?php
-							the_field( 'thanks_title' );
-						?>
-                    </h2>
-
-                    <!-- swiper_slide of honors-and-thanks_section  -->
-                    <div class="swiper swiperHonor">
-                        <div class="swiper-wrapper">
-							<?php
-								$images = get_field( 'honour_galery' );
-								if ( $images ): ?>
-
-							<?php foreach ( $images as $image ): ?>
-                                <div class="swiper-slide">
-                                    <a href="<?php
-										echo esc_url( $image['url'] );
-									?>" data-lightbox="
-    <?php
-										the_ID();
-									?>" tabindex="1">
-                                        <img src="<?php echo esc_url( $image['url'] ); ?>"
-                                             alt="<?php echo esc_attr( $image['alt'] ); ?>"/>
-                                    </a>
-                                </div> <!-- /swiper_slide of honors-and-thanks__section -->
-							<?php endforeach; ?>
-                        </div> <!-- /swiper-wraper of honors-and-thanks__section -->
-						<?php endif; ?>
-
-                        <div class="swiper-pagination"></div>
-                        <div class="button-arrow--small button-prev">
-                            <svg width="7.8" height="12.7">
-                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
-                                </use>
-                            </svg>
-                        </div> <!-- button-prev -->
-                        <div class="button-arrow--small button-next">
-                            <svg width="7.8" height="12.7">
-                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
-                                </use>
-                            </svg>
-                        </div> <!-- button-next  -->
-                    </div> <!-- /swiperHonor  -->
-                </div> <!-- / thanks-container   -->
-            </div> <!-- / container   -->
+							$images = get_field( 'honour_galery' );
+							if ( $images ): ?>
+                                <div class="swiper-wrapper">
+									<?php foreach ( $images as $image ): ?>
+                                        <a class="swiper-slide" href="<?php echo esc_url( $image['url'] ); ?>"
+                                           data-lightbox="honorsGallery">
+                                            <img src="<?php echo esc_url( $image['url'] ); ?>"
+                                                 alt="<?php echo esc_attr( $image['alt'] ); ?>">
+                                        </a>
+									<?php endforeach; ?>
+                                </div>
+							<?php endif; ?>
+                    </div>
+                    <div class="button-arrow--medium button-next_honors">
+                        <svg width="12" height="24">
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                        </svg>
+                    </div>
+                    <div class="button-arrow--medium button-prev_honors">
+                        <svg width="12" height="24">
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </section>
 
 

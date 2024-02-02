@@ -58,33 +58,29 @@ const swiperResults = new Swiper('.swiperResults', {
 
 // honors-and-thanks section
 
-const swiperHonor = new Swiper('.swiperHonor', {
+const swiperHonors = new Swiper('.swiperHonors', {
     centeredSlides: true,
     loop: true,
-    spaceBetween: 10,
-
+    spaceBetween: 24,
     breakpoints: {
-        1920: {
-            spaceBetween: 20,
-            slidesPerView: 5,
+        431: {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            slidesPerGroup: 1,
+
         },
 
-        992: {
-            slidesPerView: 3,
-            spaceBetween: 16,
+        993: {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            slidesPerGroup: 3,
+
         },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 16,
-        },
-        360: {
-            slidesPerView: 1,
-            spaceBetween: 16,
-        },
+
     },
     navigation: {
-        nextEl: '.button-next',
-        prevEl: '.button-prev',
+        nextEl: '.button-next_honors',
+        prevEl: '.button-prev_honors',
     },
 });
 
@@ -97,7 +93,7 @@ function initializeLightbox() {
         disableScrolling: true,
         albumLabel: 'Слайд %1 з %2',
         fitImagesInViewport: true,
-        positionFromTop: 200,
+        'wrapAround': true,
     });
 }
 
