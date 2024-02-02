@@ -8,6 +8,7 @@
   background-image: url("../../images/bg/main_bg_desk.jpg");
   background-size: cover;
   background-position: center;
+  background-color: rgba($color-light-gray, 0.5);
   @media screen and (max-width: $width-l) {
     margin-bottom: 48px;
     padding: 64px 0;
@@ -114,6 +115,16 @@
     gap: 12px;
     @media screen and (max-width: $width-xs) {
       margin-left: unset;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.2) rotate(15deg);
+      }
+    }
+
+    svg {
+      transition: all $transition-base;
     }
 
     p {
@@ -284,7 +295,7 @@
       }
     }
 
-     &._active {
+    &._active {
       .top {
         @media screen and (max-width: $width-s) {
           height: 180px;
@@ -400,6 +411,7 @@
   background-image: url("../../images/bg/poryad_bg_desk.jpg");
   background-size: cover;
   background-position: center;
+  background-color: rgba($color-light-gray, 0.5);
   @media screen and (max-width: $width-l) {
     padding: 64px 0;
     margin-bottom: 96px;

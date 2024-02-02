@@ -1,6 +1,6 @@
     <!--  ============= to top button =============  -->
     <div class="to-top-wrapper container">
-        <a href="#" class="to-top" aria-label="Кнопка вгору">
+        <a href="#" class="button-arrow--up" aria-label="Кнопка вгору">
             <svg class="to-top-icon">
                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-to-top"></use>
             </svg>

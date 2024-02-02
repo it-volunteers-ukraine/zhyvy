@@ -1,108 +1,78 @@
-// team_section ****************************
+function toggleCardMobileHover(element) {
+    const cardGrid = document.querySelector('#teamCardsGrid');
+    const cardList = cardGrid.querySelectorAll('.card');
 
-const listTeam = document.querySelector(".team_list");
-
-listTeam.addEventListener("click", openTmCard);
-
-function openTmCard(event) {
-  let target = event.target;
-
-  if (target.className === "front-sideIMG") {
-    target.closest("div").classList.add("rotate-180");
-
-    target
-      .closest("div")
-      .nextSibling.nextElementSibling.classList.add("rotate-0");
-  }
-
-  if (target.className === "back-side_text") {
-    target.closest("div").classList.remove("rotate-0");
-    target
-      .closest("div")
-      .previousSibling.previousElementSibling.classList.remove("rotate-180");
-  }
+    cardList.forEach(card => {
+        if (card !== element) {
+            card.classList.remove('_active');
+        }
+    });
+    element.classList.toggle('_active');
 }
 
-// Results_section*************************************
 
-const swiperResults = new Swiper(".swiperResults", {
-  centeredSlides: true,
-  loop: true,
+// Results_section
+const swiperResults = new Swiper('.swiperResults', {
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 1,
 
-  breakpoints: {
-    1920: {
-      spaceBetween: 5,
-      slidesPerView: 3,
+    breakpoints: {
+        768: {
+            spaceBetween: 5,
+            slidesPerView: 3,
+        },
     },
 
-    992: {
-      spaceBetween: 5,
-      slidesPerView: 3,
+    navigation: {
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
     },
-    768: {
-      spaceBetween: 5,
-      slidesPerView: 3,
-    },
-
-    360: {
-      spaceBetween: 10,
-      slidesPerView: 1,
-    },
-  },
-
-  navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
-  },
 });
 
-// honors-and-thanks__section*************************************
+// honors-and-thanks section
 
-const swiperHonor = new Swiper(".swiperHonor", {
-  centeredSlides: true,
-  loop: true,
-  spaceBetween: 10,
+const swiperHonors = new Swiper('.swiperHonors', {
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 24,
+    breakpoints: {
+        431: {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            slidesPerGroup: 1,
 
-  breakpoints: {
-    1920: {
-      spaceBetween: 20,
-      slidesPerView: 5,
-    },
+        },
 
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 16,
+        993: {
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            slidesPerGroup: 3,
+
+        },
+
     },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 16,
+    navigation: {
+        nextEl: '.button-next_honors',
+        prevEl: '.button-prev_honors',
     },
-    360: {
-      slidesPerView: 1,
-      spaceBetween: 16,
-    },
-  },
-  navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
-  },
 });
 
-// Lightbox***********************************************
+// Lightbox
 
 function initializeLightbox() {
-  lightbox.option({
-    resizeDuration: 200,
-    alwaysShowNavOnTouchDevices: true,
-    disableScrolling: true,
-    albumLabel: "Слайд %1 з %2",
-    fitImagesInViewport: true,
-    positionFromTop: 200,
-  });
+    lightbox.option({
+        resizeDuration: 200,
+        alwaysShowNavOnTouchDevices: true,
+        disableScrolling: true,
+        albumLabel: 'Слайд %1 з %2',
+        fitImagesInViewport: true,
+        'wrapAround': true,
+    });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  initializeLightbox();
+document.addEventListener('DOMContentLoaded', function () {
+    initializeLightbox();
 });
 
-console.log("skdmosdkoslmd");
