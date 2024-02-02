@@ -18,37 +18,14 @@
         <!--    history_section -->
         <section class="history" id="history">
             <div class="container">
-                <div class="history-container">
-
-					<?php
-						$image = get_field( 'history_image' );
-						if ( ! empty( $image ) ): ?>
-
-                    <div class="history_image-thumb">
-                        <img src="<?php
-							echo esc_url( $image['url'] );
-						?>" alt="<?php
-							echo esc_attr( $image['alt'] );
-						?>"/>
-						<?php
-							endif;
-						?>
+                <div class="history-wrapper">
+                    <div class="image">
+                        <img src="<?php echo esc_url( get_field( 'history_image' )['url'] ); ?>"
+                             alt="<?php echo esc_attr( get_field( 'history_image' )['alt'] ); ?>">
                     </div>
-
-                    <div class="history-content">
-                        <h1 class="title-gradient-h1">
-							<?php
-								the_field( 'history_title' );
-							?>
-                        </h1>
-
-                        <div class="history-content_description">
-                            <p class="history-content_text">
-								<?php
-									the_field( 'history_text' );
-								?>
-                            </p>
-                        </div>
+                    <div class="content">
+                        <h2 class="title-gradient-h1"><?php the_field( 'history_title' ); ?></h2>
+                        <p><?php the_field( 'history_text' ); ?></p>
                     </div>
                 </div>
             </div>
@@ -173,7 +150,7 @@
 
 
         <!-- honors-and-thanks section  -->
-        <section class="honors" id="aboutHonors">
+        <section class="honors" id="honors">
             <div class="container">
                 <h2 class="title-gradient-h1"><?php the_field( 'thanks_title' ); ?></h2>
                 <div class="carousel-wrapper">
