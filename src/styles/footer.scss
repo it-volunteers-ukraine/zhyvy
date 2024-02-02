@@ -206,6 +206,7 @@
       text-decoration: underline;
       padding-top: 6px;
       padding-bottom: 6px;
+      width: fit-content;
     }
   }
 }
@@ -295,17 +296,4 @@
   justify-content: end;
   padding-top: 36px;
   padding-bottom: 36px;
-}
-.to-top {
-  width: 52px;
-  height: 52px;
-  border-radius: 4px;
-  background: $gradient-colorful;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform $transition-base;
-  &:hover {
-    transform: scale(1.2);
-  }
 }
