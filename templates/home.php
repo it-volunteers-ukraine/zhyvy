@@ -17,7 +17,7 @@
                     <p class="text"><?php the_field( 'hero_text' ); ?></p>
                     <a class="contact" href="tel:<?php the_field( 'phone_hotline', 'option' ); ?>" target="_blank"
                        aria-label="Подзвонити на гарячу лінію">
-                        <svg width="24" height="24">
+                        <svg width="30" height="30">
                             <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/sprite.svg#icon-phone_24"></use>
                         </svg>
                         <p>
