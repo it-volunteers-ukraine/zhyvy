@@ -1,4 +1,4 @@
-console.log("footer part");
+
 
 document.querySelectorAll(".footer-dropdown-toggle").forEach((e) => {
   e.addEventListener("click", (e) => {
