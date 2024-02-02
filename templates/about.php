@@ -34,66 +34,34 @@
 
         <!-- team_section  -->
         <section class="team" id="team">
+            <div class="container">
+                <h2 class="title-gradient-h1"><?php the_field( 'team_title' ); ?></h2>
 
-            <div class="container ">
-                <div class="team-container">
-                    <h2 class="title-gradient-h1">
-						<?php
-							the_field( 'team_title' );
-						?>
-                    </h2>
-
-                    <div class="team_list">
-						<?php
-							if ( have_rows( 'team_card' ) ): ?>
-								<?php
-								while ( have_rows( 'team_card' ) ):
-									the_row();
-									?>
-
-                                    <div class="team-card">
-                                        <div class="front-side front-side-js">
-                                            <img class="front-sideIMG" src="<?php
-												the_sub_field( 'team_card_image' );
-											?>" alt="<?php
-												the_sub_field( 'team_card_name' );
-											?> <?php
-												the_sub_field( 'team_card_surname' );
-											?>">
-
+                <div id="teamCardsGrid" class="grid-container">
+					<?php if ( have_rows( 'team_card' ) ) :
+						while ( have_rows( 'team_card' ) ) :
+							the_row(); ?>
+                            <div class="grid-item">
+                                <article class="card" onclick=toggleCardMobileHover(this)>
+                                    <div class="top">
+                                        <div class="top-front">
+                                            <img src="<?php the_sub_field( 'team_card_image' ) ?>"
+                                                 alt="<?php the_sub_field( 'team_card_name' ) . ' ' .
+											                the_sub_field( 'team_card_surname' ); ?>">
                                         </div>
-
-                                        <div class="back-side back-side-js">
-                                            <p class="back-side_text">
-												<?php
-													the_sub_field( 'my_goal' );
-												?>
-                                            </p>
-                                        </div>
-
-                                        <div class="team-card_content content">
-                                    <span class="content_title">
-                                        <?php
-	                                        the_sub_field( 'team_card_name' );
-                                        ?>
-                                        <?php
-	                                        the_sub_field( 'team_card_surname' );
-                                        ?>
-                                    </span>
-                                            <span class="content_position">
-                                        <?php
-	                                        the_sub_field( 'team_card_position' );
-                                        ?>
-                                    </span>
+                                        <div class="top-back">
+                                            <p><?php the_sub_field( 'my_goal' ); ?></p>
                                         </div>
                                     </div>
-								<?php
-								endwhile;
-								?>
-							<?php
-							endif;
-						?>
-                    </div>
+                                    <div class="bottom">
+                                        <h3><?php the_sub_field( 'team_card_name' ) . ' ' .
+										          the_sub_field( 'team_card_surname' ); ?></h3>
+                                        <p><?php the_sub_field( 'team_card_position' ); ?></p>
+                                    </div>
+                                </article>
+                            </div>
+						<?php endwhile;
+					endif; ?>
                 </div>
             </div>
         </section>

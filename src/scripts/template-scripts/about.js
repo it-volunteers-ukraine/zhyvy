@@ -1,30 +1,17 @@
-// team_section
+function toggleCardMobileHover(element) {
+    const cardGrid = document.querySelector('#teamCardsGrid');
+    const cardList = cardGrid.querySelectorAll('.card');
 
-const listTeam = document.querySelector('.team_list');
-
-listTeam.addEventListener('click', openTmCard);
-
-function openTmCard(event) {
-    let target = event.target;
-
-    if (target.className === 'front-sideIMG') {
-        target.closest('div').classList.add('rotate-180');
-
-        target
-            .closest('div')
-            .nextSibling.nextElementSibling.classList.add('rotate-0');
-    }
-
-    if (target.className === 'back-side_text') {
-        target.closest('div').classList.remove('rotate-0');
-        target
-            .closest('div')
-            .previousSibling.previousElementSibling.classList.remove('rotate-180');
-    }
+    cardList.forEach(card => {
+        if (card !== element) {
+            card.classList.remove('_active');
+        }
+    });
+    element.classList.toggle('_active');
 }
 
-// Results_section
 
+// Results_section
 const swiperResults = new Swiper('.swiperResults', {
     centeredSlides: true,
     loop: true,

@@ -30,6 +30,7 @@
         border-radius: 8px;
         @media screen and (max-width: $width-l) {
           max-height: 524px;
+          min-height: 212px;
         }
       }
     }
@@ -50,253 +51,162 @@
   }
 
 
-  // team section****************************************
-  .team-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media only screen and (min-width: $width-xl) {
-      padding-top: 132px;
-      align-items: flex-start;
+  // team section
+  .team {
+    padding-top: 132px;
+    @media screen and (max-width: $width-l) {
+      padding-top: 96px;
     }
-
-    //  767
-    @media only screen and (min-width: $width-m) and (max-width: 1182px) {
-      padding-top: 86px;
-      align-items: flex-start;
-    }
-    // 360 - 767
-    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
+    @media screen and (max-width: $width-s) {
       padding-top: 82px;
     }
-  }
 
-  .team_list {
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 0;
-    justify-content: flex-start;
-    gap: 32px;
-    padding-top: 17px;
-
-    // 992
-    @media only screen and (min-width: $width-l) {
-      padding-top: 36px;
-      justify-content: center;
-    }
-    // 768 991
-    @media only screen and (min-width: $width-m) and (max-width: 991px) {
-      justify-content: flex-start;
+    .title-gradient-h1 {
+      margin-bottom: 36px;
+      @media screen and (max-width: $width-l) {
+        margin-bottom: 24px;
+      }
+      @media screen and (max-width: $width-s) {
+        margin-bottom: 16px;
+        text-align: center;
+      }
     }
 
-    // 360 - 767
-    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
-      padding-top: 16px;
-      justify-content: center;
-    }
-    @media only screen and (max-width: $width-min-body) {
-      padding-top: 16px;
-      justify-content: center;
-    }
-  }
-
-  // CARDS
-  .team-card {
-    display: flex;
-    flex-direction: column;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-
-    max-height: 341px;
-    border-radius: $border-radius-base;
-    overflow: hidden;
-    flex-basis: 225px;
-
-    // 1183
-    @media only screen and (min-width: $width-xl) {
-      flex-basis: 250px;
-      height: 319px;
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      @media screen and (max-width: $width-s) {
+        justify-content: center;
+      }
     }
 
-    // 992-1182
-    @media only screen and (min-width: $width-l) and (max-width: 1182px) {
-      flex-basis: 208px;
-      height: 263px;
-    }
-    // 768-991
-    @media only screen and (min-width: $width-m) and (max-width: 991px) {
-      flex-basis: 212px;
-      height: 268px;
-    }
-    // 360-767
-    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
-      flex-basis: 256px;
-      height: 319px;
-    }
-  }
+    .grid-item {
+      width: calc(25% - (3 * 32px / 4));
+      @media screen and (max-width: 940px) {
+        width: calc(33.33% - (2 * 32px / 3));
+      }
+      @media screen and (max-width: 740px) {
+        width: calc(50% - (1 * 32px / 2));
+      }
+      @media screen and (max-width: $width-s) {
+        width: 256px;
 
-  // TWO SIDEs of  team_CARDs for hover_effects
-  .front-side,
-  .back-side {
-    background-size: cover;
-    border-radius: $border-radius-base;
-    transition: transform $transition-base;
+      }
+    }
 
-    transition: transform $transition-base;
-    height: 238px;
-    // 1183
-    @media only screen and (min-width: $width-xl) {
-      height: 248px;
-    }
-    // 992 -1182
-    @media only screen and (min-width: $width-l) and (max-width: 1182px) {
-      height: 203px;
-    }
-    // 768 - 1182
-    @media only screen and (min-width: $width-m) and (max-width: 991px) {
-      height: 208px;
-    }
-    // 360
-    @media only screen and (min-width: $width-min-body) and (max-width: 767px) {
-      height: 248px;
-    }
-  }
+    .card {
+      height: 100%;
+      border-radius: $border-radius-base;
+      overflow: hidden;
+      perspective: 800px;
+      display: flex;
+      flex-direction: column;
 
-  .front-side {
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
+      &:hover {
+        .top {
+          @media screen and (min-width: $width-l+1) {
+            transform: rotateY(180deg);
+          }
+        }
+      }
 
-    & img {
+      &._active {
+        .top {
+          @media screen and (max-width: $width-l) {
+            transform: rotateY(180deg);
+          }
+        }
+      }
+    }
+
+    .top {
+      transition: all $transition-base;
+      transform-style: preserve-3d;
+      position: relative;
+      min-height: 248px;
+
+      @media screen and (max-width: $width-l) {
+        min-height: 218px;
+      }
+      @media screen and (max-width: 940px) {
+        min-height: 248px;
+      }
+      @media screen and (max-width: $width-m) {
+        min-height: 218px;
+      }
+      @media screen and (max-width: 740px) {
+        min-height: 280px;
+      }
+      @media screen and (max-width: $width-s) {
+        min-height: 248px;
+      }
+    }
+
+    .top-front {
+      position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: fill;
-    }
-  }
 
-  .back-side {
-    position: absolute;
-    backface-visibility: hidden;
-
-    text-align: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(238, 238, 238, 0.87);
-    margin-top: 0;
-    transform: rotateY(180deg);
-    transform-style: preserve-3d;
-  }
-
-  // GLOW_TEXT ON CARD
-  .back-side_text {
-    padding: 24px 24px 32px 24px;
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    text-align: center;
-    font-weight: 400;
-    line-height: $line-height-base;
-    color: $color-text-primary;
-  }
-
-  // cards  hover only for desctop back-side
-  @media only screen and (min-width: $width-xl) {
-    // cards hover efects for  back-side
-    .team-card:hover .back-side {
-      transform: rotateY(0deg);
-      transform-style: preserve-3d;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
     }
 
-    // cards  hover only for desctop  efects for  front-side
-    .team-card:hover .front-side {
-      transform: rotateY(-180deg);
-      transform-style: preserve-3d;
+    .top-back {
+      padding: 10px 24px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      background-color: #eeeeeede;
+      backface-visibility: hidden;
+      transform: rotateY(180deg);
+
+      p {
+        text-align: center;
+      }
+
     }
-  }
-  // class for js
-  .rotate-180 {
-    transform: rotateY(-180deg);
-    transform-style: preserve-3d;
-  }
 
-  // class for js
-  .rotate-0 {
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-  }
-
-  // wrapp for text in _team_card
-  .team-card_content {
-    display: flex;
-
-    flex-direction: column;
-    padding: 14px 16px;
-    z-index: 100;
-    gap: 4px;
-    flex: 1;
-    overflow: hidden;
-    border-radius: 0 0 $border-radius-base $border-radius-base;
-    background: linear-gradient(
-                    228deg,
-                    #3872e1 1.04%,
-                    #22aef8 48.54%,
-                    #32d299 99.8%
-    );
-    background-image: url(../../images/bg/bg_team_cards_mob_360.png);
-
-    background-repeat: repeat;
-    background-size: cover;
-
-    //  1183
-    @media screen and (min-width: $width-xl) {
+    .bottom {
+      flex: auto;
+      padding: 10px 12px;
+      min-height: 76px;
+      color: $color-white;
       background-image: url(../../images/bg/bg_team_cards_desc.png);
-      padding: 14px 16px;
-    }
-    // 992-1182
-    @media screen and (min-width: $width-l) and (max-width: 1182px) {
-      background-image: url(../../images/bg/bg_team_cards_tab_992.png);
-      padding: 12px;
-    }
-    // 768-991
-    @media screen and (min-width: $width-m) and (max-width: 991px) {
-      background-image: url(../../images/bg/bg_team_cards_tab_768.png);
-      padding: 14px 16px;
-    }
+      background-size: cover;
+      background-position: right top;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 2;
+      @media screen and (max-width: $width-s) {
+        height: auto;
+      }
 
-    // 360-767
-    @media screen and (min-width: $width-min-body) and (max-width: 767px) {
-      background-image: url(../../images/bg/bg_team_cards_mob_360.png);
-      padding: 14px 16px;
+      h3 {
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.15px;
+        line-height: 116%;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 14px;
+        letter-spacing: 0.15px;
+        line-height: 116%;
+      }
     }
   }
 
-  // name and surname
-  .content_title {
-    align-self: stretch;
-    font-family: $font-family-base;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: $color-white;
-    filter: blur(0);
-    filter: brightness(99%);
-    // 1183
-    @media screen and (min-width: $width-xl) {
-      font-size: 20px;
-      line-height: $line-height-base;
-    }
-    // 992
-    @media screen and (min-width: $width-l) {
-      font-size: $font-size-base;
-      line-height: 1;
-    }
-  }
-
-  // team position
-  .content_position {
-    font-family: $font-family-base;
-    color: $color-white;
-    font-size: 14px;
-    line-height: 116%;
-  }
 
   // results_section**************************************************
   .results-container {
