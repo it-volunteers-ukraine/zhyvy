@@ -98,14 +98,14 @@
 						<?php endif; ?>
 
                         <div class="swiper-pagination"></div>
-                        <div class="button-arrow--small button-prev">
-                            <svg width="7.8" height="12.7">
+                        <div class="button-arrow--medium button-prev">
+                            <svg width="12" height="24">
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
                                 </use>
                             </svg>
                         </div>
-                        <div class="button-arrow--small button-next">
-                            <svg width="7.8" height="12.7">
+                        <div class="button-arrow--medium button-next">
+                            <svg width="12" height="24">
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
                                 </use>
                             </svg>
