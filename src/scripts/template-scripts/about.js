@@ -1,4 +1,4 @@
-// team_section ****************************
+// team_section
 
 const listTeam = document.querySelector('.team_list');
 
@@ -23,7 +23,7 @@ function openTmCard(event) {
     }
 }
 
-// Results_section*************************************
+// Results_section
 
 const swiperResults = new Swiper('.swiperResults', {
     centeredSlides: true,
@@ -56,7 +56,7 @@ const swiperResults = new Swiper('.swiperResults', {
     },
 });
 
-// honors-and-thanks__section*************************************
+// honors-and-thanks section
 
 const swiperHonor = new Swiper('.swiperHonor', {
     centeredSlides: true,
@@ -88,7 +88,7 @@ const swiperHonor = new Swiper('.swiperHonor', {
     },
 });
 
-// Lightbox***********************************************
+// Lightbox
 
 function initializeLightbox() {
     lightbox.option({

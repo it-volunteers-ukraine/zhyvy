@@ -15,7 +15,7 @@
 		); ?>
 
 
-        <!--    history_section*************************************** -->
+        <!--    history_section -->
         <section class="history" id="history">
             <div class="container">
                 <div class="history-container">
@@ -49,13 +49,13 @@
 								?>
                             </p>
                         </div>
-                    </div> <!-- /   history-content -->
-                </div> <!-- / history-container  -->
-            </div> <!-- container  -->
+                    </div>
+                </div>
+            </div>
         </section>
 
 
-        <!-- team_section  ***************************************-->
+        <!-- team_section  -->
         <section class="team" id="team">
 
             <div class="container ">
@@ -84,7 +84,7 @@
 												the_sub_field( 'team_card_surname' );
 											?>">
 
-                                        </div> <!-- / front-side -->
+                                        </div>
 
                                         <div class="back-side back-side-js">
                                             <p class="back-side_text">
@@ -92,9 +92,8 @@
 													the_sub_field( 'my_goal' );
 												?>
                                             </p>
-                                        </div> <!--/ back-side  -->
+                                        </div>
 
-                                        <!-- content FOR CARDS surname name  etc ...  -->
                                         <div class="team-card_content content">
                                     <span class="content_title">
                                         <?php
@@ -109,25 +108,24 @@
 	                                        the_sub_field( 'team_card_position' );
                                         ?>
                                     </span>
-                                        </div> <!-- /team-card_content content  -->
-                                    </div> <!-- / team-card  -->
+                                        </div>
+                                    </div>
 								<?php
 								endwhile;
 								?>
 							<?php
 							endif;
 						?>
-                    </div> <!-- /team_list -->
-                </div> <!-- /team-container  -->
-            </div> <!-- /container  -->
+                    </div>
+                </div>
+            </div>
         </section>
 
 
-        <!-- results_section *************************************** -->
+        <!-- results_section  -->
         <section class="results" id="results">
             <div class="container">
                 <div class="results-container">
-                    <!-- alternate title as svg  -->
 
                     <h2 class="title-gradient-h1">
 						<?php
@@ -135,8 +133,6 @@
 						?>
                     </h2>
 
-
-                    <!-- swiper_slide of results_section  -->
                     <div class="swiper swiperResults">
                         <div class="swiper-wrapper">
 							<?php
@@ -154,9 +150,9 @@
                                         <img src="<?php echo esc_url( $image['url'] ); ?>"
                                              alt="<?php echo esc_attr( $image['alt'] ); ?>"/>
                                     </a>
-                                </div> <!-- /swiper_slide of results_section -->
+                                </div>
 							<?php endforeach; ?>
-                        </div> <!-- /swiper-wraper  -->
+                        </div>
 						<?php endif; ?>
 
                         <div class="swiper-pagination"></div>
@@ -165,23 +161,21 @@
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
                                 </use>
                             </svg>
-                        </div> <!-- button-prev -->
+                        </div>
                         <div class="button-arrow--small button-next">
                             <svg width="7.8" height="12.7">
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#chevron-right">
                                 </use>
                             </svg>
-                        </div> <!-- button-next  -->
+                        </div>
+                    </div>
 
-                    </div> <!-- /swiperResults  -->
-
-
-                </div> <!-- / results-container   -->
-            </div> <!-- / container   -->
+                </div>
+            </div>
         </section>
 
 
-        <!-- honors-and-thanks__section *************************************** -->
+        <!-- honors-and-thanks section  -->
         <section class="honors-and-thanks" id="thanks">
 
             <div class="container">
@@ -270,7 +264,7 @@
                                                 Зовнішнє посиланя
                                             </span>
                                                 </a>
-                                            </div> <!-- /partners-card-img-wrapper  -->
+                                            </div>
 
 											<?php
 										} elseif ( ! $link && $logo ) {
@@ -278,7 +272,7 @@
                                             <div class="  partners-card-img-wrapper">
                                                 <img src="<?php echo $logo['url']; ?>" alt="<?php echo $name; ?>"
                                                      loading="lazy"/>
-                                            </div> <!-- /partners-card-img-wrapper  -->
+                                            </div>
 											<?php
 										} elseif ( $link && ! $logo && $name ) {
 											?>
@@ -301,16 +295,14 @@
 											<?php
 										}
 									?>
-                                </div> <!--/ partners-card  -->
+                                </div>
 							<?php
 							endwhile; ?>
-                        </div> <!--/ partners_list -->
+                        </div>
 					<?php endif; ?>
-                </div> <!-- /partners-container  -->
-            </div> <!-- /container  -->
-
+                </div>
+            </div>
         </section>
-
     </main>
 
 <?php
