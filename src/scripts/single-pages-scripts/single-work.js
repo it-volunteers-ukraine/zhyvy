@@ -32,6 +32,7 @@ function initializeLightbox() {
     alwaysShowNavOnTouchDevices: true,
     disableScrolling: true,
     wrapAround: true,
+    'albumLabel': 'Слайд %1 з %2',
   });
 }
 
