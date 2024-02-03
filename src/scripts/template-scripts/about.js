@@ -13,13 +13,13 @@ function toggleCardMobileHover(element) {
 
 // Results_section
 const swiperResults = new Swiper('.swiperResults', {
-    centeredSlides: true,
     loop: true,
     spaceBetween: 10,
     slidesPerView: 1,
 
     breakpoints: {
         768: {
+            centeredSlides: true,
             spaceBetween: 5,
             slidesPerView: 3,
         },
@@ -34,15 +34,15 @@ const swiperResults = new Swiper('.swiperResults', {
 // honors-and-thanks section
 
 const swiperHonors = new Swiper('.swiperHonors', {
-    centeredSlides: true,
     loop: true,
     spaceBetween: 24,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+
     breakpoints: {
         431: {
             slidesPerView: 'auto',
-            centeredSlides: false,
             slidesPerGroup: 1,
-
         },
 
         993: {
