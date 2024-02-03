@@ -182,6 +182,7 @@
     background-size: cover;
     background-position: right top;
     background-repeat: no-repeat;
+    background-color: rgba($color-light-gray, 0.5);
     position: relative;
     z-index: 2;
     @media screen and (max-width: $width-s) {
